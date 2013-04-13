@@ -1,0 +1,3 @@
+BaseApp.Router.map(function() {
+
+});

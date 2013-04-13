@@ -7,4 +7,10 @@
 // //= require jquery
 // //= require jquery_ujs
 //= require twitter/bootstrap
-// //= require_tree .
+// //= require handlebars
+//= require ember
+//= require ember-data
+//= require_self
+//= require base_app
+BaseApp = Ember.Application.create();
+//= require_tree .
