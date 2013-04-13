@@ -11,6 +11,7 @@ describe User do
   it { should have_db_column(:last_sign_in_at).of_type(:datetime) }
   it { should have_db_column(:current_sign_in_ip).of_type(:string) }
   it { should have_db_column(:last_sign_in_ip).of_type(:string) }
+  it { should have_db_column(:authentication_token).of_type(:string) }
 
   it { should have_and_belong_to_many(:roles) }
 
