@@ -1,3 +1,3 @@
-BaseApp.ApplicationController = Ember.Controller.extend({
+Vazno.ApplicationController = Ember.Controller.extend({
 
 });

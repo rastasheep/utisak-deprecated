@@ -1,2 +1,2 @@
-BaseApp.ApplicationView = Ember.View.extend({
+Vazno.ApplicationView = Ember.View.extend({
 });

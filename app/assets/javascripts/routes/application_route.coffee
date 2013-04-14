@@ -1,3 +1,3 @@
-BaseApp.ApplicationRoute = Ember.Route.extend({
+Vazno.ApplicationRoute = Ember.Route.extend({
 
 });

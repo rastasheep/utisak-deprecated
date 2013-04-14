@@ -14,6 +14,7 @@ gem 'active_model_serializers' # works out of the box with ember-data
 gem 'ember-rails'              # ember framework
 gem 'ember-auth-rails'         # client-side authentication
 
+gem "jquery-rails"
 gem "coffee-rails"
 gem "less-rails"
 
