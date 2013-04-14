@@ -21,7 +21,6 @@ class Api::V1::BaseController < ApplicationController
   end
 
   def auth_only!
-    debugger
     unless params[:auth_token] && user_signed_in?
       render json: {}, status: 401
     end
