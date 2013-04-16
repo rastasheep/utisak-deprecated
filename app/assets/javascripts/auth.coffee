@@ -3,3 +3,4 @@ Auth.Config.reopen
   tokenDestroyUrl: '/users/sign_out'
   tokenKey: 'auth_token'
   idKey: 'user_id'
+  userModel: Vazno.User
