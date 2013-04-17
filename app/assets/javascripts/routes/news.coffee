@@ -1,3 +1,3 @@
-Vazno.NewsRoute = Em.Route.extend
+Vazno.IndexRoute = Em.Route.extend
   model: ->
     Vazno.News.find()

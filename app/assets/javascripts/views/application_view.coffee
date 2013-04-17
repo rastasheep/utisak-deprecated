@@ -1,2 +1,3 @@
-Vazno.ApplicationView = Ember.View.extend({
-});
+Vazno.ApplicationView = Ember.View.extend
+  didInsertElement: ->
+    Auth.Module.RememberMe.recall()

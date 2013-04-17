@@ -1,9 +1,17 @@
 class SessionsController < Devise::SessionsController
+
   def create
-    return missing_params unless params[:email] && params[:password]
+    unless (params[:email] && params[:password]) || (params[:remember_token])
+      return missing_params
+    end
 
     build_resource
-    resource = resource_from_credentials
+    resource = if params[:remember_token]
+                 resource_from_remember_token
+               else
+                 resource_from_credentials
+               end
+
     return invalid_credentials unless resource
 
     resource.ensure_authentication_token!
@@ -11,6 +19,12 @@ class SessionsController < Devise::SessionsController
       user_id: resource.id,
       auth_token: resource.authentication_token,
     }
+
+    if params[:remember]
+      resource.remember_me!
+      data[:remember_token] = remember_token(resource)
+    end
+
     render json: data, status: 201
   end
 
@@ -36,6 +50,17 @@ class SessionsController < Devise::SessionsController
     render json: {}, status: 401
   end
 
+  def remember_token(resource)
+    data = resource_class.serialize_into_cookie(resource)
+    "#{data.first.first}-#{data.last}"
+  end
+
+  def resource_from_remember_token
+    token = params[:remember_token]
+    id, identifier = token.split('-')
+    resource_class.serialize_from_cookie(id, identifier)
+  end
+
   def resource_from_credentials
     data = { email: params[:email] }
     if res = resource_class.find_for_database_authentication(data)
@@ -44,4 +69,5 @@ class SessionsController < Devise::SessionsController
       end
     end
   end
+
 end

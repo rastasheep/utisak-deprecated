@@ -35,7 +35,48 @@ describe SessionsController do
       it 'returns http 201' do
         response.response_code.should == 201
       end
+
+      context 'remember token auth' do
+
+        context 'remember me on' do
+          let(:params) do
+            user.remember_me!
+            data = User.serialize_into_cookie(user)
+            token = "#{data.first.first}-#{data.last}"
+            {email: user.email, password: user.password,  remember: true }
+          end
+
+          before {post :create, params}
+          subject { JSON.parse response.body }
+
+          it { should include 'auth_token' }
+          it { should include 'user_id' }
+          debugger
+          it { should include 'remember_token' }
+        end
+
+        context 'remember me off' do
+          before { post :create, email: user.email, password: user.password, remember: false }
+          subject { JSON.parse response.body }
+
+          it { should include 'auth_token' }
+          it { should include 'user_id' }
+          it { should_not include 'remember_token' }
+        end
+
+        context 'remember me unspecified' do
+          before { post :create, email: user.email, password: user.password }
+          subject { JSON.parse response.body }
+
+          it { should include 'auth_token' }
+          it { should include 'user_id' }
+          it { should_not include 'remember_token' }
+        end
+
+      end
+
     end
+
   end
 
   describe 'DELETE destroy' do

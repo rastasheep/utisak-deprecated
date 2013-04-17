@@ -1,5 +1,12 @@
 <h1>Application</h1>
 
-{{view Vazno.AuthView}}
-{{#linkTo news.index}}News{{/linkTo}}
+{{#linkTo index}}News{{/linkTo}}
+{{#linkTo more}}More{{/linkTo}}
+
 {{outlet}}
+
+{{#if Auth.currentUser}}
+signed in
+{{else}}
+not signed in
+{{/if}}

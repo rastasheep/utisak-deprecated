@@ -4,3 +4,8 @@ Auth.Config.reopen
   tokenKey: 'auth_token'
   idKey: 'user_id'
   userModel: Vazno.User
+  rememberMe: true
+  rememberTokenKey: 'remember_token'
+  rememberPeriod: 14 # days
+  rememberAutoRecall: true
+  signInRedirectFallbackRoute: 'index'

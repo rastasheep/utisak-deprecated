@@ -3,6 +3,7 @@ Vazno.AuthSignInView = Em.View.extend
 
   email:    null
   password: null
+  remember: true
 
   submit: (event, view) ->
     event.preventDefault()
@@ -10,3 +11,4 @@ Vazno.AuthSignInView = Em.View.extend
     Auth.signIn
       email:    @get 'email'
       password: @get 'password'
+      remember: true
