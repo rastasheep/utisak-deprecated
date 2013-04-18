@@ -12,7 +12,8 @@ gem 'inherited_resources'      # for easy RESTful API controller scaffolding
 gem 'active_model_serializers' # works out of the box with ember-data
 
 gem 'ember-rails'              # ember framework
-gem 'ember-auth-rails'         # client-side authentication
+gem 'ember-auth-rails'
+  gem 'ember-auth-source'
 
 gem "jquery-rails"
 gem "coffee-rails"
