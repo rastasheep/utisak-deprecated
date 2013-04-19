@@ -1,9 +1,7 @@
-<h1>Application</h1>
-
-{{#linkTo index}}News{{/linkTo}}
-{{#linkTo more}}More{{/linkTo}}
-
-{{outlet}}
+<div id="apploader"></div>
+<div class="content" id="content-home">
+  {{outlet}}
+</div>
 
 {{#if Auth.currentUser}}
 signed in
