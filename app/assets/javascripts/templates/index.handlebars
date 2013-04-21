@@ -1,4 +1,4 @@
-<header>
+<header class="main">
   {{#linkTo more classNames="header-button header-button-icon header-button-left"}}
     <button><i class="icon-more">More</i></button>
   {{/linkTo}}
@@ -18,9 +18,13 @@
         {{#view}}
           <li id="story-5572875" data-index="1" class="post-link">
 
-            {{#linkTo 'news.show' this classNames="detail-vote-button"}}
-              <span></span>
-            {{/linkTo}}
+            {{#if can_vote}}
+              <a href="#" {{action 'vote' this}} class="detail-vote-button">
+            {{else}}
+              <a href="#" class="detail-vote-button disabled">
+            {{/if}}
+                <span></span>
+              </a>
 
             {{unbound externalLink url}}
               <div class="number">{{view._parentView.contentIndex}}.</div>
@@ -28,8 +32,8 @@
                 <b>{{title}}</b>
                 <span class="metadata">
                   <span class="link-text">{{domain}}</span><br>
-                  <span class="inline-block">{{points}} glasova, autor evo_9</span>
-                  <span class="inline-block">1 hour ago · 11 komentara</span>
+                  <span class="inline-block">{{points}} glasova, autor {{author}}</span>
+                  <span class="inline-block">{{timeAgo created_at}} · {{comments.length}} komentara</span>
                 </span>
               </div>
             {{externalLinkEnd}}

@@ -98,7 +98,7 @@ button{
 .content.hidden{
   display: none;
 }
-.content>header{
+.content header.main{
   background-color: #920000;
   line-height: 44px;
   height: 44px;
@@ -156,7 +156,7 @@ button{
   right: 0;
 }
 
-.content>header h1{
+.content header.main h1{
   padding: 0;
   text-align: center;
   font-size: 20px;
@@ -166,29 +166,29 @@ button{
   overflow: hidden;
   word-wrap: normal;
 }
-.content>.scroll{
+.content .scroll{
   overflow: hidden;
   min-height: 85vh;
 }
-.content>.scroll.striped{
+.content .scroll.striped{
   background-color: #F6F6EF;
 }
-.content>.scroll.striped p.foot-label{
+.content .scroll.striped p.foot-label{
   margin: 15px 10px;
   font-size: 13px;
   line-height: 1.4em;
   color: #4c566c;
   text-align: center;
 }
-.content>.scroll .loader,
-.content>.scroll .load-error{
+.content .scroll .loader,
+.content .scroll .load-error{
   font-size: 16px;
   color: #666;
   color: #666;
   text-align: center;
   margin: 50px 0;
 }
-.content>.scroll .load-error button{
+.content .scroll .load-error button{
   border: 0;
   font-size: 14px;
   height: 30px;
@@ -201,10 +201,10 @@ button{
   background-color: #f0f0ea;
   border-radius: 2px;
 }
-.content>.scroll .load-error button:hover{
+.content .scroll .load-error button:hover{
   background-color: #e0e0da;
 }
-.content>.scroll .load-error button:active{
+.content .scroll .load-error button:active{
   background-color: #c8c8c8;
 }
 .tableview{
@@ -225,7 +225,7 @@ button{
   padding: 0;
   position: relative;
 }
-.tableview-links li>a{
+.tableview-links li a{
   font-size: 15px;
   line-height: 1.3em;
   color: #000;
@@ -233,16 +233,16 @@ button{
   padding: 10px 5px;
   text-decoration: none;
 }
-.tableview-links li>a:visited{
+.tableview-links li a:visited{
   color: #888;
 }
-.tableview-links li>a:hover{
+.tableview-links li a:hover{
   background-color: #e8e6e2;
 }
-.tableview-links li>a *{
+.tableview-links li a *{
   pointer-events: none;
 }
-.tableview-links li>a .number{
+.tableview-links li a .number{
   text-align: right;
   width: 3.5ex;
   color: #666d74;
@@ -250,22 +250,22 @@ button{
   left: 39px;
   top: 10px;
 }
-.tableview-links li>a .story{
+.tableview-links li a .story{
   margin-left: 3.5ex;
   padding-left: 5px;
 }
-.tableview-links li>a .metadata{
+.tableview-links li a .metadata{
   display: block;
   font-size: 13px;
   color: #666d74;
   line-height: 1.2em;
 }
-.tableview-links li>a.detail-disclosure{
+.tableview-links li a.detail-disclosure{
   padding-right: 44px;
   padding-left: 44px;
 }
 
-.tableview-links li>a.detail-vote-button{
+.tableview-links li a.detail-vote-button{
   position: absolute;
   top: 0;
   left: 0;
@@ -277,8 +277,16 @@ button{
   text-align: center;
   vertical-align: middle;
 }
+.tableview-links li a.disabled {
+  cursor: default;
+}
 
-.tableview-links li>a.detail-disclosure-button{
+.tableview-links li a.disabled:hover{
+  background-color: transparent;
+  opacity: 0.65;
+}
+
+.tableview-links li a.detail-disclosure-button{
   position: absolute;
   top: 0;
   right: 0;
@@ -290,7 +298,7 @@ button{
   vertical-align: middle;
 }
 
-.tableview-links li>a.detail-vote-button span{
+.tableview-links li a.detail-vote-button span{
   opacity: .5;
   display: inline-block;
   width: 14px;
@@ -304,7 +312,12 @@ button{
   margin: 15px 0;
 }
 
-.tableview-links li>a.detail-disclosure-button span{
+.tableview-links li a.detail-vote-button:hover span,
+.tableview-links li a.detail-disclosure-button:hover span{
+  opacity: 1;
+}
+
+.tableview-links li a.detail-disclosure-button span{
   opacity: .5;
   display: inline-block;
   width: 14px;
@@ -318,11 +331,7 @@ button{
   margin: 15px 0;
 }
 
-.tableview-links li>a.detail-vote-button:hover span,
-.tableview-links li>a.detail-disclosure-button:hover span{
-  opacity: 1;
-}
-.tableview-links li>a.more-link{
+.tableview-links li a.more-link{
   cursor: pointer;
   line-height: 3em;
   padding: 10px;
@@ -380,8 +389,8 @@ ul.grouped-tableview-links li,
 ol.grouped-tableview-links li{
   padding: 0;
 }
-ul.grouped-tableview-links li>a,
-ol.grouped-tableview-links li>a{
+ul.grouped-tableview-links li a,
+ol.grouped-tableview-links li a{
   color: #000;
   font-size: 16px;
   font-weight: bold;
@@ -391,8 +400,8 @@ ol.grouped-tableview-links li>a{
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-ul.grouped-tableview-links li>a:hover,
-ol.grouped-tableview-links li>a:hover{
+ul.grouped-tableview-links li a:hover,
+ol.grouped-tableview-links li a:hover{
   background-color: #F6F6EF;
 }
 
@@ -503,7 +512,7 @@ ol.grouped-tableview-links li>a:hover{
   padding: 15px;
   border-bottom: 1px solid #E0E0E0;
 }
-.content section.comments ul>li:last-child{
+.content section.comments ul li:last-child{
   border-bottom: 0;
 }
 .content section.comments ul ul li{
@@ -572,7 +581,7 @@ ol.grouped-tableview-links li>a:hover{
 .content section.comments li.more-link-container{
   padding: 0;
 }
-.content section.comments li>a.more-link{
+.content section.comments li a.more-link{
   font-size: 15px;
   text-decoration: none;
   cursor: pointer;
@@ -638,7 +647,7 @@ ol.grouped-tableview-links li>a:hover{
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  .content>header{
+  .content header{
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
   }

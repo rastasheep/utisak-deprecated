@@ -14,8 +14,13 @@ BaseApp::Application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :news
+      resources :news do
+        member do
+          post  "vote"
+        end
+      end
       resources :users
+      resources :comments
     end
   end
 

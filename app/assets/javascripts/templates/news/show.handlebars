@@ -1,4 +1,4 @@
-<header>
+<header class="main">
   {{#linkTo index classNames="header-button header-button-icon header-button-left"}}
     <button><i class="icon-home">Home</i></button>
   {{/linkTo}}
@@ -17,9 +17,9 @@
           {{externalLinkEnd}}
         </h1>
         <p class="metadata">
-          <span class="inline-block">{{points}} glasova, autor evo_9</span>
-          <span class="inline-block">3 hours ago · 32 komentara</span>
-          <a href="http://news.ycombinator.com/item?id=5572875" target="_blank" class="external-link">news.ycombinator.com/item?id=5572875</a>
+        <span class="inline-block">{{points}} glasova, autor {{author}}</span>
+        <span class="inline-block">{{timeAgo created_at}} · {{comments.length}} komentara</span>
+        {{externalUrl url}}
         </p>
       </header>
     </div>

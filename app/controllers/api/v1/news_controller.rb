@@ -13,6 +13,11 @@ class Api::V1::NewsController < Api::V1::BaseController
     render :json => @news
   end
 
+  def vote
+    @news.update_attributes(:points=> @news.points+1)
+
+    render :nothing => true
+  end
 
   private
 
@@ -22,9 +27,9 @@ class Api::V1::NewsController < Api::V1::BaseController
   end
 
   def find_news
-    news = News.find_by_id(params[:id])
+    @news = News.find(params[:id])
 
-    unless news
+    unless @news
       render :text => "Not Found", :status => 404 and return
     end
   end
