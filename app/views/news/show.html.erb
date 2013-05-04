@@ -1,0 +1,62 @@
+<header class="main">
+  <%= link_to "#", :class=>"header-button header-button-icon header-button-left" do %>
+    <button><i class="icon-more">More</i></button>
+  <% end %>
+  <h1><%= @news.title %></h1>
+
+  <%= link_to news_index_path, :class => "header-button header-button-icon header-button-right" do %>
+    <button><i class="icon-home">Home</i></button>
+  <% end %>
+</header>
+
+<div class="scroll">
+  <section>
+
+    <div class="post-content">
+      <header>
+      <h1>
+        <%= link_to @news.url do %>
+          <%= @news.title %>
+        <% end  %>
+      </h1>
+      <p class="metadata">
+        <span class="inline-block"><%= @news.points %> glasova, autor <%= @news.user_id %></span>
+        <span class="inline-block"><%= render_time @news.created_at %> · <%= @news.comments.length %> komentara</span>
+        <%= link_to @news.url, @news.url, :class => "external-link" %>
+      </p>
+      </header>
+    </div>
+
+    <section class="comments">
+      <ul>
+        <% @comments.each do |comment| %>
+          <li>
+            <p class="metadata">
+              <b><%= comment.user_id %></b>
+              <time>
+              <a href="http://news.ycombinator.com/item?id=5655183" data-id="5655183" class="comment-permalink" target="_blank"><%= render_time comment.created_at %></a>
+              </time>
+            </p>
+            <%= simple_format(comment.content) %>
+          </li>
+        <% end %>
+      </ul>
+    </section>
+
+    <% if user_signed_in? %>
+      <%= form_for [@news, @comment], :html => { :class => "comment-form" } do |f| %>
+        <%= f.label :content, "Komentar"%>
+        <%= f.text_area :content %>
+
+        <div class="form-actions">
+          <%= f.button "Dodaj komentar", :class => "content-button" %>
+        </div>
+      <% end %>
+    <% else %>
+      <div class="comment-form">
+        "Morate biti ulogovani da bi ste ostavili komentar"
+        <%= link_to "Dodaj komentar", new_user_session_path, :class => "content-button" %>
+      </div>
+    <% end %>
+  </section>
+</div>

@@ -41,11 +41,11 @@ button{
   font-weight: bold;
 }
 
-.icon-refresh{
+.icon-add{
   display: inline-block;
   width: 20px;
-  height: 17px;
-  background: transparent url(refresh-icon.png) no-repeat;
+  height: 30px;
+  background: transparent url(add-icon.png) no-repeat;
   background-position: center center;
   -webkit-background-size: 14px 17px;
   -moz-background-size: 14px 17px;
@@ -562,7 +562,7 @@ ol.grouped-tableview-links li a:hover{
   font-size: 16px;
   color: #666;
 }
-.content section.comments button.comments-toggle{
+.content-button{
   display: block;
   height: 30px;
   line-height: 22px;
@@ -570,6 +570,7 @@ ol.grouped-tableview-links li a:hover{
   padding: 0 13px;
   font-weight: bold;
   font-size: 12px;
+  text-decoration: none;
   color: #666;
   margin: 2px 0 6px;
   background-color: #f0f0ea;
@@ -577,10 +578,10 @@ ol.grouped-tableview-links li a:hover{
   -webkit-user-select: none;
   border-radius: 2px;
 }
-.content section.comments button.comments-toggle:hover{
+.content-button:hover{
   background-color: #e0e0da;
 }
-.content section.comments button.comments-toggle:active{
+.content-button:active{
   background-color: #c8c8c8;
 }
 .content section.comments li.more-link-container{

@@ -7,6 +7,14 @@ module ApplicationHelper
     link_to title, { :sort => column, :direction => direction }, { :class => css_class }
   end
 
+  def render_time(time)
+    if time.present?
+      l(time, :format => :short)
+    else
+      "-"
+    end
+  end
+
   def render_title
     return @full_page_title if @full_page_title.present?
 

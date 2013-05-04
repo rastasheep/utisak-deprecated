@@ -2,10 +2,10 @@
 <%= link_to "#", :class=>"header-button header-button-icon header-button-left" do %>
   <button><i class="icon-more">More</i></button>
 <% end %>
-<h1>Utisak.<small>prave vesti</small></h1>
+<h1>Utisak <small>vazne vesti</small></h1>
 
-<a class="header-button header-button-icon header-button-right" id=kkk"content-home-refresh">
-  <button><i class="icon-refresh">Refresh</i></button>
+<a class="header-button header-button-icon header-button-right">
+  <button><i class="icon-add">Refresh</i></button>
 </a>
 </header>
 
@@ -21,7 +21,7 @@
           </a>
 
           <%= link_to news.url, :class => "detail-disclosure" do %>
-            <div class="number"><%= index %>.</div>
+            <div class="number"><%= index+1 %>.</div>
             <div class="story">
               <b><%= news.title %></b>
               <span class="metadata">
@@ -30,13 +30,13 @@
                   <%= news.points %> glasova, autor <%= news.user_id %>
                 </span>
                 <span class="inline-block">
-                  <%= news.created_at %> · <%= news.comments.length %> komentara
+                  <%= render_time news.created_at %> · <%= news.comments.length %> komentara
                 </span>
               </span>
             </div>
           <% end %>
 
-          <%= link_to "@", :class => "detail-disclosure-button" do %>
+          <%= link_to news_path(news), :class => "detail-disclosure-button" do %>
             <span></span>
           <% end %>
 

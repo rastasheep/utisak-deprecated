@@ -23,7 +23,9 @@ BaseApp::Application.routes.draw do
   end
 
 
-  resources :news, :path => '/'
+  resources :news, :path => '/' do
+    resources :comments
+  end
 
   get '/beta' => 'pages#index'
 
