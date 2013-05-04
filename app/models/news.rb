@@ -4,9 +4,18 @@ class News < ActiveRecord::Base
 
   has_many :comments, :dependent => :destroy
 
-  attr_accessible :content, :domain, :points, :title, :url
+  attr_accessible :content, :points, :title, :url
 
-  validates :title, :presence => true
-  validates :url, :presence => true, :uniqueness => true
+  validates :title, :user_id,  :presence => true
+  validates :url, :uniqueness => true
+
+  def domain
+    if self.url.blank?
+      nil
+    else
+      pu = URI.parse(self.url)
+      pu.host.gsub(/^www\d*\./, "")
+    end
+  end
 
 end

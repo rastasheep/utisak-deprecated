@@ -1,0 +1,48 @@
+<header class="main">
+<%= link_to "#", :class=>"header-button header-button-icon header-button-left" do %>
+  <button><i class="icon-more">More</i></button>
+<% end %>
+<h1>Utisak.<small>prave vesti</small></h1>
+
+<a class="header-button header-button-icon header-button-right" id=kkk"content-home-refresh">
+  <button><i class="icon-refresh">Refresh</i></button>
+</a>
+</header>
+
+<div class="scroll">
+  <section>
+    <ul class="tableview tableview-links" id="hwlist">
+
+      <% @news.each_with_index do |news, index| %>
+        <li data-index="1" class="post-link">
+
+          <a href="#" class="detail-vote-button">
+            <span></span>
+          </a>
+
+          <%= link_to news.url, :class => "detail-disclosure" do %>
+            <div class="number"><%= index %>.</div>
+            <div class="story">
+              <b><%= news.title %></b>
+              <span class="metadata">
+                <span class="link-text"><%= news.domain %></span><br>
+                <span class="inline-block">
+                  <%= news.points %> glasova, autor <%= news.user_id %>
+                </span>
+                <span class="inline-block">
+                  <%= news.created_at %> · <%= news.comments.length %> komentara
+                </span>
+              </span>
+            </div>
+          <% end %>
+
+          <%= link_to "@", :class => "detail-disclosure-button" do %>
+            <span></span>
+          <% end %>
+
+        </li>
+      <% end %>
+
+    </ul>
+  </section>
+</div>
