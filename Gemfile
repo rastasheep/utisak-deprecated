@@ -25,6 +25,8 @@ gem "meta_search"
 gem "dynamic_form"
 gem "heroku"
 
+gem 'turbolinks'
+
 group :assets do
   gem "therubyracer", :platform => :ruby
 end
