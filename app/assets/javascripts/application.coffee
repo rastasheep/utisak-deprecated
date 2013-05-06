@@ -9,4 +9,12 @@
 #= require config
 #= require vazno
 #= require_tree .
-window.Vazno = Em.Application.create()
+# window.Vazno = Em.Application.create()
+
+ready = ->
+  $("#more-button").click ->
+    $(".dropdown-items").toggle()
+    return false
+
+$(document).ready(ready)
+$(document).on('page:load', ready)

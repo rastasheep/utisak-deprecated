@@ -1,6 +1,6 @@
 BaseApp::Application.routes.draw do
 
-  devise_for :users, controllers: {sessions: 'sessions'}
+  devise_for :users
 
   # get "pages/index"
 
@@ -22,10 +22,15 @@ BaseApp::Application.routes.draw do
     end
   end
 
+  match "/newest" => "news#newest"
 
   resources :news, :path => '/' do
+    member do
+      post  "vote"
+    end
     resources :comments
   end
+
 
   get '/beta' => 'pages#index'
 

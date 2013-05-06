@@ -549,13 +549,13 @@ ol.grouped-tableview-links li a:hover{
   font-weight: bold;
   color: #888;
 }
-.content section.comments p.metadata time a{
-  color: #888;
-  text-decoration: none;
-}
-.content section.comments p.metadata time a:hover{
-  text-decoration: underline;
-}
+#  .content section.comments p.metadata time a{
+#    color: #888;
+#    text-decoration: none;
+#  }
+#  .content section.comments p.metadata time a:hover{
+#    text-decoration: underline;
+#  }
 .content section.comments p.no-comments{
   text-align: center;
   margin: 50px 0;
@@ -605,6 +605,78 @@ ol.grouped-tableview-links li a:hover{
 }
 .inline-block{
   display: inline-block;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-items {
+  display: none;
+  width: 256px;
+  margin: 0;
+  position: absolute;
+  top: 44px;
+  z-index: 9999;
+  line-height: 1.25;
+  background-color: rgba(0,0,0,.8);
+  border-radius: 4px;
+  box-shadow: 0 3px 8px rgba(0,0,0,.5);
+}
+
+.dropdown-items:before {
+  content:"";
+  position: absolute;
+  top: -10px;
+  left: 14px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid rgba(0,0,0,.8);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+.dropdown-items dt {
+  color: #999;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 14px 0 7px 0;
+  padding: 0 14px;
+}
+
+.dropdown-items dd {
+  float: none;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+.dropdown-items a:link,
+.dropdown-items a:visited {
+  display: block;
+  padding: 7px 14px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown-items a:focus,
+.dropdown-items a:hover {
+  background-color: #000;
+}
+
+.dropdown-items dd:last-child {
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+}
+
+.dropdown-item-name,
+.dropdown-item-detail {
+  display: block;
+}
+
+.dropdown-item-detail {
+  font-weight: normal;
+  color: #999;
 }
 
 /* For modern browsers */

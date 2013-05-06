@@ -1,12 +1,15 @@
 <header class="main">
-<%= link_to "#", :class=>"header-button header-button-icon header-button-left" do %>
-  <button><i class="icon-more">More</i></button>
-<% end %>
-<h1>Dodaj svoj utisak</h1>
+  <%= link_to "#", :id=>"more-button", :class=>"header-button header-button-icon header-button-left" do %>
+    <button><i class="icon-more">More</i></button>
+  <% end %>
 
-<a class="header-button header-button-icon header-button-right" id="content-home">
-  <button><i class="icon-home">Home</i></button>
-</a>
+  <%= render "news/dropdown" %>
+
+  <h1>Dodaj svoj utisak</h1>
+
+  <%= link_to news_index_path, :class => "header-button header-button-icon header-button-right" do %>
+    <button><i class="icon-home">Home</i></button>
+  <% end %>
 </header>
 
 <div class="scroll">
