@@ -552,17 +552,6 @@ ol.grouped-tableview-links li a:hover{
 .content section.comments ul li:last-child{
   border-bottom: 0;
 }
-.content section.comments ul ul li{
-  padding: 0 0 0 15px;
-  border: 0;
-  background: transparent url(comment-arrow.png) no-repeat 0 4px;
-  -webkit-background-size: 10px 9px;
-  -moz-background-size: 10px 9px;
-  -ms-background-size: 10px 9px;
-  -o-background-size: 10px 9px;
-  background-size: 10px 9px;
-  color: #333;
-}
 .content section.comments p{
   margin: 8px 0;
 }
@@ -575,11 +564,13 @@ ol.grouped-tableview-links li a:hover{
   float: left;
   color: #b23914;
 }
-.content section.comments p.metadata time{
+.content section.comments p.metadata time a{
   display: block;
   text-align: right;
   font-weight: bold;
   color: #888;
+  text-decoration: none;
+
 }
 #  .content section.comments p.metadata time a{
 #    color: #888;
@@ -709,6 +700,26 @@ ol.grouped-tableview-links li a:hover{
 .dropdown-item-detail {
   font-weight: normal;
   color: #999;
+}
+.comments-toggle{
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  color: #666 !important;
+  -webkit-user-select: none;
+  text-decoration: none;
+}
+.nested_comment {
+  margin-left: 30px !important;
+}
+.nested_comment .nested_comment .nested_comment .nested_comment .nested_comment {
+  margin-left: 0 !important;
+}
+
+.nested_comment li {
+  background: transparent url(comment-arrow.png) no-repeat 0 19px;
+  background-size: 10px 9px;
+  color: #333;
 }
 
 /* For modern browsers */

@@ -1,0 +1,11 @@
+<%= form_for [@news, @comment], :html => { :class => "comment-form" } do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field :parent_id %>
+  <p>
+    <%= f.label :content, "New Comment" %><br />
+    <%= f.text_area :content, :rows => 8 %>
+  </p>
+  <div class="form-actions">
+    <%= f.button "Dodaj komentar", :class => "content-button" %>
+  </div>
+<% end %>

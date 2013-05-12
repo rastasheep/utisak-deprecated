@@ -13,22 +13,17 @@
 </header>
 
 <div class="scroll">
-  <section>
-
-    <%= render "news_header" %>
 
     <section class="comments">
 
-    <% if user_signed_in? -%>
-      <%= render "comments/form" %>
-    <% else -%>
-    <% end  -%>
-
       <ul>
-        <%= nested_comments @comments.arrange(:order => :created_at) %>
+        <%= nested_comments(@comment.ancestors.arrange) %>
       </ul>
+
+      <%= render "form" %>
+
+      <%= link_to "Back", news_path(@news) %>
 
     </section>
 
-  </section>
 </div>
