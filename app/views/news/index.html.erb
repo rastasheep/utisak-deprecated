@@ -23,9 +23,15 @@
       <% @news.each_with_index do |news, index| %>
         <li data-index="1" class="post-link">
 
-        <%= link_to vote_news_path(news), :method => :post, :remote => true, :class => "detail-vote-button" do %>
+        <% if current_user and current_user.can_vote_for?(news) %>
+          <%= link_to vote_news_path(news), :method => :post, :class => "detail-vote-button" do %>
             <span></span>
           <% end %>
+        <% else %>
+          <%= link_to '#', :class => "detail-vote-button disabled" do %>
+            <span></span>
+          <% end %>
+        <% end %>
 
           <%= link_to news.url, :class => "detail-disclosure" do %>
             <div class="number"><%= index+1 %>.</div>

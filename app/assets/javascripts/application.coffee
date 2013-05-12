@@ -16,5 +16,9 @@ ready = ->
     $(".dropdown-items").toggle()
     return false
 
+  $("#flash").click ->
+    $(this).hide()
+    return false
+
 $(document).ready(ready)
 $(document).on('page:load', ready)

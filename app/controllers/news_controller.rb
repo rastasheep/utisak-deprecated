@@ -2,7 +2,7 @@ class NewsController < ApplicationController
   before_filter :find_news, :except => [:index, :newest, :new]
 
   def index
-    @news = News.by_hotness
+    @news = News.all.sort_by(&:hotness)
   end
 
   def newest
@@ -20,9 +20,12 @@ class NewsController < ApplicationController
   end
 
   def vote
-    @news.update_attributes(:points=> @news.points+1)
-
-    redirect_to news_index_path
+    vote = current_user.news_votes.new(news_id: params[:id])
+    if vote.save
+      redirect_to news_index_url, notice: "Thank you for voting."
+    else
+      redirect_to news_index_url, :alert => "Unable to vote, perhaps you already did."
+    end
   end
 
   private

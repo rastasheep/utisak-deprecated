@@ -24,7 +24,7 @@
     <% if user_signed_in? %>
       <dd>
         <a href="#" rel="external">
-          <strong class="dropdown-item-name">Prijavljen kao <%= current_user.email %> (666)</strong>
+          <strong class="dropdown-item-name">Prijavljen kao <%= current_user.email %> (<%= current_user.total_votes %>)</strong>
         </a>
       </dd>
       <hr>

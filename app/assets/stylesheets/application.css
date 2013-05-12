@@ -41,6 +41,38 @@ button{
   font-weight: bold;
 }
 
+#flash {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+#flash p {
+  margin: 0;
+  padding: 7px 28px;
+  display: inline;
+  border-style: solid;
+  color: #fff;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  z-index: 99;
+}
+
+#flash.msg-ok p {
+  background: #2ECC71;
+  border-color: #27AE60;
+}
+
+#flash.msg-error p {
+  background-color: #E74C3C;
+  border-color: #C0392B;
+}
+
 .icon-add{
   display: inline-block;
   width: 20px;

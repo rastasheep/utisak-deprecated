@@ -7,7 +7,12 @@ class User < ActiveRecord::Base
 
   devise :omniauthable
 
+  has_many :news
+  has_many :news_votes
+
   validates :email, presence: true
+  validates_uniqueness_of :email
+
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
@@ -28,6 +33,14 @@ class User < ActiveRecord::Base
 
   def admin?
     role?(:admin)
+  end
+
+  def total_votes
+    NewsVote.joins(:news).where(news: {user_id: self.id}).count
+  end
+
+  def can_vote_for?(news)
+    news_votes.build(news_id: news.id).valid?
   end
 
 #  def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
