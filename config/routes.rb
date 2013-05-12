@@ -1,4 +1,4 @@
-BaseApp::Application.routes.draw do
+Utisak::Application.routes.draw do
 
   devise_for :users
 
