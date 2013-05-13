@@ -48,6 +48,7 @@ button{
   font-weight: bold;
   text-align: center;
   cursor: pointer;
+  z-index: 99;
 }
 
 #flash p {
@@ -60,7 +61,6 @@ button{
   -moz-border-radius: 3px;
   -o-border-radius: 3px;
   text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-  z-index: 99;
 }
 
 #flash.msg-ok p {

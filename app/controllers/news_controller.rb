@@ -1,4 +1,5 @@
 class NewsController < ApplicationController
+  before_filter :authenticate_user!, :only => [:new, :vote]
   before_filter :find_news, :except => [:index, :newest, :new]
 
   def index
