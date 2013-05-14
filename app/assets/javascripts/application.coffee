@@ -14,6 +14,8 @@
 ready = ->
   $("#more-button").click ->
     $(".dropdown-items").toggle()
+    $(document).click ->
+      $(".dropdown-items").hide()
     return false
 
   $("#flash").click ->
