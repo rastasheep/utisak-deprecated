@@ -3,7 +3,8 @@ class NewsController < ApplicationController
   before_filter :find_news, :except => [:index, :newest, :new, :create]
 
   def index
-    @news = News.all.sort_by(&:hotness)
+    @news = News.all.sort_by(&:hotness).reverse
+
   end
 
   def newest
