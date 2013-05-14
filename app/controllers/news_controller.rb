@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
   before_filter :authenticate_user!, :only => [:new, :vote]
-  before_filter :find_news, :except => [:index, :newest, :new]
+  before_filter :find_news, :except => [:index, :newest, :new, :create]
 
   def index
     @news = News.all.sort_by(&:hotness)
@@ -13,6 +13,18 @@ class NewsController < ApplicationController
   end
 
   def new
+    @news = current_user.news.build
+  end
+
+  def create
+    @news = current_user.news.build params[:news]
+    if @news.save
+      flash[:notice] = 'Uspeno dodat utisak'
+      redirect_to news_index_path
+    else
+      flash[:allert] = 'Doslo je do greske! Popunite obavezna polja'
+      render :new
+    end
   end
 
   def show

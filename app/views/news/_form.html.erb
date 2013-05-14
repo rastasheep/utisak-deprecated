@@ -1,0 +1,16 @@
+<%= form_for @news, :html => { :class => "news-form" } do |f| %>
+<%= f.error_messages %>
+
+  <p><%= f.label :title %><br />
+  <%= f.text_field :title %></p>
+
+  <p><%= f.label :ulr %><br />
+  <%= f.text_field :url %></p>
+
+  <p><%= f.label :content %><br />
+  <%= f.text_area :content %></p>
+
+  <% label = @news.new_record? ? "Create" : "Update" -%>
+
+  <%= f.submit label %>
+<% end %>

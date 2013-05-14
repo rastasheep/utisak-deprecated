@@ -5,19 +5,9 @@
 
   <%= render "news/dropdown" %>
 
-  <h1>Dodaj svoj utisak</h1>
+  <h1><%= @user.email %></h1>
 
   <%= link_to news_index_path, :class => "header-button header-button-icon header-button-right" do %>
     <button><i class="icon-home">Home</i></button>
   <% end %>
 </header>
-
-<div class="scroll">
-  <section>
-    <ul class="tableview tableview-links" id="hwlist">
-
-      <%= render "form" %>
-
-    </ul>
-  </section>
-</div>

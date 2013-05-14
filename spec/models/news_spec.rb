@@ -12,6 +12,7 @@ describe News do
     context "validations" do
       subject { FactoryGirl.create(:news) }
       it { should validate_uniqueness_of(:url) }
+      it { should validate_uniqueness_of(:title) }
       it { should validate_presence_of(:url) }
       it { should validate_presence_of(:title) }
     end

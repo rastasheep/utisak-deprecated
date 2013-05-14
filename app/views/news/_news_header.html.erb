@@ -1,17 +1,13 @@
-<div class="post-content">
-  <header>
+<header class="main">
+  <%= link_to "#", :id=>"more-button", :class=>"header-button header-button-icon header-button-left" do %>
+    <button><i class="icon-more">More</i></button>
+  <% end %>
 
-    <h1>
-      <%= link_to @news.url do %>
-        <%= @news.title %>
-      <% end  %>
-    </h1>
+  <%= render "news/dropdown" %>
 
-    <p class="metadata">
-      <span class="inline-block"><%= @news.points %> glasova, autor <%= @news.user.email %></span>
-      <span class="inline-block"><%= render_time @news.created_at %> · <%= @news.comments.length %> komentara</span>
-      <%= link_to @news.url, @news.url, :class => "external-link" %>
-    </p>
+  <h1><%= @news.title %></h1>
 
-  </header>
-</div>
+  <%= link_to news_index_path, :class => "header-button header-button-icon header-button-right" do %>
+    <button><i class="icon-home">Home</i></button>
+  <% end %>
+</header>

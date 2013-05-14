@@ -2,6 +2,8 @@ Utisak::Application.routes.draw do
 
   devise_for :users
 
+  resources :users, :only => [:show]
+  #
   # get "pages/index"
 
   match "/admin" => "admin/base#index", :as => "admin"
@@ -30,7 +32,6 @@ Utisak::Application.routes.draw do
     end
     resources :comments
   end
-
 
   get '/beta' => 'pages#index'
 

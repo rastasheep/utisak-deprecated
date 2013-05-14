@@ -8,7 +8,7 @@ class News < ActiveRecord::Base
   attr_accessible :content, :title, :url, :user
 
   validates :title, :user_id,  :presence => true
-  validates :url, :uniqueness => true
+  validates :title, :url, :uniqueness => true
 
   before_create :init
 
