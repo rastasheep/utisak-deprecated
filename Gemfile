@@ -15,9 +15,6 @@ gem 'ember-rails'              # ember framework
 gem 'ember-auth-rails'
   gem 'ember-auth-source'
 
-gem "jquery-rails"
-gem "coffee-rails"
-gem "less-rails"
 
 gem "twitter-bootstrap-rails"
 
@@ -26,10 +23,14 @@ gem "dynamic_form"
 gem "heroku"
 gem "ancestry"
 
-gem 'turbolinks'
+gem "jquery-rails"
+gem "turbolinks"
 
 group :assets do
   gem "therubyracer", :platform => :ruby
+  gem "sass-rails"
+  gem "coffee-rails"
+  gem "less-rails"
 end
 
 group :test, :development do

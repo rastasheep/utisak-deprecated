@@ -1,0 +1,45 @@
+.content .post-content{
+  background-color: $smoke;
+  min-height: 4em;
+  overflow: hidden;
+  header{
+    padding: 10px 15px;
+    h1,
+    p{
+      margin: 0;
+      padding: 0;
+    }
+    h1 a{
+      display: block;
+      .link-text{
+        font-size: 13px;
+      }
+    }
+    .metadata{
+      font-size: 13px;
+      color: $dark-gray;
+      a.external-link{
+        color: $dark-gray;
+        text-decoration: none;
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-left: 16px;
+        background: transparent url(external-icon.png) no-repeat 0 50%;
+        background-size: 12px 10px;
+        &:hover{
+          color: $light-asphalt;
+        }
+      }
+    }
+    h1{
+      font-size: 17px;
+      line-height: 1.2em;
+      a{
+        color: $dark-gray;
+        text-decoration: none;
+      }
+    }
+  }
+}

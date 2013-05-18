@@ -6,5 +6,5 @@
     </time>
   </p>
   <%= simple_format(comment.content) %>
-  <%= link_to "Dodaj komentar", new_news_comment_path(@news, :parent_id => comment), :class => "comments-toggle" %>
+  <%= link_to "Dodaj komentar", new_news_comment_path(@news, :parent_id => comment), :class => "reply" %>
 </li>
