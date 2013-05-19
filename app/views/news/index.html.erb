@@ -34,7 +34,7 @@
         <% end %>
 
           <%= link_to news.url, :class => "detail-disclosure" do %>
-            <div class="number"><%= index+1 %>.</div>
+            <div class="number"><%= calculate_idnex(index) %>.</div>
             <div class="story">
               <b><%= news.title %></b>
               <span class="metadata">
@@ -55,7 +55,9 @@
 
         </li>
       <% end %>
-      <li><a class="more-link">More…<span class="loader"></span></a></li>
+      <li>
+      <%= link_to_next_page @news, 'Load More', :class => "more-link" %>
+      </li>
     </ul>
   </section>
 </div>

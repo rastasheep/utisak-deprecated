@@ -313,6 +313,7 @@ DEPENDENCIES
   heroku
   inherited_resources
   jquery-rails
+  kaminari
   less-rails
   meta_search
   omniauth-facebook

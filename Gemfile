@@ -22,6 +22,7 @@ gem "meta_search"
 gem "dynamic_form"
 gem "heroku"
 gem "ancestry"
+gem "kaminari"
 
 gem "jquery-rails"
 gem "turbolinks"
