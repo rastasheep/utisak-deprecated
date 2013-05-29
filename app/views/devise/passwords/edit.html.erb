@@ -1,16 +1,35 @@
-<h2>Change your password</h2>
+<header class="main">
+  <%= link_to "#", :id=>"more-button", :class=>"header-button header-button-icon header-button-left" do %>
+    <button><i class="icon-more">More</i></button>
+  <% end %>
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
-  <%= devise_error_messages! %>
-  <%= f.hidden_field :reset_password_token %>
+  <%= render "news/dropdown" %>
 
-  <div><%= f.label :password, "New password" %><br />
-  <%= f.password_field :password, :autofocus => true %></div>
+  <h1>Zaboravljena sifra ?</h1>
 
-  <div><%= f.label :password_confirmation, "Confirm new password" %><br />
-  <%= f.password_field :password_confirmation %></div>
+  <%= link_to news_index_path, :class => "header-button header-button-icon header-button-right" do %>
+    <button><i class="icon-home">Home</i></button>
+  <% end %>
+</header>
 
-  <div><%= f.submit "Change my password" %></div>
-<% end %>
+<div class="scroll">
+  <section>
+    <ul class="tableview tableview-links" id="hwlist">
 
-<%= render "devise/shared/links" %>
+      <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+        <%= devise_error_messages! %>
+        <%= f.hidden_field :reset_password_token %>
+
+        <div><%= f.label :password, "New password" %><br />
+          <%= f.password_field :password, :autofocus => true %></div>
+
+        <div><%= f.label :password_confirmation, "Confirm new password" %><br />
+          <%= f.password_field :password_confirmation %></div>
+
+        <div><%= f.submit "Change my password" %></div>
+      <% end %>
+
+      <%= render "devise/shared/links" %>
+    </ul>
+  </section>
+</div>

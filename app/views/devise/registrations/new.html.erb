@@ -1,18 +1,49 @@
-<h2>Sign up</h2>
+<header class="main">
+  <%= link_to "#", :id=>"more-button", :class=>"header-button header-button-icon header-button-left" do %>
+    <button><i class="icon-more">More</i></button>
+  <% end %>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <%= render "news/dropdown" %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+  <h1>Uclani se</h1>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+  <%= link_to news_index_path, :class => "header-button header-button-icon header-button-right" do %>
+    <button><i class="icon-home">Home</i></button>
+  <% end %>
+</header>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+<div class="scroll">
+  <section>
+    <ul class="tableview tableview-links" id="hwlist">
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => "uniForm"}) do |f| %>
+        <%= devise_error_messages! %>
 
-<%= render "devise/shared/links" %>
+        <fieldset class="inlineLabels">
+
+          <div class="ctrlHolder">
+            <%= f.label :email, "Email adress"%>
+            <%= f.email_field :email, :size => "35", :class => "textInput" %>
+          </div>
+
+          <div class="ctrlHolder">
+            <%= f.label :password %>
+            <%= f.password_field :password, :size => "35", :class => "textInput" %>
+          </div>
+
+          <div class="ctrlHolder">
+            <%= f.label :password_confirmation, "Re-enter password" %>
+            <%= f.password_field :password_confirmation, :size => "35", :class => "textInput" %>
+          </div>
+
+          <div class="buttonHolder">
+            <%= f.submit "Sign up", :class => "primaryAction" %>
+          </div>
+
+        </fieldset>
+      <% end %>
+
+      <%= render "devise/shared/links" %>
+    </ul>
+  </section>
+</div>

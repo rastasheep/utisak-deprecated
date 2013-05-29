@@ -1,17 +1,48 @@
-<h2>Sign in</h2>
+<header class="main">
+  <%= link_to "#", :id=>"more-button", :class=>"header-button header-button-icon header-button-left" do %>
+    <button><i class="icon-more">More</i></button>
+  <% end %>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+  <%= render "news/dropdown" %>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+  <h1>Prijavi se</h1>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+  <%= link_to news_index_path, :class => "header-button header-button-icon header-button-right" do %>
+    <button><i class="icon-home">Home</i></button>
+  <% end %>
+</header>
 
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
+<div class="scroll">
+  <section>
+    <ul class="tableview tableview-links" id="hwlist">
 
-<%= render "devise/shared/links" %>
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => "uniForm"}) do |f| %>
+        <%= devise_error_messages! %>
+
+        <fieldset class="inlineLabels">
+
+          <div class="ctrlHolder">
+            <%= f.label :email, "Email address" %>
+            <%= f.email_field :email, :size => "35", :class => "textInput" %>
+          </div>
+
+          <div class="ctrlHolder">
+            <%= f.label :password %>
+            <%= f.password_field :password, :size => "35", :class => "textInput" %>
+            <p class="formHint">Forgotten your password? <%= link_to "Reset it", new_password_path(resource_name) %></p>
+          </div>
+
+          <div class="buttonHolder">
+              <% if devise_mapping.rememberable? -%>
+                <label for="user_remember_me" class="secondaryAction" ><%= f.check_box :remember_me %> Remember me</label>
+              <% end -%>
+            <%= f.submit "Sign in", :class => "primaryAction" %>
+          </div>
+
+        </fieldset>
+      <% end %>
+
+      <%= render "devise/shared/links" %>
+    </ul>
+  </section>
+</div>

@@ -1,11 +1,15 @@
-<%= form_for [@news, @comment], :html => { :class => "comment-form" } do |f| %>
+<%= form_for [@news, @comment], :html => { :class => "uniForm commentForm" } do |f| %>
   <%= f.error_messages %>
-  <%= f.hidden_field :parent_id %>
-  <p>
-    <%= f.label :content, "New Comment" %><br />
-    <%= f.text_area :content, :rows => 8 %>
-  </p>
-  <div class="form-actions">
-    <%= f.button "Dodaj komentar", :class => "content-button" %>
-  </div>
+
+  <fieldset class="">
+    <%= f.hidden_field :parent_id %>
+    <div class="ctrlHolder">
+      <%= f.label :content, "Poruka" %>
+      <%= f.text_area :content %>
+    </div>
+    <div class="buttonHolder">
+      <%= f.submit "Dodaj komentar", :class => "primaryAction" %>
+    </div>
+  </fieldset>
+
 <% end %>

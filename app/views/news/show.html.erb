@@ -7,10 +7,11 @@
 
     <section class="comments">
 
-    <% if user_signed_in? -%>
-      <%= render "comments/form" %>
-    <% else -%>
-    <% end  -%>
+      <% if user_signed_in? -%>
+        <%= render "comments/form" %>
+      <% else -%>
+        <p>Morate biti prijavljeni da bi ste komentarisali.</p>
+      <% end  -%>
 
       <ul>
         <%= nested_comments @comments.arrange(:order => :created_at) %>

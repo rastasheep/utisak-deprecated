@@ -1,0 +1,64 @@
+.uniForm { width: 440px; margin: auto; }
+
+.uniForm.commentForm { width: 100%; margin: auto; }
+
+.uniForm .ctrlHolder{ padding: 28px; border-bottom: 1px solid #efefef; }
+
+.uniForm .buttonHolder{
+  padding: 28px;
+  border-bottom: 1px solid #efefef;
+  text-align: right;
+}
+
+.uniForm .buttonHolder .primaryAction{ padding: 10px 22px; line-height: 1; border: 1px solid #ccc; font-size: 12px; font-weight: bold;
+  /* CSS3 */
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius:         4px;
+  -moz-border-radius:    4px;
+  -o-border-radius:      4px;
+  text-shadow: 1px 1px 0 #fff;
+}
+.uniForm .buttonHolder .primaryAction:focus,
+.uniForm .buttonHolder .primaryAction:hover{
+  background-color: transparent;
+}
+.uniForm .secondaryAction            { text-align: left; margin-top: 7px; }
+.uniForm a.secondaryAction           { color: #237fc6; font-weight: bold; }
+.uniForm button.secondaryAction      { background: transparent; border: none; color: #777; margin: 1.25em 0 0 0; padding: 0; }
+
+.uniForm label{ font-weight: bold; }
+
+.uniForm .inlineLabels label em,
+.uniForm .inlineLabels .label em{ font-style: normal; font-weight: bold; }
+.uniForm label small{ font-size: .75em; color: #777; }
+
+.uniForm .textInput,
+.uniForm textarea    { padding: 4px 2px; border: 1px solid #aaa; background: #fff; }
+.uniForm textarea    { height: 12em; }
+.uniForm.commentForm textarea{ width:99%;}
+
+.uniForm ul li label{ font-size: .85em; }
+
+/* Get rid of the 'glow' effect in WebKit, optional */
+.uniForm .ctrlHolder .textInput:focus,
+.uniForm .ctrlHolder textarea:focus{ outline: none; }
+
+.uniForm .formHint                    { font-size: .85em; color: #777; }
+.uniForm .inlineLabels .formHint      { padding-top: .5em; }
+.uniForm .ctrlHolder.focused .formHint{ color: #333; }
+
+/* Input actions */
+.inputActions { float: right; margin-top: .25em; font-size: .85em; line-height: 1; }
+.inputActions-remove{ margin-left: 1em; font-size: 1.5em; }
+
+/* Inline labels */
+
+.uniForm .inlineLabels select{ width: auto; }
+
+@media only screen and (max-width: 321px){
+  .uniForm {width:100%;}
+  .uniForm .inlineLabels .textInput, .uniForm .inlineLabels .fileUpload, .uniForm .inlineLabels .selectInput, .uniForm .inlineLabels select, .uniForm .inlineLabels textarea {
+    float: left;
+    width: 63%;
+  }
+}
