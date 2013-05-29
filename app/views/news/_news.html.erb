@@ -1,0 +1,35 @@
+<% @news.each_with_index do |news, index| %>
+  <li data-index="1" class="post-link">
+
+  <% if current_user and !current_user.can_vote_for?(news) %>
+    <%= link_to '#', :class => "detail-vote-button disabled" do %>
+      <span></span>
+    <% end %>
+  <% else %>
+    <%= link_to vote_news_path(news), :method => :post, :class => "detail-vote-button" do %>
+      <span></span>
+    <% end %>
+  <% end %>
+
+  <%= link_to news.url, :class => "detail-disclosure" do %>
+    <div class="number"><%= calculate_idnex(index) %>.</div>
+    <div class="story">
+      <b><%= news.title %></b>
+      <span class="metadata">
+        <span class="link-text"><%= news.domain %></span><br>
+        <span class="inline-block">
+          <%= news.points %> glasova, autor <%= news.user.email %>
+        </span>
+        <span class="inline-block">
+          <%= render_time news.created_at %> · <%= news.comments.length %> komentara
+        </span>
+      </span>
+    </div>
+  <% end %>
+
+  <%= link_to news_path(news), :class => "detail-disclosure-button" do %>
+    <span></span>
+  <% end %>
+
+  </li>
+<% end %>
