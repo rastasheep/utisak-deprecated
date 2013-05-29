@@ -74,6 +74,11 @@
   background-color: transparent;
   opacity: 0.65;
 }
+.tableview-links li a.disabled span {
+  transform:rotate(90deg);
+  -ms-transform:rotate(90deg); /* IE 9 */
+  -webkit-transform:rotate(90deg); /* Safari and Chrome */
+}
 
 .tableview-links li a.detail-disclosure-button{
   position: absolute;
