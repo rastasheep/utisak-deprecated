@@ -27,6 +27,11 @@
           </div>
 
           <div class="ctrlHolder">
+            <%= f.label :username, "Username"%>
+            <%= f.text_field :username, :size => "35", :class => "textInput" %>
+          </div>
+
+          <div class="ctrlHolder">
             <%= f.label :password %>
             <%= f.password_field :password, :size => "35", :class => "textInput" %>
           </div>

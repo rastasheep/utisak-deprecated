@@ -6,8 +6,8 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 User.create([
-  { email: 'foo@example.com', password: 'foopassword' },
-  { email: 'bar@example.com', password: 'barpassword' }
+  { username: 'foo', email: 'foo@example.com', password: 'foopassword' },
+  { username: 'bar', email: 'bar@example.com', password: 'barpassword' }
 ])
 News.create([
   { title: 'Profesorka priznala da je snimala seks sa svojim ucenicima', url: 'http://www.blic.rs/Vesti/Svet/377702/Profesorka-priznala-da-je-snimala-seks-sa-svojim-ucenicima', domain: 'blic.rs', points: 10},

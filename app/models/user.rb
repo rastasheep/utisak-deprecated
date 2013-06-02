@@ -10,12 +10,12 @@ class User < ActiveRecord::Base
   has_many :news
   has_many :news_votes
 
-  validates :email, presence: true
+  validates :email, :username, :presence => true
   validates_uniqueness_of :email
 
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :username, :password, :password_confirmation, :remember_me
 
   has_and_belongs_to_many :roles
 

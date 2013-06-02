@@ -12,8 +12,14 @@ describe User do
   it { should have_db_column(:current_sign_in_ip).of_type(:string) }
   it { should have_db_column(:last_sign_in_ip).of_type(:string) }
   it { should have_db_column(:authentication_token).of_type(:string) }
+  it { should have_db_column(:username).of_type(:string) }
 
   it { should have_and_belong_to_many(:roles) }
+
+  it { should validate_uniqueness_of(:email) }
+
+  it { should validate_presence_of(:email) }
+  it { should validate_presence_of(:username) }
 
   let(:user) { create(:user) }
 
