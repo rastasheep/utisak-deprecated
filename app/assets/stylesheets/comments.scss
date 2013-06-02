@@ -1,5 +1,14 @@
 .comments{
   font-size: 13px;
+  .info {
+    font-size: 17px;
+    line-height: 1.2em;
+    padding: 10px 15px;
+    color: $dark-gray;
+    font-weight: bold;
+    border-bottom: 1px solid $light-gray-rgba;
+    text-align: center;
+  }
   ul{
     margin: 0;
     padding: 0;
@@ -8,7 +17,7 @@
   }
   ul li{
     padding: 15px;
-    border-bottom: 1px solid #E0E0E0;
+    border-bottom: 1px solid $light-gray-rgba;
   }
   ul li:last-child{
     border-bottom: 0;

@@ -10,7 +10,8 @@
       <% if user_signed_in? -%>
         <%= render "comments/form" %>
       <% else -%>
-        <p>Morate biti prijavljeni da bi ste komentarisali.</p>
+        <p class="info">Morate biti <%= link_to "prijavljeni", new_user_session_path, :class => "link-text" %> da bi ste komentarisali.</p>
+
       <% end  -%>
 
       <ul>
