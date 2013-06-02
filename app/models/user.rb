@@ -13,11 +13,21 @@ class User < ActiveRecord::Base
   validates :email, :username, :presence => true
   validates_uniqueness_of :email
 
+  attr_accessor :login
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :username, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :username, :password, :password_confirmation, :remember_me, :login
 
   has_and_belongs_to_many :roles
+
+  def self.find_first_by_auth_conditions(warden_conditions)
+    conditions = warden_conditions.dup
+    if login = conditions.delete(:login)
+      where(conditions).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
+    else
+      where(conditions).first
+    end
+  end
 
   def role?(role)
     return !!self.roles.find_by_name(role.to_s)
