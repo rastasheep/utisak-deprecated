@@ -46,17 +46,16 @@ button{
 
 .flash {
   position: absolute;
-  top: 12px;
   left: 12px;
   font-weight: bold;
   text-align: center;
   cursor: pointer;
   z-index: 99;
+  width: 300px;
 
   p {
     margin: 0;
     padding: 7px 28px;
-    display: inline;
     border-style: solid;
     color: #fff;
     border-radius: 3px;
