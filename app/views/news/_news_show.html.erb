@@ -1,4 +1,4 @@
-<div class="post-content">
+<div class="news-show">
   <header>
 
     <h1>
@@ -14,4 +14,11 @@
     </p>
 
   </header>
+
+  <%if @news.content.present? %>
+    <p class="news-content">
+    <%= @news.content %>
+    </p>
+  <% end %>
+
 </div>

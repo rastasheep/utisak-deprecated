@@ -9,7 +9,7 @@ module ApplicationHelper
 
   def render_time(time)
     if time.present?
-      l(time, :format => :short)
+      l(time, :format => :widget)
     else
       "-"
     end

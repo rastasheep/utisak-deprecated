@@ -1,4 +1,5 @@
-.content .post-content{
+.news-show{
+  color: $dark-gray;
   background-color: $smoke;
   min-height: 4em;
   overflow: hidden;
@@ -11,13 +12,8 @@
     }
     h1 a{
       display: block;
-      .link-text{
-        font-size: 13px;
-      }
     }
     .metadata{
-      font-size: 13px;
-      color: $dark-gray;
       a.external-link{
         color: $dark-gray;
         text-decoration: none;
@@ -41,5 +37,8 @@
         text-decoration: none;
       }
     }
+  }
+  .news-content{
+    padding: 10px 15px;
   }
 }
