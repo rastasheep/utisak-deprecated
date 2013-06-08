@@ -220,6 +220,7 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
+    redcarpet (2.3.0)
     ref (1.0.4)
     responders (0.9.3)
       railties (~> 3.1)
@@ -319,6 +320,7 @@ DEPENDENCIES
   omniauth-facebook
   pg
   rails
+  redcarpet
   rspec-rails
   sass-rails
   selenium-webdriver

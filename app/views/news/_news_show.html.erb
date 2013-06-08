@@ -16,9 +16,9 @@
   </header>
 
   <%if @news.content.present? %>
-    <p class="news-content">
-    <%= @news.content %>
-    </p>
+    <div class="news-content">
+      <%= markdown @news.content %>
+    </div>
   <% end %>
 
 </div>

@@ -26,6 +26,7 @@ gem "kaminari"
 
 gem "jquery-rails"
 gem "turbolinks"
+gem "redcarpet"
 
 group :assets do
   gem "therubyracer", :platform => :ruby
