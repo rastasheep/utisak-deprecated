@@ -30,9 +30,10 @@
     padding: 0;
     margin: 0;
   }
-  p.metadata b{
+  p.metadata b a{
     float: left;
     color: $dark-red;
+    text-decoration: none;
   }
   p.metadata time a{
     display: block;

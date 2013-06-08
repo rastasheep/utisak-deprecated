@@ -8,8 +8,13 @@
     </h1>
 
     <p class="metadata">
-      <span class="inline-block"><%= @news.points %> glasova, autor <%= @news.user.username %></span>
-      <span class="inline-block"><%= render_time @news.created_at %> · <%= @news.comments.length %> komentara</span>
+    <span class="inline-block">
+      <%= @news.points %> glasova,
+      autor <%= link_to @news.user.username, user_path(@news.user), :class => "link-text" %>
+    </span>
+    <span class="inline-block"><%= render_time @news.created_at %> ·
+      <%= @news.comments.length %> komentara
+    </span>
       <%= link_to @news.url, @news.url, :class => "external-link" %>
     </p>
 

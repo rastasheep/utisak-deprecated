@@ -1,6 +1,6 @@
 <li>
   <p class="metadata">
-    <b><%= comment.user.username %></b>
+    <b><%= link_to comment.user.username, user_path(comment.user) %></b>
     <time>
       <%= link_to render_time(comment.created_at), news_comment_path(@news, comment) %>
     </time>
