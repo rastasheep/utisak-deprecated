@@ -8,7 +8,9 @@
         <%= nested_comments(@comment.path.arrange) %>
       </ul>
 
-      <%= link_to "Back", news_path(@news) %>
+      <div class="back">
+        <%= link_to "← Povratak na utisak", news_path(@news)  %>
+      </div>
 
     </section>
 
