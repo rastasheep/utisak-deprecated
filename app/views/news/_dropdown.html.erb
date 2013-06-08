@@ -17,9 +17,9 @@
     </dd>
     <dd>
     <dd>
-      <a href="#" rel="external">
+      <%= link_to about_path do %>
         <strong class="dropdown-item-name">O utisku</strong>
-      </a>
+      <% end %>
     </dd>
     <% if user_signed_in? %>
       <dd>

@@ -3,10 +3,11 @@ Utisak::Application.routes.draw do
   devise_for :users
 
   resources :users, :only => [:show]
-  #
-  # get "pages/index"
 
-  match "/admin" => "admin/base#index", :as => "admin"
+  get "/admin" => "admin/base#index", :as => "admin"
+  get "/about" => "pages#about"
+  get "/api" => "pages#api"
+# match '/beta' => 'pages#index'
 
   namespace "admin" do
     resources :users
@@ -33,6 +34,5 @@ Utisak::Application.routes.draw do
     resources :comments
   end
 
-  get '/beta' => 'pages#index'
 
 end

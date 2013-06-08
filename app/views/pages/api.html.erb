@@ -1,0 +1,21 @@
+<header class="main">
+  <%= link_to "#", :id=>"more-button", :class=>"header-button header-button-icon header-button-left" do %>
+    <button><i class="icon-more">More</i></button>
+  <% end %>
+
+  <%= render "news/dropdown" %>
+
+  <h1>Utisak api</h1>
+
+  <%= link_to news_index_path, :class => "header-button header-button-icon header-button-right" do %>
+    <button><i class="icon-home">Home</i></button>
+  <% end %>
+</header>
+
+<div class="scroll">
+  <section>
+    <ul class="tableview tableview-links" id="hwlist">
+      <h1>Api strana!</h1>
+    </ul>
+  </section>
+</div>
