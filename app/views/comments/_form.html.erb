@@ -1,11 +1,12 @@
 <%= form_for [@news, @comment], :html => { :class => "uniForm commentForm" } do |f| %>
   <%= f.error_messages %>
 
-  <fieldset class="">
+  <fieldset>
     <%= f.hidden_field :parent_id %>
     <div class="ctrlHolder">
       <%= f.label :content, "Poruka" %>
       <%= f.text_area :content %>
+      <%= markdown_hint("comment-hint") %>
     </div>
     <div class="buttonHolder">
       <%= f.submit "Dodaj komentar", :class => "primaryAction" %>

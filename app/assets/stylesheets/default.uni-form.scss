@@ -43,6 +43,8 @@
 .uniForm .ctrlHolder textarea:focus{ outline: none; }
 
 .uniForm .formHint                    { font-size: .85em; color: #777; }
+.uniForm .formHint a, .uniForm .fromHint a:visited { text-decoration:none; color:$light-asphalt;}
+
 .uniForm .inlineLabels .formHint      { padding-top: .5em; }
 .uniForm .ctrlHolder.focused .formHint{ color: #333; }
 

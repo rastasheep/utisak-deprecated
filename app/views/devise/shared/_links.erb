@@ -1,15 +1,15 @@
 <div class="footer" >
   <%- if controller_name != 'sessions' %>
-    <%= link_to "Sign in", new_session_path(resource_name) %> |
+    <%= link_to "Prijavi se", new_session_path(resource_name) %> |
   <% end -%>
 
   <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-    <%= link_to "Sign up", new_registration_path(resource_name) %> |
+    <%= link_to "Uclani se", new_registration_path(resource_name) %> |
   <% end -%>
 
   <%- if devise_mapping.omniauthable? %>
     <%- resource_class.omniauth_providers.each do |provider| %>
-      <%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider) %>
+      <%= link_to "Prijava pomocu #{provider.to_s.titleize}a", omniauth_authorize_path(resource_name, provider) %>
     <% end -%>
   <% end -%>
 </div>

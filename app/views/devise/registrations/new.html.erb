@@ -22,27 +22,27 @@
         <fieldset class="inlineLabels">
 
           <div class="ctrlHolder">
-            <%= f.label :email, "Email adress"%>
+            <%= f.label :email, "Email adresa"%>
             <%= f.email_field :email, :size => "35", :class => "textInput" %>
           </div>
 
           <div class="ctrlHolder">
-            <%= f.label :username, "Username"%>
+            <%= f.label :username, "Korisnicko ime"%>
             <%= f.text_field :username, :size => "35", :class => "textInput" %>
           </div>
 
           <div class="ctrlHolder">
-            <%= f.label :password %>
+            <%= f.label :password , "Sifra"%>
             <%= f.password_field :password, :size => "35", :class => "textInput" %>
           </div>
 
           <div class="ctrlHolder">
-            <%= f.label :password_confirmation, "Re-enter password" %>
+            <%= f.label :password_confirmation, "Ponovite sifru" %>
             <%= f.password_field :password_confirmation, :size => "35", :class => "textInput" %>
           </div>
 
           <div class="buttonHolder">
-            <%= f.submit "Sign up", :class => "primaryAction" %>
+            <%= f.submit "Uclani se", :class => "primaryAction" %>
           </div>
 
         </fieldset>

@@ -59,4 +59,15 @@ module ApplicationHelper
     "https://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}&d=mm"
   end
 
+  def markdown_hint(klass = "")
+    #  tag = content_tag :p, :class => "formHint #{klass}" do
+    #  "Za formatiranje teksta mozete koristiti #{link_to "markdown", "#"} sintaksu."
+    #  end
+    hint = "<p class='formHint #{klass}'>"
+    hint << "Za formatiranje teksta mozete koristiti "
+    hint << "<a href='#'>markdown</a> "
+    hint << "sintaksu. </p>"
+    hint.html_safe
+  end
+
 end

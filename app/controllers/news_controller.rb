@@ -36,9 +36,9 @@ class NewsController < ApplicationController
   def vote
     vote = current_user.news_votes.new(news_id: params[:id])
     if vote.save
-      redirect_to news_index_url, notice: "Thank you for voting."
+      redirect_to news_index_url, notice: "Hvala sto ste glasali!"
     else
-      redirect_to news_index_url, :alert => "Unable to vote, perhaps you already did."
+      redirect_to news_index_url, :alert => "Glas nije poslat, verovatno ste vec glasali"
     end
   end
 

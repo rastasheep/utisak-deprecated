@@ -16,6 +16,9 @@
         <p>Clan od <%= l(@user.created_at, :format => :short_date) %></p>
       </li>
       <li>
+        <p>Utisaka: <%=  @user.news.count %></p>
+      </li>
+      <li>
         <p>Karma: <%=  @user.total_votes %></p>
       </li>
       <li>

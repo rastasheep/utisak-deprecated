@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
     comment.user = current_user
     comment.save!
 
-    redirect_to @news, :notice => "Comment added"
+    redirect_to @news, :notice => "Komentar dodat!"
   end
 
   def show

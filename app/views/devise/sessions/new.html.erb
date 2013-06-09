@@ -22,21 +22,21 @@
         <fieldset class="inlineLabels">
 
           <div class="ctrlHolder">
-            <%= f.label :login, "Email or username" %>
+            <%= f.label :login, "Email ili korisnicko ime" %>
             <%= f.text_field :login, :size => "35", :class => "textInput" %>
           </div>
 
           <div class="ctrlHolder">
-            <%= f.label :password %>
+            <%= f.label :password, "Sifra" %>
             <%= f.password_field :password, :size => "35", :class => "textInput" %>
-            <p class="formHint">Forgotten your password? <%= link_to "Reset it", new_password_path(resource_name) %></p>
+            <p class="formHint">Zaboravljna sifra? <%= link_to "zatrazi novu.", new_password_path(resource_name) %></p>
           </div>
 
           <div class="buttonHolder">
               <% if devise_mapping.rememberable? -%>
-                <label for="user_remember_me" class="secondaryAction" ><%= f.check_box :remember_me %> Remember me</label>
+                <label for="user_remember_me" class="secondaryAction" ><%= f.check_box :remember_me %> Zapamti me</label>
               <% end -%>
-            <%= f.submit "Sign in", :class => "primaryAction" %>
+            <%= f.submit "Prijavi se", :class => "primaryAction" %>
           </div>
 
         </fieldset>
