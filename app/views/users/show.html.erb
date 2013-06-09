@@ -1,10 +1,43 @@
 <%= render "users_header" %>
 
-<div class="scroll">
+<div class="scroll striped">
   <section>
-    <ul class="tableview tableview-links" id="hwlist">
+  <div class="grouped-tableview cf">
+    <span id="y-icon"></span>
+    <%= image_tag(avatar_url(@user.email, :size => "120"), :class => "avatar") %>
+    <div id="app-desc">
+      <%= content_tag(:h1, @user.username) %>
+      <%= content_tag(:p, markdown(@user.about)) %>
+    </div>
+  </div>
 
-
+    <ul class="grouped-tableview grouped-tableview-links">
+      <li>
+        <p>Clan od <%= l(@user.created_at, :format => :short_date) %></p>
+      </li>
+      <li>
+        <p>Karma: <%=  @user.total_votes %></p>
+      </li>
+      <li>
+        <p>Prosek: <%= @user.avg_votes %></p>
+      </li>
+      <% if @user == current_user %>
+        <li>
+          <%= link_to "Iznemni profil", edit_user_registration_path, :class => "edit" %>
+        </li>
+      <% end  %>
     </ul>
+
+    <% if @user.news.present? %>
+      <p class="user-info">Korisnikovi utisci:</p>
+
+      <ul class="grouped-tableview grouped-tableview-links">
+        <% @user.news.reverse.each do |news| %>
+          <li>
+          <%= link_to news.title, news_path(news) %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
   </section>
 </div>

@@ -3,6 +3,6 @@ sr:
    formats:
      short: %d %b %H:%M
      long_date: %A, %b %d %Y
-     short_date: %B %d, %Y
+     short_date: %d. %m. %Y
      date_with_time: %A, %b %d %Y at %H:%M
      widget: %d.%m. u %H:%M

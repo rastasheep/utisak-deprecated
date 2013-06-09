@@ -13,6 +13,7 @@ describe User do
   it { should have_db_column(:last_sign_in_ip).of_type(:string) }
   it { should have_db_column(:authentication_token).of_type(:string) }
   it { should have_db_column(:username).of_type(:string) }
+  it { should have_db_column(:about).of_type(:text) }
 
   it { should have_and_belong_to_many(:roles) }
 

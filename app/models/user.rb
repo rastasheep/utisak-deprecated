@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   attr_accessor :login
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :username, :password, :password_confirmation, :remember_me, :login
+  attr_accessible :email, :username, :password, :password_confirmation, :remember_me, :login, :about
 
   has_and_belongs_to_many :roles
 
@@ -47,6 +47,14 @@ class User < ActiveRecord::Base
 
   def total_votes
     NewsVote.joins(:news).where(news: {user_id: self.id}).count
+  end
+
+  def avg_votes
+    if news.count > 0
+      total_votes / self.news.count
+    else
+      "-"
+    end
   end
 
   def can_vote_for?(news)

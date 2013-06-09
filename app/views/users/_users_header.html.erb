@@ -5,7 +5,7 @@
 
   <%= render "news/dropdown" %>
 
-  <h1><%= @user.email %></h1>
+  <h1>Korisnik: <%= @user.username %></h1>
 
   <%= link_to news_index_path, :class => "header-button header-button-icon header-button-right" do %>
     <button><i class="icon-home">Home</i></button>

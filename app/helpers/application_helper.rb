@@ -45,10 +45,18 @@ module ApplicationHelper
   end
 
   def markdown(text)
+    return unless text
+
     options = [:autolink => true, :no_intra_emphasis => true, :filter_html => true, :hard_wrap => true]
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, *options)
 
     markdown.render(text).html_safe
+  end
+
+  def avatar_url(author_email, options = {})
+    gravatar_id = Digest::MD5.hexdigest(author_email.downcase)
+    size = options[:size].present? ? options[:size] : "48"
+    "https://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}&d=mm"
   end
 
 end
