@@ -9,6 +9,9 @@
 .grouped-tableview + .grouped-tableview{
   margin-top: 0;
 }
+.grouped-tableview.cf{
+  text-align: center;
+}
 .grouped-tableview p{
   margin: 0 0 1em;
 }

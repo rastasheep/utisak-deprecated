@@ -13,4 +13,13 @@
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
   }
+  .content{
+    min-height: 85vh;
+  }
+  .grouped-tableview.cf{
+    text-align: left;
+  }
+  .avatar {
+    float: left;
+  }
 }

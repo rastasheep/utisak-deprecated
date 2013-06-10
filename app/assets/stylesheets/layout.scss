@@ -145,7 +145,6 @@ h6 { font-size: 11.9px; }
   position: relative;
   margin: 0 auto;
   padding-bottom: 1px;
-  overflow: hidden;
   &.hidden{
     display: none;
   }
@@ -310,6 +309,4 @@ header.main h1{
 }
 
 .content .scroll{
-  overflow: hidden;
-  min-height: 85vh;
 }
