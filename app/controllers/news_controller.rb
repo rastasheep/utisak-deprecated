@@ -20,11 +20,9 @@ class NewsController < ApplicationController
   def create
     @news = current_user.news.build params[:news]
     if @news.save
-      flash[:notice] = 'Uspeno dodat utisak'
-      redirect_to news_index_path
+      redirect_to news_index_path, :notice => t(:'news.added')
     else
-      flash[:allert] = 'Doslo je do greske! Popunite obavezna polja'
-      render :new
+      render :new, :alert => t(:'news.failed')
     end
   end
 
@@ -36,9 +34,9 @@ class NewsController < ApplicationController
   def vote
     vote = current_user.news_votes.new(news_id: params[:id])
     if vote.save
-      redirect_to news_index_url, notice: "Hvala sto ste glasali!"
+      redirect_to news_index_url, notice: t(:'news.vote.added')
     else
-      redirect_to news_index_url, :alert => "Glas nije poslat, verovatno ste vec glasali"
+      redirect_to news_index_url, :alert => t(:'news.vote.failed')
     end
   end
 

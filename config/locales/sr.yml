@@ -1,8 +1,41 @@
 sr:
- time:
-   formats:
-     short: %d %b %H:%M
-     long_date: %A, %b %d %Y
-     short_date: %d. %m. %Y
-     date_with_time: %A, %b %d %Y at %H:%M
-     widget: %d.%m. u %H:%M
+  time:
+    formats:
+      short: %d %b %H:%M
+      long_date: %A, %b %d %Y
+      short_date: %d. %m. %Y
+      date_with_time: %A, %b %d %Y at %H:%M
+      widget: %d.%m. u %H:%M
+  activerecord:
+    errors:
+      template:
+        body: ! 'Proverite sledeća polja:'
+        header:
+          one: ! 'Došlo je do greške.'
+          few: ! 'Došlo je do grešaka.'
+          many: ! 'Došlo je do grešaka.'
+          other: ! 'Došlo je do grešaka.'
+      models:
+        news:
+          attributes:
+            title:
+              blank: 'prazan.'
+            url:
+              taken: 'je već dodat.'
+              blank: 'prazan.'
+      messages:
+        record_invalid: 'prazno'
+    attributes:
+      news:
+        title: 'Naslov'
+        url: 'Link'
+  news:
+    added: 'Uspešno dodat utisak'
+    failed: 'Došlo je do greške! Popunite obavezna polja'
+    vote:
+      added: 'Hvala što ste glasali!'
+      failed: 'Glas nije poslat, verovatno ste već glasali'
+comments:
+  added: 'Komentar uspešno dodat'
+  failed: 'Došlo je do greške! Popunite obavezna polja'
+

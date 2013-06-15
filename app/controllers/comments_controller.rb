@@ -9,9 +9,11 @@ class CommentsController < ApplicationController
   def create
     comment = @news.comments.build(params[:comment])
     comment.user = current_user
-    comment.save!
-
-    redirect_to @news, :notice => "Komentar dodat!"
+    if comment.save
+      redirect_to news_index_path, :notice => t(:'comments.added')
+    else
+      redirect_to news_path(@news), :alert =>  t(:'comments.failed')
+    end
   end
 
   def show
