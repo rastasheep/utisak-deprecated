@@ -65,8 +65,8 @@ module ApplicationHelper
     #  end
     hint = "<p class='formHint #{klass}'>"
     hint << "Za formatiranje teksta mozete koristiti "
-    hint << "<a href='#'>markdown</a> "
-    hint << "sintaksu. </p>"
+    hint << link_to("markdown", markdown_path).html_safe
+    hint << " sintaksu. </p>"
     hint.html_safe
   end
 

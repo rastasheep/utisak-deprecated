@@ -19,4 +19,18 @@ describe News do
 
     it { should belong_to :user }
     it { should have_many(:comments).dependent(:destroy) }
+
+
+    describe "#vote" do
+      before do
+        @news = FactoryGirl.create(:news)
+      end
+
+      it "increse points by one" do
+        @news.should_receive(:update_attributes).with(:points => @news.points + 1)
+        @news.vote!
+      end
+
+    end
+
 end

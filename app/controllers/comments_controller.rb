@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
     comment = @news.comments.build(params[:comment])
     comment.user = current_user
     if comment.save
-      redirect_to news_index_path, :notice => t(:'comments.added')
+      redirect_to news_path(@news), :notice => t(:'comments.added')
     else
       redirect_to news_path(@news), :alert =>  t(:'comments.failed')
     end

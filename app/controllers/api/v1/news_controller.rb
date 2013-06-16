@@ -6,11 +6,13 @@ class Api::V1::NewsController < Api::V1::BaseController
 
     return missing_params unless params[:title]
 
-    @news = News.create!(params)
-    @news.user = current_user
-    @news.save!
+    @news = current_user.news.build params[:news]
+    if @news.save
+      render :json => @news
+    else
+      render :new, :alert => t(:'news.failed')
+    end
 
-    render :json => @news
   end
 
   def vote
@@ -27,7 +29,7 @@ class Api::V1::NewsController < Api::V1::BaseController
   end
 
   def find_news
-    @news = News.find(params[:id])
+    @news = News.find_by_id(params[:id])
 
     unless @news
       render :text => "Not Found", :status => 404 and return

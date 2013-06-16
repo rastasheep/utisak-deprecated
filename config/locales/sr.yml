@@ -20,22 +20,35 @@ sr:
           attributes:
             title:
               blank: 'prazan.'
+              taken: 'već postoji.'
             url:
               taken: 'je već dodat.'
-              blank: 'prazan.'
+              blank: 'mora biti prisutan.'
+              invalid: 'je pogrešnog formata.'
+        user:
+          attributes:
+            password:
+              confirmation: 'Unete šifre se ne podudaraju'
+              too_short: 'Uneta šifra je prekratka'
+            current_password:
+              blank: 'Morate uneti šifru kako bi ste izmenili nalog'
+
       messages:
         record_invalid: 'prazno'
     attributes:
       news:
         title: 'Naslov'
         url: 'Link'
+      user:
+        password: ''
+        current_password: ''
   news:
     added: 'Uspešno dodat utisak'
     failed: 'Došlo je do greške! Popunite obavezna polja'
     vote:
       added: 'Hvala što ste glasali!'
       failed: 'Glas nije poslat, verovatno ste već glasali'
-comments:
-  added: 'Komentar uspešno dodat'
-  failed: 'Došlo je do greške! Popunite obavezna polja'
+  comments:
+    added: 'Komentar uspešno dodat'
+    failed: 'Došlo je do greške! Popunite obavezna polja'
 

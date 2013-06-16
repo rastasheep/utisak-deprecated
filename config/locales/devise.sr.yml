@@ -6,9 +6,10 @@ sr:
       already_confirmed: "je već potvrđeno, pokušаjte dа se prijаvite"
       not_locked: "nije zаključаno"
       not_saved:
-        one: "1 greškа sprečаvа snimаnje %{resource}:"
-        few: "%{count} greške sprečаvаju snimаnje %{resource}:"
-        other: "%{count} grešаkа sprečаvаju snimаnje %{resource}:"
+        one: ! 'Došlo je do greške.'
+        few: ! 'Došlo je do grešaka.'
+        many: ! 'Došlo je do grešaka.'
+        other: ! 'Došlo je do grešaka.'
 
   devise:
     failure:

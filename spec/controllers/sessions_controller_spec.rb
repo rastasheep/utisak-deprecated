@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe SessionsController do
+  before { pending }
+
   let(:user) { FactoryGirl.create(:user) }
 
   before do
@@ -51,7 +53,6 @@ describe SessionsController do
 
           it { should include 'auth_token' }
           it { should include 'user_id' }
-          debugger
           it { should include 'remember_token' }
         end
 

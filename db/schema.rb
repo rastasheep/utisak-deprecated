@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20130608181417) do
     t.string   "title"
     t.string   "url"
     t.string   "domain"
+    t.integer  "points"
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

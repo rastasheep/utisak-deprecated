@@ -3,8 +3,7 @@ class NewsController < ApplicationController
   before_filter :find_news, :except => [:index, :newest, :new, :create]
 
   def index
-    news = News.all.sort_by(&:hotness).reverse
-    @news = Kaminari.paginate_array(news).page(params[:page])
+    @news = Kaminari.paginate_array(News.hotness).page(params[:page])
   end
 
   def newest
@@ -33,7 +32,8 @@ class NewsController < ApplicationController
 
   def vote
     vote = current_user.news_votes.new(news_id: params[:id])
-    if vote.save
+    if vote.save!
+      @news.vote!
       redirect_to news_index_url, notice: t(:'news.vote.added')
     else
       redirect_to news_index_url, :alert => t(:'news.vote.failed')

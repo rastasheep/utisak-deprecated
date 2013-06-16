@@ -7,7 +7,7 @@ Utisak::Application.routes.draw do
   get "/admin" => "admin/base#index", :as => "admin"
   get "/about" => "pages#about"
   get "/api" => "pages#api"
-# match '/beta' => 'pages#index'
+  get "/markdown" => "pages#markdown"
 
   namespace "admin" do
     resources :users

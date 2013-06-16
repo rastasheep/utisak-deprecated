@@ -15,7 +15,7 @@ describe Api::V1::NewsController do
     end
 
     it "renders news as JSON" do
-      response.body.should include("My first news.")
+      response.body.should include("My first news!")
     end
 
   end
@@ -48,7 +48,7 @@ describe Api::V1::NewsController do
 
     context "with auth token" do
 
-      before { post :create, title: 'New news', url: 'http://yahoo.com', domain: 'yahoo.com', auth_token: user.authentication_token }
+      before { post :create, title: 'New news', url: 'http://yahoo.com', auth_token: user.authentication_token }
 
       it "returns http 200" do
         response.response_code.should == 200

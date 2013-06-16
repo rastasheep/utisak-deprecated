@@ -6,4 +6,7 @@ class PagesController < ApplicationController
   def api
   end
 
+  def markdown
+  end
+
 end
