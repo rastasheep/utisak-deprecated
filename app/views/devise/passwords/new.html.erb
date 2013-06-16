@@ -1,37 +1,25 @@
-<header class="main">
-  <%= link_to "#", :id=>"more-button", :class=>"header-button header-button-icon header-button-left" do %>
-    <button><i class="icon-more">More</i></button>
-  <% end %>
-
-  <%= render "news/dropdown" %>
-
-  <h1>Zaboravljena sifra ?</h1>
-
-  <%= link_to news_index_path, :class => "header-button header-button-icon header-button-right" do %>
-    <button><i class="icon-home">Home</i></button>
-  <% end %>
-</header>
+<%= render "layouts/shared/header", :title => "Zaboravljena šifra", :action => "home" %>
 
 <div class="scroll">
   <section>
-  <ul class="tableview tableview-links" id="hwlist">
+    <ul class="tableview tableview-links" id="hwlist">
 
-    <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:class => "uniForm", :method => :post }) do |f| %>
-      <%= devise_error_messages! %>
+      <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:class => "uniForm", :method => :post }) do |f| %>
+        <%= devise_error_messages! %>
 
-      <fieldset class="inlineLabels">
-        <div class="ctrlHolder">
-          <%= f.label :login, "Email ili korisnicko ime" %>
-          <%= f.text_field :login, :size => "35", :class => "textInput" %>
-        </div>
+        <fieldset class="inlineLabels">
+          <div class="ctrlHolder">
+            <%= f.label :login, "Email ili korisničko ime" %>
+            <%= f.text_field :login, :size => "35", :class => "textInput" %>
+          </div>
 
-        <div class="buttonHolder">
-          <%= f.submit "Posalji mi dalje instrukcije", :class => "primaryAction"  %>
-        </div>
-      </fieldset>
-    <% end %>
+          <div class="buttonHolder">
+            <%= f.submit "Pošalji mi dalje instrukcije", :class => "primaryAction"  %>
+          </div>
+        </fieldset>
+      <% end %>
 
-    <%= render "devise/shared/links" %>
-  </ul>
+      <%= render "devise/shared/links" %>
+    </ul>
   </section>
 </div>

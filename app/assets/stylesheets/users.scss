@@ -12,4 +12,23 @@
   font-weight: bold;
   text-align: center;
 }
-
+.delete-acc{
+  text-align: center !important;
+  padding: 30px !important;
+  background-color: $smoke !important;
+}
+.delete-acc:hover{
+  color: $smoke !important;
+  background-color: $light-red !important;
+}
+.delete-acc .primaryAction{
+  color:$dark-red;
+  text-shadow: 1px 1px 0 #fff;
+  padding: 10px 22px;
+  line-height: 1;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+}

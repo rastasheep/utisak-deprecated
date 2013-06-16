@@ -1,16 +1,4 @@
-<header class="main">
-  <%= link_to "#", :id=>"more-button", :class=>"header-button header-button-icon header-button-left" do %>
-    <button><i class="icon-more">More</i></button>
-  <% end %>
-
-  <%= render "news/dropdown" %>
-
-  <h1>Prijavi se</h1>
-
-  <%= link_to news_index_path, :class => "header-button header-button-icon header-button-right" do %>
-    <button><i class="icon-home">Home</i></button>
-  <% end %>
-</header>
+<%= render "layouts/shared/header", :title => "Prijavi se", :action => "home" %>
 
 <div class="scroll">
   <section>
@@ -22,14 +10,14 @@
         <fieldset class="inlineLabels">
 
           <div class="ctrlHolder">
-            <%= f.label :login, "Email ili korisnicko ime" %>
+            <%= f.label :login, "Email ili korisničko ime" %>
             <%= f.text_field :login, :size => "35", :class => "textInput" %>
           </div>
 
           <div class="ctrlHolder">
             <%= f.label :password, "Sifra" %>
             <%= f.password_field :password, :size => "35", :class => "textInput" %>
-            <p class="formHint">Zaboravljna sifra? <%= link_to "zatrazi novu.", new_password_path(resource_name) %></p>
+            <p class="formHint">Zaboravljna šifra? <%= link_to "zatraži novu.", new_password_path(resource_name) %></p>
           </div>
 
           <div class="buttonHolder">

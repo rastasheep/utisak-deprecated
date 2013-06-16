@@ -16,11 +16,10 @@ class News < ActiveRecord::Base
   before_create :init
 
   scope :by_date, order("created_at DESC")
-  scope :by_hotness, order("(( SELECT COUNT(*) FROM news_votes WHERE news_votes.news_id = id) / (((EXTRACT(EPOCH FROM LOCALTIMESTAMP) - EXTRACT(EPOCH FROM created_at))/3600 + 2) ^ 1.8) )DESC")
 
   def self.hotness
     find_by_sql(%Q{(SELECT *,
-                    points / (((EXTRACT(EPOCH FROM LOCALTIMESTAMP) - EXTRACT(EPOCH FROM created_at))/3600 + 2) ^ 1.8)
+                    points - 1 / (((EXTRACT(EPOCH FROM LOCALTIMESTAMP) - EXTRACT(EPOCH FROM created_at))/3600 + 2) ^ 1.8)
                     AS score
                     FROM news
                     ORDER BY score DESC)})

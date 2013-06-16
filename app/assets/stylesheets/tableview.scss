@@ -8,7 +8,7 @@
   border-top: 1px solid $light-gray-rgba;
   padding: 10px;
 }
-.tableview li:first-child{
+.tableview li:first-child, .tableview li:last-child{
   border-top: 0;
 }
 .tableview-links li{

@@ -13,6 +13,7 @@ body{
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
+  color:$light-asphalt;
   margin: 0;
   padding: 0;
   position: relative;
@@ -35,6 +36,8 @@ pre, code{
 button{
   outline: 0;
 }
+input:not([type=submit]):not([type=file]), textarea { font-size:16px;}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
   font-family: inherit;
@@ -296,6 +299,17 @@ header.main h1{
   color: $light-asphalt;
   font-weight: bold;
   text-decoration: none;
+}
+
+.reply, .back a{
+  cursor: pointer;
+  font-weight: bold;
+  color: #666 !important;
+  -webkit-user-select: none;
+  text-decoration: none;
+}
+.back {
+  padding: 15px;
 }
 
 .footer {

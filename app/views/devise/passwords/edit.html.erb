@@ -1,35 +1,32 @@
-<header class="main">
-  <%= link_to "#", :id=>"more-button", :class=>"header-button header-button-icon header-button-left" do %>
-    <button><i class="icon-more">More</i></button>
-  <% end %>
-
-  <%= render "news/dropdown" %>
-
-  <h1>Zaboravljena sifra ?</h1>
-
-  <%= link_to news_index_path, :class => "header-button header-button-icon header-button-right" do %>
-    <button><i class="icon-home">Home</i></button>
-  <% end %>
-</header>
+<%= render "layouts/shared/header", :title => "Zaboravljena šifra", :action => "home" %>
 
 <div class="scroll">
   <section>
-    <ul class="tableview tableview-links" id="hwlist">
+  <ul class="tableview tableview-links" id="hwlist">
 
-      <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
-        <%= devise_error_messages! %>
-        <%= f.hidden_field :reset_password_token %>
+    <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:class => "uniForm",:method => :put }) do |f| %>
+      <%= devise_error_messages! %>
 
-        <div><%= f.label :password, "Nova sifra" %><br />
-          <%= f.password_field :password, :autofocus => true %></div>
+      <%= f.hidden_field :reset_password_token %>
 
-        <div><%= f.label :password_confirmation, "Ponovite novu sifru" %><br />
-          <%= f.password_field :password_confirmation %></div>
+      <fieldset class="inlineLabels">
+        <div class="ctrlHolder">
+          <%= f.label :password, "Nova sifra" %>
+          <%= f.password_field :password%>
+        </div>
 
-        <div><%= f.submit "Promeni sifru" %></div>
-      <% end %>
+        <div class="ctrlHolder">
+          <%= f.label :password_confirmation, "Ponovite novu šifru" %>
+          <%= f.password_field :password_confirmation %>
+        </div>
 
-      <%= render "devise/shared/links" %>
-    </ul>
+        <div class="buttonHolder">
+          <%= f.submit "Promeni šifru", :class => "primaryAction"  %>
+        </div>
+      </fieldset>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+  </ul>
   </section>
 </div>

@@ -1,4 +1,4 @@
-<%= render "news/news_header" %>
+<%= render "layouts/shared/header", :title => "Komentar korisnika: #{@comment.user.username}", :action => "home" %>
 
 <div class="scroll">
 
@@ -9,7 +9,7 @@
       </ul>
 
       <div class="back">
-        <%= link_to "← Povratak na utisak", news_path(@news)  %>
+        <%= link_to "← Povratak na utisak", news_path(@news) %>
       </div>
 
     </section>

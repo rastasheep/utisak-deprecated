@@ -53,21 +53,30 @@ module ApplicationHelper
     markdown.render(text).html_safe
   end
 
+  def markdown_hint(klass = "")
+    content_tag :p, :class => "formHint #{klass}" do
+      "Za formatiranje teksta mozete koristiti ".html_safe +
+      link_to("markdown", markdown_path) +
+      " sintaksu."
+    end
+  end
+
   def avatar_url(author_email, options = {})
     gravatar_id = Digest::MD5.hexdigest(author_email.downcase)
     size = options[:size].present? ? options[:size] : "48"
     "https://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}&d=mm"
   end
 
-  def markdown_hint(klass = "")
-    #  tag = content_tag :p, :class => "formHint #{klass}" do
-    #  "Za formatiranje teksta mozete koristiti #{link_to "markdown", "#"} sintaksu."
-    #  end
-    hint = "<p class='formHint #{klass}'>"
-    hint << "Za formatiranje teksta mozete koristiti "
-    hint << link_to("markdown", markdown_path).html_safe
-    hint << " sintaksu. </p>"
-    hint.html_safe
+  def action_link(action='')
+    if action == "new"
+      link_to new_news_path, :class => "header-button header-button-icon header-button-right" do
+        '<button><i class="icon-add">New</i></button>'.html_safe
+      end
+    else
+      link_to news_index_path, :class => "header-button header-button-icon header-button-right" do
+        '<button><i class="icon-home">Home</i></button>'.html_safe
+      end
+    end
   end
 
 end

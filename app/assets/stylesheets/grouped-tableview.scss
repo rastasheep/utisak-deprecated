@@ -2,7 +2,6 @@
   margin: 10px 9px 11px;
   padding: 10px;
   border: 1px solid #E0E0E0;
-  background-color: #f8f8f5;
   border-radius: 2px;
   overflow: hidden;
 }
@@ -51,15 +50,20 @@ ol.grouped-tableview-links li{
 ul.grouped-tableview-links li a,
 ul.grouped-tableview-links li p,
 ol.grouped-tableview-links li a{
-  color: #000;
   font-weight: bold;
   display: block;
   padding: 10px;
   text-decoration: none;
   white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: normal;
+}
+ul.grouped-tableview-links li a,
+ol.grouped-tableview-links li a{
+  color:$light-asphalt;
 }
 ul.grouped-tableview-links li a:hover,
 ol.grouped-tableview-links li a:hover{
-  background-color: #F6F6EF;
+  background-color: $smoke;
 }

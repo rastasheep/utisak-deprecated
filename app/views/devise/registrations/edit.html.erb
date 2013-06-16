@@ -1,36 +1,70 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<%= render "layouts/shared/header", :title => "Izmeni profil", :action => "home" %>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-  <%= devise_error_messages! %>
+<div class="scroll">
+  <section>
+  <ul class="tableview tableview-links" id="hwlist">
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => "uniForm"}) do |f| %>
+      <%= devise_error_messages! %>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <fieldset class="inlineLabels">
+
+        <div class="ctrlHolder">
+          <%= f.label :email, "Email adresa"%>
+          <%= f.email_field :email, :size => "35", :class => "textInput" %>
+        </div>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <div class="ctrlHolder">
+          <%= f.label :username, "Korisničko ime"%>
+          <%= f.text_field :username, :size => "35", :class => "textInput" %>
+        </div>
+
+        <div class="ctrlHolder">
+          <%= f.label :about, "Informacije" %>
+          <%= f.text_area :about %>
+          <%= markdown_hint %>
+        </div>
+
+        <div class="ctrlHolder">
+          <%= f.label :password , "Nova šifra"%>
+          <%= f.password_field :password, :size => "35", :class => "textInput" %>
+        </div>
+
+        <div class="ctrlHolder">
+          <%= f.label :password_confirmation, "Ponovite novu šifru" %>
+          <%= f.password_field :password_confirmation, :size => "35", :class => "textInput" %>
+        </div>
+
+        <div class="ctrlHolder">
+          <%= f.label :current_password , "Trenutna šifra"%>
+          <%= f.password_field :current_password, :size => "35", :class => "textInput" %>
+          <p class="formHint">Trenutna šifra je neophodna za ažuriranje profila.</p>
+        </div>
+
+        <div class="buttonHolder">
+          <%= f.submit "Izmeni profil", :class => "primaryAction" %>
+        </div>
+
+      </fieldset>
+
+    </ul>
   <% end %>
 
-  <div><%= f.label :username %><br />
-  <%= f.text_field :username %></div>
+  <ul class="grouped-tableview cf delete-acc">
+    <h2>Brisanje naloga</h2>
 
-  <div><%= f.label :about %><br />
-  <%= f.text_area :about %></div>
-  <%= markdown_hint %>
+    <%= button_to "Obriši nalog", registration_path(resource_name), :data => { :confirm => "Da li ste sigurni da želite da obrišete nalog?" }, :method => :delete, :class => "primaryAction" %>
+  </ul>
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-  <%= f.password_field :password, :autocomplete => "off" %></div>
+  <ul class="tableview tableview-links">
+    <div class="back">
+      <%= link_to "← Povratak na profil", user_path(@user)  %>
+    </div>
+  </ul>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-  <%= f.password_field :current_password %></div>
-
-  <div><%= f.submit "Update" %></div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
-
-<%= link_to "Back", :back %>
+  </section>
+</div>

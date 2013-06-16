@@ -1,4 +1,4 @@
-<%= render "users_header" %>
+<%= render "layouts/shared/header", :title => @user.username, :action => "new" %>
 
 <div class="scroll striped">
   <section>
@@ -13,7 +13,7 @@
 
     <ul class="grouped-tableview grouped-tableview-links">
       <li>
-        <p>Clan od <%= l(@user.created_at, :format => :short_date) %></p>
+        <p>Član od <%= l(@user.created_at, :format => :short_date) %></p>
       </li>
       <li>
         <p>Utisaka: <%=  @user.news.count %></p>

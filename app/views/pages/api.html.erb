@@ -1,16 +1,4 @@
-<header class="main">
-  <%= link_to "#", :id=>"more-button", :class=>"header-button header-button-icon header-button-left" do %>
-    <button><i class="icon-more">More</i></button>
-  <% end %>
-
-  <%= render "news/dropdown" %>
-
-  <h1>Utisak api</h1>
-
-  <%= link_to news_index_path, :class => "header-button header-button-icon header-button-right" do %>
-    <button><i class="icon-home">Home</i></button>
-  <% end %>
-</header>
+<%= render "layouts/shared/header", :title => "Utisak api", :action => "home" %>
 
 <div class="scroll">
   <section>

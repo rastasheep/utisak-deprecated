@@ -3,6 +3,7 @@
     background-color: $smoke;
   }
   .content{
+    min-height: 85vh;
     max-width: 768px;
     box-shadow: 0 2px 3px $light-gray;
     border-radius: 2px;
@@ -13,13 +14,10 @@
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
   }
-  .content{
-    min-height: 85vh;
-  }
   .grouped-tableview.cf{
     text-align: left;
   }
-  .avatar {
+  .avatar{
     float: left;
   }
 }
