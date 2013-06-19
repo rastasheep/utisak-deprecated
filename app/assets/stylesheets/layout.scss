@@ -14,6 +14,7 @@ body{
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   color:$light-asphalt;
+  line-height: 1.231;
   margin: 0;
   padding: 0;
   position: relative;
@@ -38,6 +39,17 @@ button{
 }
 input:not([type=submit]):not([type=file]), textarea { font-size:16px;}
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+h1, h2, h3 {
+  line-height: 40px;
+}
 h1 {
   font-size: 32px;
   font-weight: 900;
@@ -76,6 +88,8 @@ h6 {
   margin: 0;
   font-weight: bold;
 }
+
+p{ margin: 0 0 20px; }
 
 .flash {
   position: absolute;

@@ -2,74 +2,81 @@
 
 <div class="scroll">
   <section>
-  <ul class="tableview tableview-links" id="hwlist">
-    <div class="markdown-content"><p>Markdown je alat za konverziju čistog (plain) teksta u HTML sadržaj.  Markdown ima sopstvenu sintaksu koja je veoma jednostavna za korišćenje. Prvenstveno je namenjen osobama koje pišu sadržaj vidljiv na Web-u i prema tome moraju da koriste HTML markup. Markdown je rešenje za pisanje čitkih, jednostavnih tekstualnih dokumenata koji se uz pomoć Markdown softvera konvertuju u validan HTML sadržaj. Dokumenti pisani Markdown sintaksom su veoma čitki pa se čak i ne moraju konvertovati u HTML ako ih čitate u običnom text editor-u. <a href="http://daringfireball.net/">John Gruber</a>, autor Markdown-a, je inspiraciju za stvaranje Markdown-a pronašao u jednostavnom formatu tekstualnih e-mail poruka.
+  <div class="txt-content">
 
-            </p>
-            <p>U ovom članku će biti opisane mogućnosti i primene Markdown sintakse kroz mnoštvo primera. Nakon zvanične verzije Markdown-a <a href="http://daringfireball.net/projects/markdown/syntax">http://daringfireball.net/projects/markdown/syntax</a>, upoznaću vas sa <a href="http://github.github.com/github-flavored-markdown/">GFM</a> unapređenim Markdown-om, kao i sa varijantom specifičnom za <em>Node Srbija</em>, jer sve to možete koristiti na ovom sajtu.
-            <input type="hidden" value="cutHere">
+    <p>Markdown je alat za konverziju čistog (plain) teksta u HTML sadržaj.  Markdown ima sopstvenu sintaksu koja je veoma jednostavna za korišćenje. Prvenstveno je namenjen osobama koje pišu sadržaj vidljiv na Web-u i prema tome moraju da koriste HTML markup. Markdown je rešenje za pisanje čitkih, jednostavnih tekstualnih dokumenata koji se uz pomoć Markdown softvera konvertuju u validan HTML sadržaj. Dokumenti pisani Markdown sintaksom su veoma čitki pa se čak i ne moraju konvertovati u HTML ako ih čitate u običnom text editor-u. <a href="http://daringfireball.net/">John Gruber</a>, autor Markdown-a, je inspiraciju za stvaranje Markdown-a pronašao u jednostavnom formatu tekstualnih e-mail poruka.
+    </p>
 
-            </p>
-            <p><em>Markdown pored svoje sintakse dozvoljava i upotrebu klasičnog HTML-a. Specijalni karakteri kao što su <code>&gt;</code> i <code>&amp;</code> će automatski biti </em> escape-ovani. To znači da <code>4 &lt; 5</code> jednostavno tako i napišete.<br><em>Napomena: upotreba HTML-a na ovom sajtu je blokirana iz bezbednosnih razloga.</em>
+    <p>U ovom članku će biti opisane mogućnosti i primene Markdown sintakse kroz mnoštvo primera. Nakon zvanične verzije Markdown-a <a href="http://daringfireball.net/projects/markdown/syntax">http://daringfireball.net/projects/markdown/syntax</a>, upoznaću vas sa <a href="http://github.github.com/github-flavored-markdown/">GFM</a> unapređenim Markdown-om, kao i sa varijantom specifičnom za <em>Node Srbija</em>, jer sve to možete koristiti na ovom sajtu.
+    </p>
 
-            </p>
-            <h3>Pasusi (paragraphs)</h3>
-            <p>Pasus je jednostavno skup rečenica opciono odvojenih novim redom.<br>Da biste napravili novi red (<code>&lt;br /&gt;</code>), rečenicu završite sa dva razmaka pre nego što pređete u novi red.
+    <p>Markdown pored svoje sintakse dozvoljava i upotrebu klasičnog HTML-a. Specijalni karakteri kao što su <code>&gt;</code> i <code>&amp;</code> će automatski biti escape-ovani. To znači da <code>4 &lt; 5</code> jednostavno tako i napišete.<br>Napomena: upotreba HTML-a na ovom sajtu je blokirana iz bezbednosnih razloga
+    </p>
 
-            </p>
-            <p>Ovo je primer pasus. Još jedna test rečenica u istom pasusu koja se završava sa dva razmaka pa novi red.<br>Primetićete da je ovaj tekst u novom redu.
+    <h3>Pasusi (paragraphs)</h3>
 
-            </p>
-            <h3>Naslovi (headers)</h3>
-            <p>Postoje dva načina da kreirate naslov (header).
+    <p>Pasus je jednostavno skup rečenica opciono odvojenih novim redom.<br>Da biste napravili novi red (<code>&lt;br /&gt;</code>), rečenicu završite sa dva razmaka pre nego što pređete u novi red.
+    </p>
 
-            </p>
-            <ol>
-              <li>Da podvučete tekst sa bilo kojim brojem znakova jednako (<code>=</code>) ukoliko želite <strong>h1</strong> tag, ili ukoliko želite <strong>h2</strong> tag sa znakovima povlaka (<code>-</code>).</li>
-              <li>Započnete rečenicu sa određenim brojem znakova taraba (<code>#</code>). Broj znakova je od 1 - 6 u zavisnosti od željenog taga <strong>h1 - h6</strong>.</li>
-            </ol>
-            <p>a) Kod prvog načina broj karaktera kojim podvlačite tekst nije bitan:
+    <p>Ovo je primer pasus. Još jedna test rečenica u istom pasusu koja se završava sa dva razmaka pa novi red.<br>Primetićete da je ovaj tekst u novom redu.
+    </p>
 
-            </p>
-            <h1>Ovo je primer za h1</h1>
-            <pre><code class="undefined">
+    <h3>Naslovi (headers)</h3>
+
+    <p>Postoje dva načina da kreirate naslov (header).
+    </p>
+
+    <ol>
+      <li>Da podvučete tekst sa bilo kojim brojem znakova jednako (<code>=</code>) ukoliko želite <strong>h1</strong> tag, ili ukoliko želite <strong>h2</strong> tag sa znakovima povlaka (<code>-</code>).</li>
+      <li>Započnete rečenicu sa određenim brojem znakova taraba (<code>#</code>). Broj znakova je od 1 - 6 u zavisnosti od željenog taga <strong>h1 - h6</strong>.</li>
+    </ol>
+
+    <p>
+    a) Kod prvog načina broj karaktera kojim podvlačite tekst nije bitan:
+    </p>
+
+    <pre><code class="undefined">
             Ovo je primer za h1
             =============</code></pre>
-            <h2>Ovo je primer za h2</h2>
-            <pre><code class="undefined">Ovo je primer za h2
+    <pre><code class="undefined">Ovo je primer za h2
             ----</code></pre>
-            <p>b) Kod drugog načina rečenicu možete opciono i završiti sa tarabama (ne mora da se podudara sa brojem započetih taraba). Ovo je više u estetske svrhe kada se dokument čita u text editor-u.
 
+            <p>b) Kod drugog načina rečenicu možete opciono i završiti sa tarabama (ne mora da se podudara sa brojem započetih taraba). Ovo je više u estetske svrhe kada se dokument čita u text editor-u.
             </p>
+
             <h1>Ovo je h1</h1>
             <h2>Ovo je h2</h2>
             <h3>Ovo je h3</h3>
             <h4>Ovo je h4</h4>
             <h5>Ovo je h5</h5>
             <h6>Ovo je h6</h6>
+
             <pre><code class="bash"><span class="comment"># Ovo je h1</span>
             <span class="comment">## Ovo je h2</span>
             <span class="comment">### Ovo je h3</span>
             <span class="comment">#### Ovo je h4</span>
             <span class="comment">##### Ovo je h5</span>
             <span class="comment">###### Ovo je h6</span></code></pre>
-            <h3>Citati (blockquotes)</h3>
-            <p>Markdown koristi isti princip za citat kao e-mail poruke. Započnite rečenicu sa znakom veće (<code>&gt;</code>):
 
+            <h3>Citati (blockquotes)</h3>
+
+            <p>Markdown koristi isti princip za citat kao e-mail poruke. Započnite rečenicu sa znakom veće (<code>&gt;</code>):
             </p>
+
             <blockquote>
               <p>Ovo je čuveni citat.
               Lepo izgleda.
               Baš je čitljiv ovaj Markdown...
-
               </p>
             </blockquote>
+
             <pre><code class="undefined">&gt; Ovo je čuveni citat.
             &gt; Lepo izgleda.
             &gt; Baš je čitljiv ovaj Markdown...</code></pre>
-            <p>Markdown ne zahteva da svaki red započne sa znakom <code>&gt;</code>, već je potrebno da barem prvi red započnete sa <code>&gt;</code>. Citati mogu sadržati i druge elemente (tagove) uključujući i sam citat:
 
+            <p>Markdown ne zahteva da svaki red započne sa znakom <code>&gt;</code>, već je potrebno da barem prvi red započnete sa <code>&gt;</code>. Citati mogu sadržati i druge elemente (tagove) uključujući i sam citat:
             </p>
+
             <blockquote>
               <p>Ovde je započet citat.<br><code>console.log()</code> ili <code>alert()</code>?
               <em>Pa naravno <code>console.log()</code> osim ako nemate sreće pa naletite na <strong>IE</strong> :-D</em>
@@ -213,6 +220,5 @@
               <p>b) <code>Referentni</code> linkovi se sastoje od teksta linka obuhvaćenim uglastim zagradama, opciono razmakom i na kraju identifikator linka obuhvaćen uglastim zagradama. Nakon ovoga je potrebno definisati sam link bilo gde u dokumentu (preporuka je odmah nakon završenog pasusa).
 
               </p>
-    </ul>
-  </section>
-</div>
+              </section>
+            </div>
