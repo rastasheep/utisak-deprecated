@@ -53,6 +53,4 @@ Utisak::Application.configure do
   config.assets.js_compressor  = :uglifier
   config.assets.css_compressor = :scss
 
-  config.ember.variant = :production
-
 end

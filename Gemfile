@@ -12,12 +12,9 @@ gem 'bcrypt-ruby'              # password encryption
 gem 'inherited_resources'      # for easy RESTful API controller scaffolding
 gem 'active_model_serializers' # works out of the box with ember-data
 
-gem 'ember-rails'              # ember framework
-gem 'ember-auth-rails'
-  gem 'ember-auth-source'
-
-
-gem "twitter-bootstrap-rails"
+# gem 'ember-rails'              # ember framework
+# gem 'ember-auth-rails'3
+# gem 'ember-auth-source'
 
 gem "meta_search"
 gem "dynamic_form"
@@ -35,6 +32,8 @@ group :assets do
   gem "coffee-rails"
   gem "less-rails"
 end
+
+gem 'bootstrap-sass', '~> 2.3.2.0'
 
 group :test, :development do
   gem "rspec-rails"

@@ -1,15 +1,6 @@
 #= require turbolinks
 #= require jquery
-#= require jquery_ujs
-#= require handlebars
-#= require ember
-#= require ember-data
-#= require ember-auth
 #= require_self
-#= require config
-#= require vazno
-#= require_tree .
-# window.Vazno = Em.Application.create()
 
 ready = ->
   $("#more-button").click ->
