@@ -7,8 +7,10 @@ class User < ActiveRecord::Base
 
   devise :omniauthable
 
-  has_many :news
-  has_many :news_votes
+  has_many :news, :dependent => :destroy
+  has_many :news_votes, :dependent => :destroy
+  has_many :comments, :dependent => :destroy
+
 
   validates :email, :username, :presence => true
   validates_uniqueness_of :email
