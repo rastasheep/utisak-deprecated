@@ -4,7 +4,7 @@ sr:
       short: %d %b %H:%M
       long_date: %A, %b %d %Y
       short_date: %d. %m. %Y
-      date_with_time: %A, %b %d %Y at %H:%M
+      date_with_time: %d. %m.'%y at %H:%M
       widget: %d.%m. u %H:%M
   activerecord:
     errors:

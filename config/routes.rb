@@ -9,7 +9,8 @@ Utisak::Application.routes.draw do
   get "/api" => "pages#api"
   get "/markdown" => "pages#markdown"
 
-  namespace "admin" do
+  namespace 'admin' do
+    resources :news
     resources :users
   end
 

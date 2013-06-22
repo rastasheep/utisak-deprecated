@@ -1,21 +1,72 @@
-<dl class="dl-horizontal">
+<div class="page-header">
+  <h1>User: <%= @user.username %></h1>
+</div>
 
-  <dt>Email</dt>
-  <dd><%= @user.email %></dd>
+<table class="table table-hover">
+  <tbody>
+    <tr>
+      <td>ID:</td>
+      <td><%= @user.id %>
+    </tr>
 
-  <dt>Sign in count</dt>
-  <dd><%= @user.sign_in_count %></dd>
+    <tr>
+      <td>Username:</td>
+      <td><%= @user.username %></td>
+    </tr>
 
-  <dt>Last sign in at</dt>
-  <dd><%= l( @user.last_sign_in_at, :format => :long_date ) %></dd>
+    <tr>
+      <td>Email:</td>
+      <td><%= @user.email %></td>
+    </tr>
 
-  <dt>Last sign in IP</dt>
-  <dd><%= @user.last_sign_in_ip %></dd>
+    <tr>
+      <td>Auth token :</td>
+      <td><%= @user.authentication_token %></td>
+    </tr>
 
-  <dt>Created at</dt>
-  <dd><%= l( @user.created_at, :format => :long_date ) %></dd>
+    <tr>
+      <td>Karma:</td>
+      <td><%= @user.total_votes%> </td>
+    </tr>
 
-  <dt>Updated at</dt>
-  <dd><%= l( @user.updated_at, :format => :long_date ) %></dd>
+    <tr>
+      <td>Created at:</td>
+      <td><%= l( @user.created_at, :format => :date_with_time ) %></td>
+    </tr>
 
-</dl>
+    <tr>
+      <td>Updated at:</td>
+      <td><%= l( @user.updated_at, :format => :date_with_time ) %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to "Edit", edit_admin_user_path(@user) %> |
+<%= link_to "Back", :back %>
+
+<h3>News (<%= @user.news.count %>)</h3>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><%= sortable "id" %></th>
+      <th><%= sortable "title" %></th>
+      <th><%= sortable "link" %></th>
+      <th><%= sortable "points" %></th>
+      <th><%= sortable "created_at" %></th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user.news.each do |news| -%>
+      <tr>
+        <td><%= link_to(news.id, admin_news_path(news)) %></td>
+        <td><%= news.title %></td>
+        <td><%= link_to(news.domain, news.url) %></td>
+        <td><%= news.points %></td>
+        <td><%= l( news.created_at, :format => :date_with_time ) %></td>
+        <td><%= link_to("", admin_news_path(news), :confirm => "Are you sure?", :method => :delete, :class=>"icon-remove") %> </td>
+      </tr>
+    <% end -%>
+  </tbody>
+</table>

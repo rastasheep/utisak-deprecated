@@ -1,0 +1,29 @@
+<%= f.error_messages %>
+
+      <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+    <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+    <p>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </p>
+    <p>
+    <%= f.label :domain %><br />
+    <%= f.text_field :domain %>
+  </p>
+    <p>
+    <%= f.label :points %><br />
+    <%= f.text_field :points %>
+  </p>
+    <p>
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </p>
+    
+<% label = @news.new_record? ? "Create" : "Update" -%>
+<%= f.submit label %>

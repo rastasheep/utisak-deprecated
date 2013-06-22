@@ -1,0 +1,80 @@
+<div class="page-header">
+  <h1>News: <%= @news.id %></h1>
+</div>
+
+<table class="table table-hover">
+  <tbody>
+    <tr>
+      <td>ID:</td>
+      <td><%= @news.id %>
+    </tr>
+
+    <tr>
+      <td>User:</td>
+      <td><%= link_to(@news.user.username, admin_user_path(@news.user))%></td>
+    </tr>
+
+    <tr>
+      <td>Title:</td>
+      <td><%= @news.title %></td>
+    </tr>
+
+    <tr>
+      <td>Content:</td>
+      <td><%= @news.content %></td>
+    </tr>
+
+    <tr>
+      <td>Url:</td>
+      <td>
+        <%= link_to( @news.url) do %>
+          <%= @news.domain %>
+          <span class="icon-share"></span>
+        <% end %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Points:</td>
+      <td><%= @news.points %> </td>
+    </tr>
+
+    <tr>
+      <td>Created at:</td>
+      <td><%= l( @news.created_at, :format => :date_with_time ) %></td>
+    </tr>
+
+    <tr>
+      <td>Updated at:</td>
+      <td><%= l( @news.updated_at, :format => :date_with_time ) %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to "Edit", edit_admin_news_path(@news) %> |
+<%= link_to "Back", :back %>
+
+<h3>Comments (<%= @news.comments.count %>)</h3>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>User</td>
+      <td>Content</td>
+      <td>Created at</td>
+      <td>Delete</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @news.comments.order("created_at DESC").each do |comment| -%>
+      <tr>
+        <td><%= link_to(comment.id, "#") %></td>
+        <td><%= link_to(comment.user.username, admin_user_path(comment.user)) %></td>
+        <td><%= comment.content %></td>
+        <td><%= l( comment.created_at, :format => :date_with_time ) %></td>
+        <td></td>
+      </tr>
+    <% end -%>
+  </tbody>
+</table>
