@@ -5,6 +5,8 @@ gem "rails"
 
 gem "pg", :require => "pg"
 
+gem "uglifier"
+
 gem "devise"
 gem "omniauth-facebook"
 gem 'bcrypt-ruby'              # password encryption
@@ -29,9 +31,9 @@ gem "jquery-rails"
 gem "turbolinks"
 gem "redcarpet"
 
+gem "sass-rails"
 group :assets do
   gem "therubyracer", :platform => :ruby
-  gem "sass-rails"
   gem "coffee-rails"
   gem "less-rails"
 end

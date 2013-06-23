@@ -53,4 +53,7 @@ Utisak::Application.configure do
   config.assets.js_compressor  = :uglifier
   config.assets.css_compressor = :scss
 
+  config.assets.compress = true
+  config.assets.digest = true
+
 end

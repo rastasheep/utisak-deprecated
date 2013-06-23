@@ -47,5 +47,7 @@ module Utisak
     # Heroku requires setting
     config.assets.initialize_on_precompile = false
 
+    Sprockets::Compressors.register_css_compressor(:scss, 'Sass::Rails::CssCompressor', :require => 'sass/rails/compressor')
+
   end
 end

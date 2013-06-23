@@ -263,6 +263,9 @@ GEM
     turbolinks (1.1.1)
       coffee-rails
     tzinfo (0.3.37)
+    uglifier (2.1.1)
+      execjs (>= 0.3.0)
+      multi_json (~> 1.0, >= 1.0.2)
     warden (1.2.1)
       rack (>= 1.0)
     websocket (1.0.7)
@@ -309,3 +312,4 @@ DEPENDENCIES
   therubyracer
   thin
   turbolinks
+  uglifier
