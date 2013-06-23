@@ -1,0 +1,73 @@
+<div class="page-header">
+  <h1>Comment <%= @comment.id %></h1>
+</div>
+
+<table class="table table-hover">
+  <tbody>
+    <tr>
+      <td>ID</td>
+      <td><%= @comment.id %></td>
+    </tr>
+
+    <tr>
+      <td>News</td>
+      <td><%= link_to(@comment.news.title, admin_news_path(@comment.news)) %></td>
+    </tr>
+
+    <tr>
+      <td>User</td>
+      <td><%= link_to(@comment.user.username, admin_user_path(@comment.user)) %></td>
+    </tr>
+
+    <tr>
+      <td>Content</td>
+      <td><%= @comment.content %></td>
+    </tr>
+
+    <tr>
+      <td>Utisak url:</td>
+      <td>
+        <%= link_to(news_comment_path(@comment),news_comment_path(@comment), "data-no-turbolink" => true) %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Created at:</td>
+      <td><%= l( @comment.created_at, :format => :date_with_time ) %></td>
+    </tr>
+
+    <tr>
+      <td>Updated at:</td>
+      <td><%= l( @comment.updated_at, :format => :date_with_time ) %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to "Edit", edit_admin_comment_path(@comment) %> |
+<%= link_to "Back", admin_comments_path %>
+
+<h3>News</h3>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><%= sortable "id" %></th>
+      <th><%= sortable "title" %></th>
+      <th><%= sortable "link" %></th>
+      <th><%= sortable "points" %></th>
+      <th><%= sortable "created_at" %></th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% news = @comment.news-%>
+    <tr>
+      <td><%= link_to(news.id, admin_news_path(news)) %></td>
+      <td><%= news.title %></td>
+      <td><%= link_to(news.domain, news.url) %></td>
+      <td><%= news.points %></td>
+      <td><%= l( news.created_at, :format => :date_with_time ) %></td>
+      <td><%= link_to("", admin_news_path(news), :confirm => "Are you sure?", :method => :delete, :class=>"icon-remove") %> </td>
+    </tr>
+  </tbody>
+</table>

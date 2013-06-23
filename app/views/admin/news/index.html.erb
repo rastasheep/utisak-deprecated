@@ -1,6 +1,6 @@
 <h1>News</h1>
 
-<%= form_for @search, :url => "/admin/news", :html => {:method => :get, :class => "well form-search"} do |f| %>
+<%= form_for @search, :url => admin_news_index_path, :html => {:method => :get, :class => "well form-search"} do |f| %>
 
   <%= f.label :title_or_domain_contains, "Search by title or domain:" %>
   <%= f.text_field :title_or_domain_contains, :class => "input-medium search-query" %>

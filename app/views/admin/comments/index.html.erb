@@ -1,0 +1,49 @@
+<h1>Comments</h1>
+
+<!--
+<%= form_for @search, :url => admin_comments_path, :html => {:method => :get} do |f| %>
+
+  feel free to add further search options, eg foo_or_bar_contains
+  <%= f.label :_contains, "Search by " %>
+  <%= f.text_field :_contains %>
+  <%= f.submit %>
+   <p>Set up your search form or delete.</p>
+ -->
+
+<% end %>
+
+
+<p><%= link_to("Create a new Comment", new_admin_comment_path) %></p>
+
+<table class="sortable table table-striped table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th><%= sortable "id" %></th>
+      <th><%= sortable "news" %></th>
+      <th><%= sortable "ancestry" %></th>
+      <th><%= sortable "user" %></th>
+      <th>Content</th>
+      <th><%= sortable "created_at" %></th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= link_to(comment.id, admin_comment_path(comment)) %></td>
+        <td><%= link_to(comment.news.id, admin_news_path(comment.news)) %></td>
+        <% if comment.ancestry -%>
+          <td><%= link_to(comment.ancestry, admin_comment_path(comment.ancestry)) %></td>
+        <% else -%>
+          <td>-</td>
+       <% end -%>
+        <td><%= link_to(comment.user.username, admin_user_path(comment.user)) %></td>
+        <td><%= comment.content %></td>
+        <td><%= l( comment.created_at, :format => :date_with_time ) %></td>
+        <td><%= link_to("", admin_comment_path(comment), :confirm => "Are you sure?", :method => :delete, :class=>"icon-remove") %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @comments %>

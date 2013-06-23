@@ -35,6 +35,13 @@
     </tr>
 
     <tr>
+      <td>Utisak url:</td>
+      <td>
+        <%= link_to( news_path(@news),news_path(@news), "data-no-turbolink" => true) %>
+      </td>
+    </tr>
+
+    <tr>
       <td>Points:</td>
       <td><%= @news.points %> </td>
     </tr>
@@ -69,7 +76,7 @@
   <tbody>
     <% @news.comments.order("created_at DESC").each do |comment| -%>
       <tr>
-        <td><%= link_to(comment.id, "#") %></td>
+        <td><%= link_to(comment.id, admin_comment_path(comment)) %></td>
         <td><%= link_to(comment.user.username, admin_user_path(comment.user)) %></td>
         <td><%= comment.content %></td>
         <td><%= l( comment.created_at, :format => :date_with_time ) %></td>

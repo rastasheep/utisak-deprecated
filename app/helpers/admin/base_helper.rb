@@ -10,4 +10,8 @@ module Admin::BaseHelper
     News.group_by_day(:created_at, Time.zone, TIME_RANGE).count
   end
 
+  def all_comments
+    Comment.group_by_day(:created_at, Time.zone, TIME_RANGE).count
+  end
+
 end

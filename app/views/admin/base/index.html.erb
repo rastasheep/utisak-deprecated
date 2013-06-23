@@ -35,3 +35,18 @@
 </div>
 
 <%= line_chart all_news %>
+
+<div class="page-header">
+  <h1>Comments</h1>
+
+  <blockquote>
+    <small><%= l(Time.now, :format => :short_date) %>:</small>
+
+    <p>
+      <%= pluralize(@daily_stats[:comments], "comments") %> / all time:
+      <%= pluralize(@overall_stats[:comments], "comments") %>
+    </p>
+  </blockquote>
+</div>
+
+<%= line_chart all_comments %>

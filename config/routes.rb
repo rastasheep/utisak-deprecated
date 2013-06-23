@@ -12,6 +12,7 @@ Utisak::Application.routes.draw do
   namespace 'admin' do
     resources :news
     resources :users
+    resources :comments
   end
 
   namespace :api do

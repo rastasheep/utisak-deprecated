@@ -6,9 +6,11 @@ class Admin::BaseController < ApplicationController
   def index
     @overall_stats = {:registered_users => User.count,
                       :news => News.count,
+                      :comments => Comment.count,
                       :votes => NewsVote.count}
     @daily_stats = {:registered_users => User.created_today.count,
                     :news => News.created_today.count,
+                    :comments => Comment.created_today.count,
                     :votes => NewsVote.created_today.count}
   end
 

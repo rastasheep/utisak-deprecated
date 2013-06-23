@@ -1,5 +1,7 @@
 class Comment < ActiveRecord::Base
 
+  include AnalyticScopes
+
   has_ancestry
 
   belongs_to :news
