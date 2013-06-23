@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -14,6 +16,8 @@ class User < ActiveRecord::Base
 
   validates :email, :username, :presence => true
   validates_uniqueness_of :email
+
+  include AnalyticScopes
 
   attr_accessor :login
 

@@ -4,6 +4,12 @@ class Admin::BaseController < ApplicationController
   layout "admin"
 
   def index
+    @overall_stats = {:registered_users => User.count,
+                      :news => News.count,
+                      :votes => NewsVote.count}
+    @daily_stats = {:registered_users => User.created_today.count,
+                    :news => News.created_today.count,
+                    :votes => NewsVote.created_today.count}
   end
 
   protected

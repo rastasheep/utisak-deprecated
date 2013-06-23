@@ -22,6 +22,9 @@ gem "heroku"
 gem "ancestry"
 gem "kaminari"
 
+gem "chartkick"
+gem "groupdate"
+
 gem "jquery-rails"
 gem "turbolinks"
 gem "redcarpet"

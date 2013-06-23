@@ -1,1 +1,37 @@
-<h2>Dashboard</h2>
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+
+<div class="page-header">
+  <h1>Users</h1>
+
+  <blockquote>
+    <small> <%= l(Time.now, :format => :short_date) %>:</small>
+
+    <p>
+    <%= pluralize(@daily_stats[:registered_users], "new user") %> / all time:
+    <%= pluralize(@overall_stats[:registered_users], "user") %>
+    </p>
+
+  </blockquote>
+</div>
+
+<%= line_chart all_users %>
+
+<div class="page-header">
+  <h1>News</h1>
+
+  <blockquote>
+    <small><%= l(Time.now, :format => :short_date) %>:</small>
+
+    <p>
+      <%= pluralize(@daily_stats[:news], "news") %> / all time:
+      <%= pluralize(@overall_stats[:news], "news") %>
+    </p>
+
+    <p>
+      <%= pluralize(@daily_stats[:votes], "vote") %> / all time:
+      <%= pluralize(@overall_stats[:votes], "vote") %>
+    </p>
+  </blockquote>
+</div>
+
+<%= line_chart all_news %>

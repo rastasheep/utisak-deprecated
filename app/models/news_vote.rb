@@ -1,4 +1,7 @@
 class NewsVote < ActiveRecord::Base
+
+  include AnalyticScopes
+
   attr_accessible :news_id, :user_id
 
   belongs_to :news
