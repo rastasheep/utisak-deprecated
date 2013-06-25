@@ -79,4 +79,8 @@ module ApplicationHelper
     end
   end
 
+  def bookmarklet_url
+    'javascript:window.location="http://www.utisak.com/new?url="+encodeURIComponent(document.location)+"&title="+encodeURIComponent(document.title)'
+  end
+
 end

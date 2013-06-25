@@ -13,7 +13,7 @@ class NewsController < ApplicationController
   end
 
   def new
-    @news = current_user.news.build
+    @news = current_user.news.build(:url => params[:url], :title => params[:title])
   end
 
   def create
