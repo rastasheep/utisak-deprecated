@@ -1,4 +1,17 @@
 sr:
+
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%e %b"
+      long: "%e. %B %Y."
+      only_day: "%e"
+    day_names: [Nedelja, Ponedeljak, Utorak, Sreda, Četvrtak, Petak, Subota]
+    abbr_day_names: [Ned, Pon, Uto, Sre, Čet, Pet, Sub]
+    month_names: [~, Januar, Februar, Mart, April, Maj, Jun, Jul, Avgust, Septembar, Oktobar, Novembar, Decembar]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, Maj, Jun, Jul, Aug, Sep, Okt, Nov, Dec]
+    order: [:day, :month, :year]
+
   time:
     formats:
       short: %d %b %H:%M
@@ -6,49 +19,155 @@ sr:
       short_date: %d. %m. %Y
       date_with_time: %d. %m.'%y at %H:%M
       widget: %d.%m. u %H:%M
+    am: "am"
+    pm: "pm"
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "pola minuta"
+      less_than_x_seconds:
+        zero: "manje od 1 sekunde"
+        one: "manje od 1 sekund"
+        few: "manje od %{count} sekunde"
+        other: "manje od %{count} sekundi"
+      x_seconds:
+        one: "1 sekunda"
+        few: "%{count} sekunde"
+        other: "%{count} sekundi"
+      less_than_x_minutes:
+        zero: "manje od minuta"
+        one: "manje od 1 minut"
+        other: "manje od %{count} minuta"
+      x_minutes:
+        one: "1 minut"
+        other: "%{count} minuta"
+      about_x_hours:
+        one: "oko 1 sat"
+        few: "oko %{count} sata"
+        other: "oko %{count} sati"
+      x_days:
+        one: "1 dan"
+        other: "%{count} dana"
+      about_x_months:
+        one: "oko 1 mesec"
+        few: "oko %{count} meseca"
+        other: "oko %{count} meseci"
+      x_months:
+        one: "1 mesec"
+        few: "%{count} meseca"
+        other: "%{count} meseci"
+      almost_x_years:
+        one: "skoro 1 godine"
+        other: "skoro %{count} godine"
+      about_x_years:
+        one: "oko 1 godine"
+        other: "oko %{count} godine"
+      over_x_years:
+        one: "preko 1 godine"
+        other: "preko %{count} godine"
+
+  number:
+    format:
+      precision: 3
+      separator: ","
+      delimiter: "."
+    currency:
+      format:
+        unit: "DIN"
+        precision: 2
+        format: "%n %u"
+
+  support:
+    array:
+      sentence_connector: "i"
+
   activerecord:
+    models:
+      news: "Vest"
+      user: "Korisnik"
+      comment: "Komentar"
+    attributes:
+      news:
+        title: "Naslov"
+        url: "Link"
+      user:
+        email: "Email"
+        username: "Korisničko ime"
+        password: "Šifra"
+        login: "Email ili korisničko ime" # they dont need to know
+        current_password: "" # they dont need to know
+        password_confirmation: "Potvrda šifre"
+        about: "Infomacije"
+      comment:
+        content: "Poruka"
+        user_id: "Korisnik"
+
     errors:
       template:
-        body: ! 'Proverite sledeća polja:'
+        body: ! "Proverite sledeća polja:"
         header:
-          one: ! 'Došlo je do greške.'
-          few: ! 'Došlo je do grešaka.'
-          many: ! 'Došlo je do grešaka.'
-          other: ! 'Došlo je do grešaka.'
+          one: ! "Došlo je do greške."
+          few: ! "Došlo je do grešaka."
+          many: ! "Došlo je do grešaka."
+          other: ! "Došlo je do grešaka."
       models:
         news:
           attributes:
             title:
-              blank: 'prazan.'
-              taken: 'već postoji.'
+              blank: "mora biti prisutan."
+              taken: "već postoji u našoj bazi."
             url:
-              taken: 'je već dodat.'
-              blank: 'mora biti prisutan.'
-              invalid: 'je pogrešnog formata.'
+              taken: "je već dodat."
+              blank: "mora biti prisutan."
+              invalid: "je pogrešnog formata."
         user:
           attributes:
+            username:
+              blank: "- morate uneti korisničko ime"
+              taken: "već postoji u našoj bazi."
             password:
-              confirmation: 'Unete šifre se ne podudaraju'
-              too_short: 'Uneta šifra je prekratka'
+              blank: "- morate uneti šifru"
+              confirmation: "- unete šifre se ne poklapaju"
+              too_short: "- uneta šifra je prekratka"
             current_password:
-              blank: 'Morate uneti šifru kako bi ste izmenili nalog'
+              blank: "Morate uneti šifru kako bi ste izmenili nalog"
+            email:
+              blank: "- morate uneti email"
+              taken: "- već postoji u našoj bazi."
+            login:
+              blank: "- morate uneti email ili korisničko ime"
 
       messages:
-        record_invalid: 'prazno'
-    attributes:
-      news:
-        title: 'Naslov'
-        url: 'Link'
-      user:
-        password: ''
-        current_password: ''
+        record_invalid: "prazno"
+        inclusion: "nije u listi"
+        exclusion: "nije dostupno"
+        invalid: "nije ispravan"
+        confirmation: "ne slaže se sa potvrdom"
+        accepted: "mora biti prihvaćeno"
+        empty: "mora biti uneto"
+        blank: "mora biti uneto"
+        too_long: "predugačko (ne više od %{count} karaktera)"
+        too_short: "prekratko (ne manje od %{count} karaktera)"
+        wrong_length: "nije odgovarajuće dužine (mora imati %{count} karaktera)"
+        taken: "već zauzeto"
+        not_a_number: "nije broj"
+        greater_than: "mora biti veće od %{count}"
+        greater_than_or_equal_to: "mora biti veće ili jednako od %{count}"
+        equal_to: "mora biti jednako %{count}"
+        less_than: "mora biti manje od %{count}"
+        less_than_or_equal_to: "mora biti manje ili jednako od %{count}"
+        odd: "mora biti neparno"
+        even: "mora biti parno"
+
+# Custom stuff
   news:
-    added: 'Uspešno dodat utisak'
-    failed: 'Došlo je do greške! Popunite obavezna polja'
+    added: "Uspešno dodat utisak"
+    failed: "Došlo je do greške! Popunite obavezna polja"
     vote:
-      added: 'Hvala što ste glasali!'
-      failed: 'Glas nije poslat, verovatno ste već glasali'
+      added: "Hvala što ste glasali!"
+      failed: "Glas nije poslat, verovatno ste već glasali"
+
   comments:
-    added: 'Komentar uspešno dodat'
-    failed: 'Došlo je do greške! Popunite obavezna polja'
+    added: "Komentar uspešno dodat"
+    failed: "Došlo je do greške! Popunite obavezna polja"
 
