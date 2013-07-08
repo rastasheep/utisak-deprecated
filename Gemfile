@@ -29,7 +29,7 @@ gem "groupdate"
 
 gem "jquery-rails"
 gem "turbolinks"
-gem "redcarpet"
+gem "rails_autolink"
 
 gem "sass-rails"
 group :assets do
