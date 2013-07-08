@@ -1,0 +1,7 @@
+$('.tableview').append("<%= escape_javascript(render 'news')%>");
+
+<% if @news.last_page? -%>
+  $('#load_more_link').remove()
+<% else -%>
+  $('#load_more_link').replaceWith("<%= escape_javascript(link_to_next_page(@news,'Učitaj još', :remote => true, :id=>'load_more_link'))%>");
+<% end -%>

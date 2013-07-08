@@ -4,6 +4,11 @@ class NewsController < ApplicationController
 
   def index
     @news = Kaminari.paginate_array(News.hotness).page(params[:page])
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def newest

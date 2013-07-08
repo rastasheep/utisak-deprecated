@@ -123,7 +123,7 @@
   margin: 15px 0;
 }
 
-.tableview-links li a.more-link{
+a.more-link{
   cursor: pointer;
   line-height: 3em;
   padding: 10px;
@@ -131,4 +131,5 @@
   color: $light-asphalt;
   text-align: center;
   font-weight: bold;
+  text-decoration:none;
 }

@@ -6,10 +6,9 @@
 
       <%= render "news" %>
 
-      <li>
-      <%= link_to_next_page @news, 'Load More', :class => "more-link" %>
-      </li>
-
     </ul>
+
+      <%= link_to_next_page @news, 'Učitaj još', :remote => true, :id=>"load_more_link", :class => "more-link" %>
+
   </section>
 </div>

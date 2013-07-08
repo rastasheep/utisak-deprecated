@@ -159,6 +159,14 @@ sr:
         odd: "mora biti neparno"
         even: "mora biti parno"
 
+  views:
+  pagination:
+    first: "← Prva"
+    last: "Poslednja →"
+    previous: "← Prethodna"
+    next: "Sledeća →"
+    truncate: "..."
+
 # Custom stuff
   news:
     added: "Uspešno dodat utisak"
