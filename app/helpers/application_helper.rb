@@ -44,23 +44,6 @@ module ApplicationHelper
     end
   end
 
-  def markdown(text)
-    return unless text
-
-    options = [:autolink => true, :no_intra_emphasis => true, :filter_html => true, :hard_wrap => true]
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, *options)
-
-    markdown.render(text).html_safe
-  end
-
-  def markdown_hint(klass = "")
-    content_tag :p, :class => "formHint #{klass}" do
-      "Za formatiranje teksta mozete koristiti ".html_safe +
-      link_to("markdown", markdown_path) +
-      " sintaksu."
-    end
-  end
-
   def avatar_url(author_email, options = {})
     gravatar_id = Digest::MD5.hexdigest(author_email.downcase)
     size = options[:size].present? ? options[:size] : "48"
@@ -77,6 +60,10 @@ module ApplicationHelper
         '<button><i class="icon-home">Home</i></button>'.html_safe
       end
     end
+  end
+
+  def nice_format(content)
+   auto_link(simple_format(content), :html => { :target => "_blank" })
   end
 
   def bookmarklet_url

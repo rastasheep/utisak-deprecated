@@ -5,6 +5,6 @@
       <%= link_to render_time(comment.created_at), news_comment_path(@news, comment) %>
     </time>
   </p>
-  <%= markdown comment.content %>
+  <%= nice_format comment.content %>
   <%= link_to "Dodaj komentar", new_news_comment_path(@news, :parent_id => comment), :class => "reply" %>
 </li>

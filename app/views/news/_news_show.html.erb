@@ -22,7 +22,7 @@
 
   <%if @news.content.present? %>
     <div class="news-content">
-      <%= markdown @news.content %>
+      <%= nice_format @news.content %>
     </div>
   <% end %>
 
