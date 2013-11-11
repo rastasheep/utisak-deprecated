@@ -1,0 +1,23 @@
+// Globally applicable state styles only!
+// Module-specific states belong with their module as a regular modifier class.
+// e.g .my-module--is-loading
+
+.is-hidden
+  display: none
+
+.no-js .is-hidden--no-js
+  display: none
+
+.js .is-hidden--js
+  display: none
+
+.is-visually-hidden
+  // Hide only visually, but have it available for screenreaders: h5bp.com/v
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px

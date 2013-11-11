@@ -1,0 +1,14 @@
+@mixin btn
+  display: inline-block
+  color: $white
+  @include background(linear-gradient(top, #B0C1DF 50%, $dark-blue 50%))
+  font-size: 14px
+  line-height: 21px
+  border-radius: 4px
+  padding: 12px 30px
+  margin-left: 10px
+  text-decoration: none
+  &:hover
+    text-decoration: none
+    opacity: 0.8
+    color: $white 

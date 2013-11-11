@@ -1,0 +1,58 @@
+// IE version variables
+// ------------------------------------------------
+$ie7: false !default
+$ie8: false !default
+$ie9: false !default
+$lt-ie9: $ie7 or $ie8
+
+// Compass cross-browser support configuration
+// http://compass-style.org/reference/compass/support/
+$legacy-support-for-ie6: false
+$legacy-support-for-ie7: $ie7
+$legacy-support-for-ie8: $ie8
+
+
+// Vertical rhythm settings
+// ------------------------------------------------
+$base-font-size: 16px
+$base-line-height: 24px
+$round-to-nearest-half-line: true
+
+
+// Colour palette
+// ------------------------------------------------
+$white: #fff
+$green: #20e320
+$light-blue: #C3D0E6
+$dark-blue: #A9BCDC
+$background: #ECEEF1
+
+
+// Font stacks
+// ------------------------------------------------
+$sans-font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif
+
+
+// Susy settings
+// ------------------------------------------------
+
+// We need narrower container 
+$container-width: 768px
+
+// Mobile first fluid grid
+$total-columns: 12
+$column-width: (60px / $base-font-size) + 0em
+$gutter-width: (20px / $base-font-size) + 0em
+$grid-padding: (20px / $base-font-size) + 0em
+$container-style: fluid
+
+// Breakpoints
+$tablet:      ((569px / $base-font-size) + 0em) 8 lt-ie9
+$tablet-only: ((569px / $base-font-size) + 0em) 8 ((768px / $base-font-size) + 0em)
+$tablet-max:  8 ((768px / $base-font-size) + 0em)
+$desktop:     ((769px / $base-font-size) + 0em) 12 lt-ie9
+
+// In IE7 & 8 all at-breakpoint blocks except $desktop are omitted.
+// $desktop at-breakpoint blocks are scoped to a .lt-ie9 class instead of the desktop media query.
+$breakpoint-media-output: not $lt-ie9
+$breakpoint-ie-output: $lt-ie9
