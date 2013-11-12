@@ -1953,6 +1953,43 @@ h3, .h3 {
   display: none;
 }
 
+/* line 2, ../stylesheets/base/_flash.sass */
+.flash {
+  height: 0;
+  position: relative;
+  text-align: center;
+  z-index: 99999;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  -webkit-transition: top 0.7s, opacity 0.7s;
+  -moz-transition: top 0.7s, opacity 0.7s;
+  -o-transition: top 0.7s, opacity 0.7s;
+  transition: top 0.7s, opacity 0.7s;
+}
+
+/* line 10, ../stylesheets/base/_flash.sass */
+.flash--content {
+  display: inline-block;
+  background: #b3b3b1;
+  color: white;
+  padding: 12px 25px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 17, ../stylesheets/base/_flash.sass */
+.flash--success {
+  background: #57ad68;
+}
+
+/* line 20, ../stylesheets/base/_flash.sass */
+.flash--failure {
+  background: #cc5454;
+}
+
 /* line 2, ../stylesheets/base/_icon.sass */
 .icon-new {
   background-image: url("../images/newpost.png");

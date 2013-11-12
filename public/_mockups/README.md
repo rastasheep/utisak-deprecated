@@ -7,7 +7,7 @@ Mockups are powered by [style](https://github.com/bensmithett/style).
 Content:
 - index.html - Default front page
 - index-logged-in.html - Front page when user is logged in
-- user.html - Default user page
+- user.html - Default user page - includes flash message example
 - user-logged-in.html - User page for owner of profile
 - session.html - Sessions page (register/login) - **[Deprecated]**
 - /_design - image mockups and other graphic stuff

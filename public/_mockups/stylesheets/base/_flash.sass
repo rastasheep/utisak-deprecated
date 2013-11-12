@@ -1,0 +1,21 @@
+// Flash messages
+.flash
+  height: 0
+  position: relative
+  text-align: center
+  z-index: 99999
+  @include opacity(1)
+  @include single-transition(top 0.7s,opacity 0.7s)
+
+.flash--content
+  display: inline-block
+  background: #b3b3b1
+  color: $white
+  padding: 12px 25px
+  @include border-radius(4px)
+
+.flash--success
+  background: #57ad68
+
+.flash--failure
+  background: #cc5454
