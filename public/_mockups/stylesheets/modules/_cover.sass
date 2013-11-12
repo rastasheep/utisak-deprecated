@@ -1,0 +1,19 @@
+.cover--inner
+  position: relative
+  // z-index: 100
+
+.cover--avatar
+  width: 100px 
+  height: 100px 
+  position: absolute 
+  @include border-radius(100%)
+  top: -110px
+  left: 50% 
+  margin-left: -50px 
+  overflow: hidden
+  border: 3px solid $white 
+  // z-index: 500
+  @include box-shadow(0 1px 1px rgba(0,0,0,0.3))
+
+  img
+    width: 100%

@@ -2150,6 +2150,53 @@ h3, .h3 {
   border-radius: 4px;
 }
 
+/* line 36, ../stylesheets/modules/_content.sass */
+.content--cover {
+  padding: 60px 10% 30px;
+  position: relative;
+  text-align: center;
+  background-color: white;
+  margin: 60px 0 40px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 91, ../.bundle/ruby/2.0.0/gems/susy-1.0.9/sass/susy/_media.scss */
+.lt-ie9 .content--cover {
+  margin: 80px 0 50px;
+}
+
+/* line 1, ../stylesheets/modules/_cover.sass */
+.cover--inner {
+  position: relative;
+}
+
+/* line 5, ../stylesheets/modules/_cover.sass */
+.cover--avatar {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  top: -110px;
+  left: 50%;
+  margin-left: -50px;
+  overflow: hidden;
+  border: 3px solid white;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+/* line 18, ../stylesheets/modules/_cover.sass */
+.cover--avatar img {
+  width: 100%;
+}
+
 /* line 1, ../stylesheets/modules/_footer.sass */
 .footer {
   text-align: center;
@@ -2210,6 +2257,10 @@ h3, .h3 {
 .list--item, .list--item--open {
   margin-bottom: 1px;
   background-color: white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
   clear: both;
 }
