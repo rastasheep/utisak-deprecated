@@ -2211,6 +2211,56 @@ h3, .h3 {
   }
 }
 
+/* line 48, ../stylesheets/modules/_content.sass */
+.content--block {
+  background: white;
+  padding: 25px 10px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+@media (min-width: 35.5625em) {
+  /* line 48, ../stylesheets/modules/_content.sass */
+  .content--block {
+    padding: 25px;
+  }
+}
+@media (min-width: 48.0625em) {
+  /* line 48, ../stylesheets/modules/_content.sass */
+  .content--block {
+    padding: 50px;
+  }
+}
+/* line 57, ../stylesheets/modules/_content.sass */
+.content--block .block--jumbo-txt {
+  font-size: 40px;
+  text-align: center;
+}
+/* line 61, ../stylesheets/modules/_content.sass */
+.content--block .block--jumbo-txt:after {
+  content: "";
+  position: relative;
+  left: 50%;
+  display: block;
+  margin: 20px 0 20px -50px;
+  width: 100px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/* line 72, ../stylesheets/modules/_content.sass */
+.content--block .block--last-par:after {
+  content: "";
+  position: relative;
+  left: 50%;
+  display: block;
+  margin: 20px 0 20px -50px;
+  width: 100px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 /* line 1, ../stylesheets/modules/_cover.sass */
 .cover--inner {
   position: relative;
@@ -2391,11 +2441,20 @@ h3, .h3 {
 .modal--buttons {
   list-style: none;
   padding: 0;
-  border-bottom: 1px solid #a9bcdc;
-  padding-bottom: 30px;
+}
+/* line 18, ../stylesheets/modules/_modal.sass */
+.modal--buttons:after {
+  content: "";
+  position: relative;
+  left: 50%;
+  display: block;
+  margin: 30px 0 20px -50px;
+  width: 100px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* line 20, ../stylesheets/modules/_modal.sass */
+/* line 28, ../stylesheets/modules/_modal.sass */
 .modal--btn {
   width: 200px;
   display: inline-block;
@@ -2441,9 +2500,8 @@ header {
   height: 50px;
   display: inline-block;
   vertical-align: middle;
-  display: none;
 }
-/* line 18, ../stylesheets/modules/_navbar.sass */
+/* line 17, ../stylesheets/modules/_navbar.sass */
 .navbar--logo:hover {
   background-position: 0 50px;
 }
@@ -2454,35 +2512,35 @@ header {
   }
 }
 
-/* line 23, ../stylesheets/modules/_navbar.sass */
+/* line 22, ../stylesheets/modules/_navbar.sass */
 .navbar--title {
   display: none;
 }
 @media (min-width: 35.5625em) {
-  /* line 23, ../stylesheets/modules/_navbar.sass */
+  /* line 22, ../stylesheets/modules/_navbar.sass */
   .navbar--title {
     display: inline-block;
   }
 }
-/* line 28, ../stylesheets/modules/_navbar.sass */
+/* line 27, ../stylesheets/modules/_navbar.sass */
 .navbar--title span {
   display: none;
   color: #a9bcdc;
 }
 @media (min-width: 48.0625em) {
-  /* line 28, ../stylesheets/modules/_navbar.sass */
+  /* line 27, ../stylesheets/modules/_navbar.sass */
   .navbar--title span {
     display: inline-block;
   }
 }
 
-/* line 34, ../stylesheets/modules/_navbar.sass */
+/* line 33, ../stylesheets/modules/_navbar.sass */
 .navbar--buttons {
   display: inline;
   float: right;
 }
 
-/* line 38, ../stylesheets/modules/_navbar.sass */
+/* line 37, ../stylesheets/modules/_navbar.sass */
 .navbar--btn {
   display: inline-block;
   color: white;
@@ -2497,6 +2555,7 @@ header {
   padding: 12px 30px;
   margin-left: 10px;
   text-decoration: none;
+  margin-left: 0;
 }
 /* line 11, ../stylesheets/mixins/_btn.sass */
 .navbar--btn:hover {
