@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // Modals
-  $("a[rel*=leanModal]").leanModal();
+  $("a[rel*=leanModal]").leanModal({closeButton: ".modal--close"});
 
   // Tooltips
   $('.tooltip').tooltipster();
