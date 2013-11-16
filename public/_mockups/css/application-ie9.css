@@ -2164,7 +2164,7 @@ h3, .h3 {
   font-size: 14px;
   line-height: 21px;
   border-radius: 4px;
-  padding: 12px 30px;
+  padding: 12px 10px;
   margin-left: 10px;
   text-decoration: none;
   margin-left: 0;
@@ -2174,6 +2174,12 @@ h3, .h3 {
   text-decoration: none;
   opacity: 0.8;
   color: white;
+}
+@media (min-width: 35.5625em) {
+  /* line 25, ../stylesheets/modules/_content.sass */
+  .more--btn {
+    padding: 12px 30px;
+  }
 }
 
 /* line 29, ../stylesheets/modules/_content.sass */
@@ -2315,35 +2321,10 @@ h3, .h3 {
   display: table;
   clear: both;
 }
-@media (min-width: 35.5625em) {
-  /* line 10, ../stylesheets/modules/_grid.sass */
-  .grid {
-    padding-left: 1.25em;
-    padding-right: 1.25em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  /* line 38, ../.bundle/ruby/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  .grid:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
 @media (min-width: 48.0625em) {
   /* line 10, ../stylesheets/modules/_grid.sass */
   .grid {
-    max-width: 768px;
-    padding-left: 1.25em;
-    padding-right: 1.25em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  /* line 38, ../.bundle/ruby/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  .grid:after {
-    content: "";
-    display: table;
-    clear: both;
+    max-width: 48em;
   }
 }
 
@@ -2371,53 +2352,59 @@ h3, .h3 {
 
 /* line 15, ../stylesheets/modules/_list-item.sass */
 .item--content, .item--share {
-  padding: 20px 25px;
+  padding: 12px 6px;
   position: relative;
 }
+@media (min-width: 35.5625em) {
+  /* line 15, ../stylesheets/modules/_list-item.sass */
+  .item--content, .item--share {
+    padding: 20px 25px;
+  }
+}
 
-/* line 19, ../stylesheets/modules/_list-item.sass */
+/* line 21, ../stylesheets/modules/_list-item.sass */
 .item--share {
   background-color: #a9bcdc;
   border-radius: 0 0 4px 4px;
   border-top: 2px solid #a7b7d4;
   color: white;
 }
-/* line 27, ../stylesheets/modules/_list-item.sass */
+/* line 29, ../stylesheets/modules/_list-item.sass */
 .item--share i {
   margin-left: 20px;
 }
 
-/* line 30, ../stylesheets/modules/_list-item.sass */
+/* line 32, ../stylesheets/modules/_list-item.sass */
 .item--content--vote {
   position: absolute;
 }
 
-/* line 33, ../stylesheets/modules/_list-item.sass */
+/* line 35, ../stylesheets/modules/_list-item.sass */
 .item--content--share {
   position: absolute;
   right: 25px;
   top: 20px;
 }
 
-/* line 38, ../stylesheets/modules/_list-item.sass */
+/* line 40, ../stylesheets/modules/_list-item.sass */
 .item--content--info {
   margin: 0 40px;
 }
 
-/* line 41, ../stylesheets/modules/_list-item.sass */
+/* line 43, ../stylesheets/modules/_list-item.sass */
 .item--content--info--metadata {
   color: #acb7bf;
   font-size: 14px;
 }
-/* line 45, ../stylesheets/modules/_list-item.sass */
+/* line 47, ../stylesheets/modules/_list-item.sass */
 .item--content--info--metadata a {
   color: #8a9299;
 }
-/* line 48, ../stylesheets/modules/_list-item.sass */
+/* line 50, ../stylesheets/modules/_list-item.sass */
 .item--content--info--metadata span {
   padding-left: 20px;
 }
-/* line 50, ../stylesheets/modules/_list-item.sass */
+/* line 52, ../stylesheets/modules/_list-item.sass */
 .item--content--info--metadata span:first-child {
   padding-left: 0;
 }
@@ -2467,7 +2454,7 @@ h3, .h3 {
   font-size: 14px;
   line-height: 21px;
   border-radius: 4px;
-  padding: 12px 30px;
+  padding: 12px 10px;
   margin-left: 10px;
   text-decoration: none;
   margin: 5px 0;
@@ -2477,6 +2464,12 @@ h3, .h3 {
   text-decoration: none;
   opacity: 0.8;
   color: white;
+}
+@media (min-width: 35.5625em) {
+  /* line 28, ../stylesheets/modules/_modal.sass */
+  .modal--btn {
+    padding: 12px 30px;
+  }
 }
 
 /* line 1, ../stylesheets/modules/_navbar.sass */
@@ -2489,11 +2482,10 @@ header {
   overflow: hidden;
   height: 85px;
   line-height: 85px;
-  font-size: 20px;
   color: white;
 }
 
-/* line 11, ../stylesheets/modules/_navbar.sass */
+/* line 10, ../stylesheets/modules/_navbar.sass */
 .navbar--logo {
   background-image: url("../images/logo.png");
   width: 50px;
@@ -2501,23 +2493,24 @@ header {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 17, ../stylesheets/modules/_navbar.sass */
+/* line 16, ../stylesheets/modules/_navbar.sass */
 .navbar--logo:hover {
   background-position: 0 50px;
 }
 @media (min-width: 35.5625em) {
-  /* line 11, ../stylesheets/modules/_navbar.sass */
+  /* line 10, ../stylesheets/modules/_navbar.sass */
   .navbar--logo {
     display: inline-block;
   }
 }
 
-/* line 22, ../stylesheets/modules/_navbar.sass */
+/* line 21, ../stylesheets/modules/_navbar.sass */
 .navbar--title {
+  font-size: 20px;
   display: none;
 }
 @media (min-width: 35.5625em) {
-  /* line 22, ../stylesheets/modules/_navbar.sass */
+  /* line 21, ../stylesheets/modules/_navbar.sass */
   .navbar--title {
     display: inline-block;
   }
@@ -2552,7 +2545,7 @@ header {
   font-size: 14px;
   line-height: 21px;
   border-radius: 4px;
-  padding: 12px 30px;
+  padding: 12px 10px;
   margin-left: 10px;
   text-decoration: none;
   margin-left: 0;
@@ -2563,10 +2556,22 @@ header {
   opacity: 0.8;
   color: white;
 }
+@media (min-width: 35.5625em) {
+  /* line 37, ../stylesheets/modules/_navbar.sass */
+  .navbar--btn {
+    padding: 12px 30px;
+  }
+}
 
 /* line 41, ../stylesheets/modules/_navbar.sass */
 .navbar--user {
-  padding: 10.5px 12px;
+  padding: 10.5px 5px;
+}
+@media (min-width: 35.5625em) {
+  /* line 41, ../stylesheets/modules/_navbar.sass */
+  .navbar--user {
+    padding: 10.5px 12px;
+  }
 }
 
 /* line 1, ../stylesheets/modules/_sidebar.sass */
@@ -2581,7 +2586,7 @@ header {
   font-size: 14px;
   line-height: 21px;
   border-radius: 4px;
-  padding: 12px 30px;
+  padding: 12px 10px;
   margin-left: 10px;
   text-decoration: none;
   margin-top: 35px;
@@ -2593,6 +2598,12 @@ header {
   text-decoration: none;
   opacity: 0.8;
   color: white;
+}
+@media (min-width: 35.5625em) {
+  /* line 1, ../stylesheets/modules/_sidebar.sass */
+  .sidebar--btn {
+    padding: 12px 30px;
+  }
 }
 
 /* line 7, ../stylesheets/modules/_sidebar.sass */

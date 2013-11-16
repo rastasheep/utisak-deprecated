@@ -5,7 +5,6 @@ header
   +clearfix
   height: 85px
   line-height: 85px
-  font-size: 20px
   color: $white
 
 .navbar--logo
@@ -20,6 +19,7 @@ header
     display: inline-block
 
 .navbar--title
+  font-size: 20px
   display: none
   +at-breakpoint($tablet)
     display: inline-block
@@ -39,4 +39,6 @@ header
   margin-left: 0
 
 .navbar--user
-  padding: 10.5px 12px
+  padding: 10.5px 5px
+  +at-breakpoint($tablet)
+    padding: 10.5px 12px

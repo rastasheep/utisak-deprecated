@@ -11,13 +11,12 @@
   +container
 
   +at-breakpoint($tablet)
-    +container
 
   +at-breakpoint($desktop)
+    
     @if $lt-ie9
-      // Sets explicit static width for old IE. They get horizontal scrollbars at <1024px.
-      $container-style: static  
+      // Force static width for IE7+8
+      width: pxtoem(768px)
     @else
-      // Sets a max-width so our grid is fluid up until 768px, then static.
-      $container-style: magic
-    +container
+      // Constrain the fluid grid to a max width
+      max-width: pxtoem(768px) 
