@@ -2550,6 +2550,20 @@ header {
   padding: 10.5px 12px;
 }
 
+/* line 46, ../stylesheets/modules/_navbar.sass */
+.pagetitle {
+  background-color: #a9bcdc;
+  border-top: 2px solid #a7b7d4;
+  color: white;
+}
+
+/* line 51, ../stylesheets/modules/_navbar.sass */
+.pagetitle--title {
+  font-size: 20px;
+  line-height: 45px;
+  height: 45px;
+}
+
 /* line 1, ../stylesheets/modules/_sidebar.sass */
 .sidebar--btn {
   display: inline-block;
