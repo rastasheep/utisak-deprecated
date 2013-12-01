@@ -1,3 +1,7 @@
+// Content elements
+//
+// Every page have some content element
+
 .content 
   min-height: 85vh
   @include border-radius(4px)
@@ -54,27 +58,5 @@
   +at-breakpoint($desktop)
     padding: 50px
 
-  .block--jumbo-txt
-    font-size: 40px
-    text-align: center
-
-    &:after
-      content: ''
-      position: relative
-      left: 50%
-      display: block
-      margin: 20px 0 20px -50px
-      width: 100px
-      height: 2px
-      background-color: rgba(0,0,0,0.1)
-
-  .block--last-par
-    &:after
-      content: ""
-      position: relative
-      left: 50%
-      display: block
-      margin: 20px 0 20px -50px
-      width: 100px
-      height: 2px
-      background-color: rgba(0, 0, 0, 0.1)
+.content--thread
+  @extend .list--item--open
