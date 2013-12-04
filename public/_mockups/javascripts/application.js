@@ -10,9 +10,18 @@ $(document).ready(function() {
   $('.item--content--share').click(function(event){
     event.preventDefault();
 
-    $(this).parents(".list--item, .list--item--open").find(".item--share").toggle();
+    $(this).parents(".list--item, .list--item--open").find(".item--share").slideToggle("100");
     $(this).parents(".list--item, .list--item--open").toggleClass('list--item list--item--open');
     $(this).find('i').toggleClass('icon-share icon-collapse');
+  });
+
+  // Bind reply button
+  $('.comment--reply a').click(function(event){
+    event.preventDefault();
+
+    $(this).parents(".comment--reply").siblings(".comment--reply-form").slideToggle("200");
+    ($(this).text() === "Zatvori") ? $(this).text("Odgovori") : $(this).text("Zatvori");
+
   });
 
 });

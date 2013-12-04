@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -1935,13 +1936,23 @@ h3, .h3 {
   margin-bottom: 1.26316em;
 }
 
-/* line 60, ../stylesheets/base/_elements.sass */
+/* line 59, ../stylesheets/base/_elements.sass */
+.pull-right {
+  float: right;
+}
+
+/* line 62, ../stylesheets/base/_elements.sass */
+.pull-left {
+  float: left;
+}
+
+/* line 66, ../stylesheets/base/_elements.sass */
 [class^="icon-"], [class*=" icon-"] {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 65, ../stylesheets/base/_elements.sass */
+/* line 71, ../stylesheets/base/_elements.sass */
 #lean_overlay {
   position: fixed;
   z-index: 100;
@@ -2627,23 +2638,36 @@ header {
   top: 50px;
 }
 
-/* line 1, ../stylesheets/modules/_thread.sass */
+/* line 3, ../stylesheets/modules/_thread.sass */
 .thread--nested {
   margin-left: 25px;
 }
 
-/* line 4, ../stylesheets/modules/_thread.sass */
+/* line 6, ../stylesheets/modules/_thread.sass */
 .thread--comment {
   position: relative;
   padding: 20px 25px;
   padding-left: 65px;
 }
-/* line 8, ../stylesheets/modules/_thread.sass */
+/* line 10, ../stylesheets/modules/_thread.sass */
 .thread--comment:hover > .comment--share {
   display: inline;
 }
 
-/* line 11, ../stylesheets/modules/_thread.sass */
+/* line 13, ../stylesheets/modules/_thread.sass */
+.thread--comment-info {
+  position: relative;
+  font-size: 20px;
+  padding: 10px 25px;
+  text-align: center;
+}
+/* line 18, ../stylesheets/modules/_thread.sass */
+.thread--comment-info b {
+  display: block;
+  padding: 20px;
+}
+
+/* line 22, ../stylesheets/modules/_thread.sass */
 .comment--author--img {
   position: absolute;
   background: #f2f2f0;
@@ -2657,13 +2681,13 @@ header {
   border-radius: 50%;
 }
 
-/* line 19, ../stylesheets/modules/_thread.sass */
+/* line 30, ../stylesheets/modules/_thread.sass */
 .comment--share {
   display: none;
   float: right;
 }
 
-/* line 23, ../stylesheets/modules/_thread.sass */
+/* line 34, ../stylesheets/modules/_thread.sass */
 .comment--reply {
   margin-top: 10px;
   font-size: 14px;
@@ -2671,18 +2695,29 @@ header {
   color: #8a9299;
 }
 
-/* line 29, ../stylesheets/modules/_thread.sass */
+/* line 40, ../stylesheets/modules/_thread.sass */
 .comment--form {
   padding-top: 20px;
 }
-/* line 32, ../stylesheets/modules/_thread.sass */
+/* line 43, ../stylesheets/modules/_thread.sass */
 .comment--form label {
   display: none;
 }
-/* line 35, ../stylesheets/modules/_thread.sass */
+/* line 46, ../stylesheets/modules/_thread.sass */
 .comment--form textarea {
   width: 100%;
   height: 120px;
+}
+
+/* line 50, ../stylesheets/modules/_thread.sass */
+.comment--reply-form {
+  display: none;
+  padding-top: 20px;
+}
+/* line 53, ../stylesheets/modules/_thread.sass */
+.comment--reply-form::before {
+  content: "↪";
+  padding: 10px;
 }
 
 /* line 5, ../stylesheets/_state.sass */
