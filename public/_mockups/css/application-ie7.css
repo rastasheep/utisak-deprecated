@@ -2127,6 +2127,17 @@ h3, .h3 {
   opacity: 0.8;
 }
 
+/* line 81, ../stylesheets/base/_icon.sass */
+.icon-settings {
+  background-image: url("../images/settings.png");
+  width: 16px;
+  height: 16px;
+}
+/* line 85, ../stylesheets/base/_icon.sass */
+.icon-settings:hover {
+  opacity: 0.8;
+}
+
 /* line 5, ../stylesheets/modules/_block.sass */
 .block--jumbo-txt {
   font-size: 40px;
@@ -2211,7 +2222,7 @@ h3, .h3 {
   background: -o-linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
   background: linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
   font-size: 14px;
-  line-height: 21px;
+  line-height: 22px;
   border-radius: 4px;
   padding: 12px 10px;
   margin-left: 10px;
@@ -2463,7 +2474,7 @@ h3, .h3 {
   background: -o-linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
   background: linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
   font-size: 14px;
-  line-height: 21px;
+  line-height: 22px;
   border-radius: 4px;
   padding: 12px 10px;
   margin-left: 10px;
@@ -2547,7 +2558,7 @@ header {
   background: -o-linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
   background: linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
   font-size: 14px;
-  line-height: 21px;
+  line-height: 22px;
   border-radius: 4px;
   padding: 12px 10px;
   margin-left: 10px;
@@ -2567,21 +2578,25 @@ header {
 
 /* line 41, ../stylesheets/modules/_navbar.sass */
 .navbar--user {
-  padding: 10.5px 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  max-height: 46px;
+  min-height: 46px;
 }
 /* line 91, ../.bundle/ruby/2.0.0/gems/susy-1.0.9/sass/susy/_media.scss */
 .lt-ie9 .navbar--user {
-  padding: 10.5px 12px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
-/* line 46, ../stylesheets/modules/_navbar.sass */
+/* line 50, ../stylesheets/modules/_navbar.sass */
 .pagetitle {
   background-color: #a9bcdc;
   border-top: 2px solid #a7b7d4;
   color: white;
 }
 
-/* line 51, ../stylesheets/modules/_navbar.sass */
+/* line 55, ../stylesheets/modules/_navbar.sass */
 .pagetitle--title {
   font-size: 20px;
   line-height: 45px;
@@ -2598,7 +2613,7 @@ header {
   background: -o-linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
   background: linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
   font-size: 14px;
-  line-height: 21px;
+  line-height: 22px;
   border-radius: 4px;
   padding: 12px 10px;
   margin-left: 10px;
