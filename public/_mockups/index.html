@@ -52,7 +52,7 @@
           </div>
 
           <nav class="navbar--buttons">
-            <a href="#"class="navbar--btn">
+            <a rel="leanModal" href="#new"class="navbar--btn">
               <i class="icon-new"></i>
               Dodaj vest
             </a>
@@ -326,7 +326,7 @@
             <div id="login" class="content--modal">
               <button class="modal--close">x</button>
                 <h1> Prijavi se koristeći</h1>
-                <ul class="modal--buttons">
+                <ul class="modal--content">
                   <li>
                     <a href="#" class="modal--btn btn--twitter">
                       <i class="icon-twitter"></i>
@@ -349,6 +349,35 @@
                   Teskst o bla bla truc stvarima kojih ce biti jedna recenica, mozda dve.
                 </p>
               </div>
+
+              <div id="new" class="content--modal">
+                <button class="modal--close">x</button>
+                  <h1>Dodaj svoj utisak</h1>
+
+                  <div class="modal--content">
+                    <form class="form-horizontal">
+                      <div class="control-group">
+                        <label class="control-label" for="inputEmail">Naslov</label>
+                        <input type="text" id="inputEmail" placeholder="Naslov">
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="inputPassword">Link</label>
+                        <input type="url" id="inputPassword" placeholder="Link">
+                      </div>
+                      <div class="control-group">
+                        <label for="news_content">Komentar</label>
+                        <textarea id="news_content" name="news[content]"></textarea>
+                      </div>
+                      <div class="control-group">
+                        <button type="submit" class="btn">Sign in</button>
+                      </div>
+                    </form>
+                  </div>
+
+                  <p>
+                    Teskst o bla bla truc stvarima kojih ce biti jedna recenica, mozda dve.
+                  </p>
+                </div>
 
         </div>
 

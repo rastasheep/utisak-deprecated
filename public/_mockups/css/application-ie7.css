@@ -2471,12 +2471,12 @@ h3, .h3 {
 }
 
 /* line 32, ../stylesheets/modules/_modal.sass */
-.modal--buttons {
+.modal--content {
   list-style: none;
   padding: 0;
 }
 /* line 35, ../stylesheets/modules/_modal.sass */
-.modal--buttons:after {
+.modal--content:after {
   content: "";
   position: relative;
   left: 50%;
