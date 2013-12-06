@@ -2247,19 +2247,11 @@ h3, .h3 {
 /* line 33, ../stylesheets/modules/_content.sass */
 .content--modal {
   width: 390px;
-  padding: 30px;
   display: none;
-  background: white;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  text-align: center;
-  border: 2px solid #a9bcdc;
+  padding: 30px;
 }
 
-/* line 42, ../stylesheets/modules/_content.sass */
+/* line 38, ../stylesheets/modules/_content.sass */
 .content--cover {
   padding: 60px 10% 30px;
   position: relative;
@@ -2273,13 +2265,13 @@ h3, .h3 {
   border-radius: 4px;
 }
 @media (min-width: 48.0625em) {
-  /* line 42, ../stylesheets/modules/_content.sass */
+  /* line 38, ../stylesheets/modules/_content.sass */
   .content--cover {
     margin: 80px 0 50px;
   }
 }
 
-/* line 52, ../stylesheets/modules/_content.sass */
+/* line 48, ../stylesheets/modules/_content.sass */
 .content--block {
   background: white;
   padding: 25px 10px;
@@ -2290,13 +2282,13 @@ h3, .h3 {
   border-radius: 4px;
 }
 @media (min-width: 35.5625em) {
-  /* line 52, ../stylesheets/modules/_content.sass */
+  /* line 48, ../stylesheets/modules/_content.sass */
   .content--block {
     padding: 25px;
   }
 }
 @media (min-width: 48.0625em) {
-  /* line 52, ../stylesheets/modules/_content.sass */
+  /* line 48, ../stylesheets/modules/_content.sass */
   .content--block {
     padding: 50px;
   }
@@ -2445,6 +2437,33 @@ h3, .h3 {
 }
 
 /* line 1, ../stylesheets/modules/_modal.sass */
+.content--modal {
+  background: white;
+  text-align: center;
+  border-left: 10px solid #a9bcdc;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 6, ../stylesheets/modules/_modal.sass */
+.content--modal:after {
+  position: absolute;
+  content: "";
+  top: 40px;
+  left: 0px;
+  pointer-events: none;
+  border: 10px solid transparent;
+  border-right-color: #a9bcdc;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* line 16, ../stylesheets/modules/_modal.sass */
 .modal--close {
   background-color: transparent;
   border: none;
@@ -2458,13 +2477,18 @@ h3, .h3 {
   right: 5px;
   top: 5px;
 }
+/* line 28, ../stylesheets/modules/_modal.sass */
+.modal--close:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
 
-/* line 14, ../stylesheets/modules/_modal.sass */
+/* line 32, ../stylesheets/modules/_modal.sass */
 .modal--buttons {
   list-style: none;
   padding: 0;
 }
-/* line 18, ../stylesheets/modules/_modal.sass */
+/* line 35, ../stylesheets/modules/_modal.sass */
 .modal--buttons:after {
   content: "";
   position: relative;
@@ -2476,9 +2500,10 @@ h3, .h3 {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* line 28, ../stylesheets/modules/_modal.sass */
+/* line 45, ../stylesheets/modules/_modal.sass */
 .modal--btn {
   width: 200px;
+  margin: 5px 0;
   display: inline-block;
   color: white;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #b0c1df), color-stop(50%, #a9bcdc));
@@ -2492,7 +2517,6 @@ h3, .h3 {
   padding: 12px 10px;
   margin-left: 10px;
   text-decoration: none;
-  margin: 5px 0;
 }
 /* line 11, ../stylesheets/mixins/_btn.sass */
 .modal--btn:hover {
@@ -2501,10 +2525,20 @@ h3, .h3 {
   color: white;
 }
 @media (min-width: 35.5625em) {
-  /* line 28, ../stylesheets/modules/_modal.sass */
+  /* line 45, ../stylesheets/modules/_modal.sass */
   .modal--btn {
     padding: 12px 30px;
   }
+}
+
+/* line 51, ../stylesheets/modules/_modal.sass */
+.btn--twitter:hover {
+  background: #55acee;
+}
+
+/* line 55, ../stylesheets/modules/_modal.sass */
+.btn--facebook:hover {
+  background: #3b5998;
 }
 
 /* line 1, ../stylesheets/modules/_navbar.sass */
