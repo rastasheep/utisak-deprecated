@@ -1866,55 +1866,58 @@ html {
 
 /* line 10, ../stylesheets/base/_elements.sass */
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  letter-spacing: -0.02em;
   height: 100%;
 }
 
-/* line 14, ../stylesheets/base/_elements.sass */
+/* line 15, ../stylesheets/base/_elements.sass */
 body {
   background-color: white;
   color: #8a9299;
   height: 100%;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
 }
 @media (min-width: 48.0625em) {
-  /* line 14, ../stylesheets/base/_elements.sass */
+  /* line 15, ../stylesheets/base/_elements.sass */
   body {
     background-color: #eceef1;
   }
 }
 
-/* line 21, ../stylesheets/base/_elements.sass */
+/* line 24, ../stylesheets/base/_elements.sass */
 a {
   color: #676767;
   text-decoration: none;
 }
-/* line 25, ../stylesheets/base/_elements.sass */
+/* line 28, ../stylesheets/base/_elements.sass */
 a:hover, a:focus {
   color: #a3b2cc;
 }
 
-/* line 28, ../stylesheets/base/_elements.sass */
+/* line 31, ../stylesheets/base/_elements.sass */
 p {
   margin-top: 0em;
   margin-bottom: 1.5em;
 }
-/* line 32, ../stylesheets/base/_elements.sass */
+/* line 35, ../stylesheets/base/_elements.sass */
 p:last-child {
   margin-bottom: 0em;
 }
 
-/* line 36, ../stylesheets/base/_elements.sass */
+/* line 39, ../stylesheets/base/_elements.sass */
 ul, ol {
   margin-top: 0em;
   margin-bottom: 1.5em;
   padding-left: 2.25em;
 }
-/* line 41, ../stylesheets/base/_elements.sass */
+/* line 44, ../stylesheets/base/_elements.sass */
 ul li, ol li {
   margin-bottom: 0em;
 }
 
-/* line 44, ../stylesheets/base/_elements.sass */
+/* line 47, ../stylesheets/base/_elements.sass */
 h1, .h1 {
   font-size: 2em;
   line-height: 1.125em;
@@ -1922,7 +1925,7 @@ h1, .h1 {
   margin-bottom: 0.75em;
 }
 
-/* line 49, ../stylesheets/base/_elements.sass */
+/* line 52, ../stylesheets/base/_elements.sass */
 h2, .h2 {
   font-size: 1.5em;
   line-height: 1.5em;
@@ -1930,7 +1933,7 @@ h2, .h2 {
   margin-bottom: 1em;
 }
 
-/* line 54, ../stylesheets/base/_elements.sass */
+/* line 57, ../stylesheets/base/_elements.sass */
 h3, .h3 {
   font-size: 1.1875em;
   line-height: 1.26316em;
@@ -1938,23 +1941,36 @@ h3, .h3 {
   margin-bottom: 1.26316em;
 }
 
-/* line 59, ../stylesheets/base/_elements.sass */
+/* line 62, ../stylesheets/base/_elements.sass */
 .pull-right {
   float: right;
 }
 
-/* line 62, ../stylesheets/base/_elements.sass */
+/* line 65, ../stylesheets/base/_elements.sass */
 .pull-left {
   float: left;
 }
 
-/* line 66, ../stylesheets/base/_elements.sass */
+/* line 68, ../stylesheets/base/_elements.sass */
+.center {
+  text-align: center;
+}
+
+/* line 72, ../stylesheets/base/_elements.sass */
+.btn-set {
+  margin: 10px;
+  line-height: 44px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* line 79, ../stylesheets/base/_elements.sass */
 [class^="icon-"], [class*=" icon-"] {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 71, ../stylesheets/base/_elements.sass */
+/* line 84, ../stylesheets/base/_elements.sass */
 #lean_overlay {
   position: fixed;
   z-index: 100;
@@ -2011,7 +2027,7 @@ h3, .h3 {
 
 /* line 7, ../stylesheets/base/_icon.sass */
 .icon-login {
-  background: center url("../images/login.png") no-repeat;
+  background: center url("../images/login.png") no-repeat !important;
   width: 24px;
   height: 24px;
 }
@@ -2104,37 +2120,38 @@ h3, .h3 {
 
 /* line 67, ../stylesheets/base/_icon.sass */
 .icon-avatar {
-  width: 24px;
-  height: 24px;
+  width: 38px;
+  height: 38px;
+  padding: 0 !important;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 71, ../stylesheets/base/_icon.sass */
+/* line 72, ../stylesheets/base/_icon.sass */
 .icon-avatar:hover {
   opacity: 0.8;
 }
 
-/* line 74, ../stylesheets/base/_icon.sass */
+/* line 75, ../stylesheets/base/_icon.sass */
 .icon-link {
   background-image: url("../images/link.png");
   width: 16px;
   height: 16px;
 }
-/* line 78, ../stylesheets/base/_icon.sass */
+/* line 79, ../stylesheets/base/_icon.sass */
 .icon-link:hover {
   opacity: 0.8;
 }
 
-/* line 81, ../stylesheets/base/_icon.sass */
+/* line 82, ../stylesheets/base/_icon.sass */
 .icon-settings {
   background-image: url("../images/settings.png");
   width: 16px;
   height: 16px;
 }
-/* line 85, ../stylesheets/base/_icon.sass */
+/* line 86, ../stylesheets/base/_icon.sass */
 .icon-settings:hover {
   opacity: 0.8;
 }
@@ -2547,118 +2564,149 @@ header {
 }
 
 /* line 4, ../stylesheets/modules/_navbar.sass */
-.navbar {
-  overflow: hidden;
-  height: 85px;
-  line-height: 85px;
-  color: white;
+.metabar {
+  position: absolute;
+  top: 15px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 65px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/* line 10, ../stylesheets/modules/_navbar.sass */
-.navbar--logo {
-  background-image: url("../images/logo.png");
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  vertical-align: middle;
-}
-/* line 16, ../stylesheets/modules/_navbar.sass */
-.navbar--logo:hover {
-  background-position: 0 50px;
-}
-@media (min-width: 35.5625em) {
-  /* line 10, ../stylesheets/modules/_navbar.sass */
-  .navbar--logo {
-    display: inline-block;
-  }
+/* line 12, ../stylesheets/modules/_navbar.sass */
+.metabar--block {
+  margin-right: 15px;
 }
 
-/* line 21, ../stylesheets/modules/_navbar.sass */
-.navbar--title {
-  font-size: 20px;
-  display: none;
-}
-@media (min-width: 35.5625em) {
-  /* line 21, ../stylesheets/modules/_navbar.sass */
-  .navbar--title {
-    display: inline-block;
-  }
-}
-/* line 27, ../stylesheets/modules/_navbar.sass */
-.navbar--title span {
-  display: none;
-  color: #a9bcdc;
-}
-@media (min-width: 48.0625em) {
-  /* line 27, ../stylesheets/modules/_navbar.sass */
-  .navbar--title span {
-    display: inline-block;
-  }
-}
-
-/* line 33, ../stylesheets/modules/_navbar.sass */
-.navbar--buttons {
-  display: inline;
-  float: right;
-}
-
-/* line 37, ../stylesheets/modules/_navbar.sass */
-.navbar--btn {
+/* line 15, ../stylesheets/modules/_navbar.sass */
+.metabar--btn {
   display: inline-block;
   color: white;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #b0c1df), color-stop(50%, #a9bcdc));
-  background: -webkit-linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
-  background: -moz-linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
-  background: -o-linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
-  background: linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
   font-size: 14px;
-  line-height: 22px;
-  border-radius: 4px;
-  padding: 12px 10px;
-  margin-left: 10px;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 16px;
+  text-align: center;
   text-decoration: none;
-  margin-left: 0;
+  border: 1px solid white;
+  border-radius: 4px;
+  vertical-align: bottom;
+  text-rendering: optimizeLegibility;
+  background: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* line 11, ../stylesheets/mixins/_btn.sass */
-.navbar--btn:hover {
+/* line 30, ../stylesheets/modules/_navbar.sass */
+.metabar--btn:hover {
   text-decoration: none;
   opacity: 0.8;
-  color: white;
+}
+
+/* line 34, ../stylesheets/modules/_navbar.sass */
+.hero {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 80px;
 }
 @media (min-width: 35.5625em) {
-  /* line 37, ../stylesheets/modules/_navbar.sass */
-  .navbar--btn {
-    padding: 12px 30px;
+  /* line 34, ../stylesheets/modules/_navbar.sass */
+  .hero {
+    margin-top: 50px;
   }
 }
 
 /* line 41, ../stylesheets/modules/_navbar.sass */
-.navbar--user {
-  padding-left: 5px;
-  padding-right: 5px;
-  max-height: 46px;
-  min-height: 46px;
-}
-@media (min-width: 35.5625em) {
-  /* line 41, ../stylesheets/modules/_navbar.sass */
-  .navbar--user {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
+.hero--title {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 50px;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: white;
+  margin-bottom: 8px;
+  outline: 0;
+  word-break: break-word;
 }
 
-/* line 50, ../stylesheets/modules/_navbar.sass */
+/* line 52, ../stylesheets/modules/_navbar.sass */
+.hero--description {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  letter-spacing: 0.01rem;
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 22px;
+  margin: 0 0 10px 0 !important;
+  padding: 0;
+  color: white;
+  outline: 0;
+  word-break: break-word;
+}
+
+/* line 64, ../stylesheets/modules/_navbar.sass */
+.navbar {
+  overflow: hidden;
+  color: white;
+  border-top: 1px #dededc solid;
+}
+
+/* line 69, ../stylesheets/modules/_navbar.sass */
+.navbar--tabs {
+  list-style: none;
+  margin: 0;
+}
+
+/* line 73, ../stylesheets/modules/_navbar.sass */
+.navbar--tabs--item {
+  margin-right: 20px;
+  display: block;
+}
+@media (min-width: 35.5625em) {
+  /* line 73, ../stylesheets/modules/_navbar.sass */
+  .navbar--tabs--item {
+    display: inline-block;
+  }
+}
+/* line 79, ../stylesheets/modules/_navbar.sass */
+.navbar--tabs--item:last-child {
+  margin-right: 0px;
+}
+/* line 82, ../stylesheets/modules/_navbar.sass */
+.navbar--tabs--item a {
+  font-weight: 700;
+  font-style: normal;
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 20px 0;
+  color: white;
+}
+
+/* line 92, ../stylesheets/modules/_navbar.sass */
+.navbar--tabs--item.active a {
+  text-decoration: line-through;
+}
+
+/* line 95, ../stylesheets/modules/_navbar.sass */
 .pagetitle {
   background-color: #a9bcdc;
   border-top: 2px solid #a7b7d4;
   color: white;
 }
 
-/* line 55, ../stylesheets/modules/_navbar.sass */
+/* line 100, ../stylesheets/modules/_navbar.sass */
 .pagetitle--title {
-  font-size: 20px;
-  line-height: 45px;
   height: 45px;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 
 /* line 1, ../stylesheets/modules/_sidebar.sass */

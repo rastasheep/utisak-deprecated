@@ -41,28 +41,42 @@
   <body>
 
     <header>
-      <div class="grid navbar">
 
-        <a href="#">
-          <span class="navbar--logo"></span>
-        </a>
+      <div class="metabar">
+        <div class="metabar--block pull-right">
 
-        <div class="navbar--title">
-          Utisak. <span>Vesti koje se pamte.</span>
+          <div class="btn-set">
+            <a class="metabar--btn" href="/p/new-post">Dodaj vest</a>
+          </div>
+
+          <div class="btn-set">
+            <img class="metabar--btn icon-avatar tooltip" src="https://d233eq3e3p3cv0.cloudfront.net/fit/c/333/333/0*rm236hEV8U2zdEhL.jpeg" title="Aleksandar Diklić">
+          </div>
+
         </div>
-
-        <nav class="navbar--buttons">
-          <a href="#"class="navbar--btn">
-            <i class="icon-new"></i>
-            Dodaj vest
-          </a>
-          <a href="#"class="navbar--btn">Najnovije</a>
-          <a href="#"class="navbar--btn navbar--user">
-            <img class="icon-avatar tooltip" title="@Markoa" src="https://2.gravatar.com/avatar/4062b608b628a89adeb54ec61e464c32?d=https%3A%2F%2Fidenticons.github.com%2F281683d0650eb208fa2138978a675665.png&amp;r=x&amp;s=140">
-          </a>
-        </nav>
-
       </div>
+
+      <header class="grid center">
+        <div class="hero">
+          <h1 class="hero--title">Utisak</h1>
+          <p class="hero--description">Vesti koje se pamte</p>
+        </div>
+      </header>
+
+      <nav class="grid center navbar">
+        <ul class="navbar--tabs">
+          <li class="navbar--tabs--item">
+            <a class="nav-tabs-anchor" href="index.html">Aktuelno</a>
+          </li>
+          <li class="navbar--tabs--item">
+            <a class="nav-tabs-anchor" href="filter.html">Najnovije</a>
+          </li>
+          <li class="navbar--tabs--item">
+            <a class="nav-tabs-anchor" href="filter.html">Utisak dana</a>
+          </li>
+        </ul>
+      </nav>
+
     </header>
 
     <div class="grid">

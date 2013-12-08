@@ -1,51 +1,96 @@
 header
   background-color: $light-blue
 
-.navbar
-  +clearfix
-  height: 85px
-  line-height: 85px
-  color: $white
+.metabar
+  position: absolute
+  top: 15px
+  box-sizing: border-box
+  width: 100%
+  height: 65px
+  @include box-sizing(border-box)
 
-.navbar--logo
-  background-image: url("../images/logo.png")
-  width: 50px
-  height: 50px
+.metabar--block
+  margin-right: 15px
+
+.metabar--btn
+  display: inline-block
+  color: $white
+  font-size: 14px
+  height: 38px
+  line-height: 38px
+  padding: 0 16px
+  text-align: center
+  text-decoration: none
+  border: 1px solid $white
+  border-radius: 4px
+  vertical-align: bottom
+  text-rendering: optimizeLegibility
+  background: transparent
+  @include box-sizing(border-box)
+  &:hover
+    text-decoration: none
+    opacity: 0.8
+
+.hero
   display: inline-block
   vertical-align: middle
-  &:hover
-    background-position: 0 50px
+  margin-top: 80px
+  +at-breakpoint($tablet)
+    margin-top: 50px
+
+.hero--title
+  font-weight: 700
+  font-style: normal
+  font-size: 50px
+  letter-spacing: -0.04em
+  line-height: 1
+  color: $white
+  margin-bottom: 8px
+  outline: 0
+  word-break: break-word
+
+.hero--description
+  font-family: Georgia, Cambria, "Times New Roman", Times,serif
+  letter-spacing: .01rem
+  font-weight: lighter
+  font-style: normal
+  font-size: 22px
+  margin: 0 0 10px 0 !important
+  padding: 0
+  color: $white
+  outline: 0
+  word-break: break-word
+
+.navbar
+  +clearfix
+  color: $white
+  border-top: 1px $gray solid
+
+.navbar--tabs
+  list-style: none
+  margin: 0
+
+.navbar--tabs--item
+  margin-right: 20px
+  display: block
   +at-breakpoint($tablet)
     display: inline-block
 
-.navbar--title
-  font-size: 20px
-  display: none
-  +at-breakpoint($tablet)
-    display: inline-block
+  &:last-child
+    margin-right: 0px
 
-  span
-    display: none
-    color: $dark-blue
-    +at-breakpoint($desktop)
-      display: inline-block
+  a
+    font-weight: 700
+    font-style: normal
+    display: block
+    font-size: 13px
+    text-transform: uppercase
+    letter-spacing: .2em
+    padding: 20px 0
+    color: $white
 
-.navbar--buttons
-  display: inline
-  float: right
-
-.navbar--btn
-  @include btn
-  margin-left: 0
-
-.navbar--user
-  padding-left: 5px
-  padding-right: 5px
-  max-height: 46px
-  min-height: 46px
-  +at-breakpoint($tablet)
-    padding-left: 12px
-    padding-right: 12px
+.navbar--tabs--item.active a 
+  text-decoration: line-through
 
 .pagetitle
   background-color: $dark-blue
@@ -53,6 +98,11 @@ header
   color: $white
 
 .pagetitle--title
-  font-size: 20px
-  line-height: 45px
   height: 45px
+  font-size: 20px
+  font-weight: 700
+  font-style: normal
+  line-height: 45px
+  text-align: center
+  text-transform: uppercase
+  letter-spacing: 0.2em

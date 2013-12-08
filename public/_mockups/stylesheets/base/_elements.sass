@@ -8,13 +8,16 @@
 
 // The basics
 html
-  font-family: $sans-font-stack
+  font-family: $font-stack
+  letter-spacing: -0.02em
   height: 100%
 
 body
   background-color: $white
   color: #8a9299
   height: 100%
+  line-height: 1.4
+  -webkit-font-smoothing: antialiased
   +at-breakpoint($desktop)
     background-color: $background
 
@@ -61,6 +64,16 @@ h3, .h3
 
 .pull-left
   float: left
+
+.center
+  text-align: center
+
+// Button holder
+.btn-set
+  margin: 10px
+  line-height: 44px
+  display: inline-block
+  white-space: nowrap
 
 // Icons
 [class^="icon-"], [class*=" icon-"]
