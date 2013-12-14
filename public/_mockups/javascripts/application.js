@@ -24,5 +24,11 @@ $(document).ready(function() {
 
   });
 
-});
+  // Fency background for user profiles
+  $.adaptiveBackground.run({
+    changeTxtColor: true,
+    parentTxtLight: "#fff",
+    parentTxtDark: "#676767"
+  });
 
+});
