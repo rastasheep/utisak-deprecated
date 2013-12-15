@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // Modals
-  $("a[rel*=leanModal]").leanModal({top: 50,closeButton: ".modal--close"});
+  $("a[rel*=leanModal]").leanModal({top: 0,closeButton: ".modal--close"});
 
   // Tooltips
   $('.tooltip').tooltipster();
@@ -22,6 +22,12 @@ $(document).ready(function() {
     $(this).parents(".comment--reply").siblings(".comment--reply-form").slideToggle("200");
     ($(this).text() === "Zatvori") ? $(this).text("Odgovori") : $(this).text("Zatvori");
 
+  });
+
+  // Bind more button
+  $('.metabar--more a').click(function(event){
+    event.preventDefault();
+    $(".navbar").slideToggle("100");
   });
 
   // Fency background for user profiles

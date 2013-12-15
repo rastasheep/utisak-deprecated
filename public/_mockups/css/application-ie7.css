@@ -1848,13 +1848,13 @@ legend + .control-group {
 
 /* line 61, ../.bundle/ruby/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 * html {
-  font-size: 100%;
+  font-size: 93.75%;
 }
 
 /* line 64, ../.bundle/ruby/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
-  font-size: 16px;
-  line-height: 1.5em;
+  font-size: 15px;
+  line-height: 1.6em;
 }
 
 /* line 14, ../.bundle/ruby/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
@@ -1897,7 +1897,7 @@ a:hover, a:focus {
 /* line 31, ../stylesheets/base/_elements.sass */
 p {
   margin-top: 0em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.6em;
 }
 /* line 35, ../stylesheets/base/_elements.sass */
 p:last-child {
@@ -1907,8 +1907,8 @@ p:last-child {
 /* line 39, ../stylesheets/base/_elements.sass */
 ul, ol {
   margin-top: 0em;
-  margin-bottom: 1.5em;
-  padding-left: 2.25em;
+  margin-bottom: 1.6em;
+  padding-left: 2.4em;
 }
 /* line 44, ../stylesheets/base/_elements.sass */
 ul li, ol li {
@@ -1917,7 +1917,7 @@ ul li, ol li {
 
 /* line 47, ../stylesheets/base/_elements.sass */
 h1, .h1 {
-  font-size: 2em;
+  font-size: 2.13333em;
   line-height: 1.125em;
   margin-top: 0em;
   margin-bottom: 0.75em;
@@ -1925,7 +1925,7 @@ h1, .h1 {
 
 /* line 52, ../stylesheets/base/_elements.sass */
 h2, .h2 {
-  font-size: 1.5em;
+  font-size: 1.6em;
   line-height: 1.5em;
   margin-top: 0em;
   margin-bottom: 1em;
@@ -1933,7 +1933,7 @@ h2, .h2 {
 
 /* line 57, ../stylesheets/base/_elements.sass */
 h3, .h3 {
-  font-size: 1.1875em;
+  font-size: 1.26667em;
   line-height: 1.26316em;
   margin-top: 0em;
   margin-bottom: 1.26316em;
@@ -2155,6 +2155,26 @@ h3, .h3 {
   opacity: 0.8;
 }
 
+/* line 89, ../stylesheets/base/_icon.sass */
+.icon-more {
+  background: center url("../images/more.png") !important;
+  width: 24px;
+  height: 24px;
+}
+/* line 93, ../stylesheets/base/_icon.sass */
+.icon-more:hover {
+  opacity: 0.8;
+}
+
+/* line 96, ../stylesheets/base/_icon.sass */
+.icon-verified {
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background: url(https://d1wzu4qct23er4.cloudfront.net/assets/checkmark-e3a77f30de8e1e6ea3316699d0ee25ac.png) center no-repeat #57ad68;
+}
+
 /* line 5, ../stylesheets/modules/_block.sass */
 .block--jumbo-txt {
   font-size: 40px;
@@ -2219,7 +2239,7 @@ h3, .h3 {
   width: 74.46809%;
   float: right;
   margin-right: 0;
-  *margin-left: -1.25em;
+  *margin-left: -1.33333em;
   min-height: 85vh;
 }
 
@@ -2259,12 +2279,16 @@ h3, .h3 {
 
 /* line 33, ../stylesheets/modules/_content.sass */
 .content--modal {
-  width: 390px;
   display: none;
   padding: 30px;
+  width: 320px;
+}
+/* line 91, ../.bundle/ruby/2.0.0/gems/susy-1.0.9/sass/susy/_media.scss */
+.lt-ie9 .content--modal {
+  width: 500px;
 }
 
-/* line 38, ../stylesheets/modules/_content.sass */
+/* line 40, ../stylesheets/modules/_content.sass */
 .content--cover {
   padding: 60px 10% 30px;
   position: relative;
@@ -2283,7 +2307,7 @@ h3, .h3 {
   margin: 80px 0 50px;
 }
 
-/* line 49, ../stylesheets/modules/_content.sass */
+/* line 51, ../stylesheets/modules/_content.sass */
 .content--block {
   background: white;
   padding: 25px 10px;
@@ -2305,9 +2329,9 @@ h3, .h3 {
 /* line 1, ../stylesheets/modules/_cover.sass */
 .content--cover::before, .content--cover::after {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 100px;
+  left: 380px;
   width: 150px;
   height: 500px;
   z-index: -1;
@@ -2373,10 +2397,12 @@ h3, .h3 {
 /* line 10, ../stylesheets/modules/_grid.sass */
 .grid {
   *zoom: 1;
-  padding-left: 1.25em;
-  padding-right: 1.25em;
+  padding-left: 1.33333em;
+  padding-right: 1.33333em;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
 }
 /* line 38, ../.bundle/ruby/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .grid:after {
@@ -2386,7 +2412,7 @@ h3, .h3 {
 }
 /* line 91, ../.bundle/ruby/2.0.0/gems/susy-1.0.9/sass/susy/_media.scss */
 .lt-ie9 .grid {
-  width: 48em;
+  width: 51.2em;
 }
 
 /* line 1, ../stylesheets/modules/_list-item.sass */
@@ -2411,7 +2437,7 @@ h3, .h3 {
   margin: 10px 0;
 }
 
-/* line 15, ../stylesheets/modules/_list-item.sass */
+/* line 14, ../stylesheets/modules/_list-item.sass */
 .item--content, .item--share {
   padding: 12px 6px;
   position: relative;
@@ -2421,49 +2447,71 @@ h3, .h3 {
   padding: 20px 25px;
 }
 
-/* line 21, ../stylesheets/modules/_list-item.sass */
+/* line 20, ../stylesheets/modules/_list-item.sass */
 .item--share {
+  text-align: center;
   background-color: #a9bcdc;
   border-radius: 0 0 4px 4px;
   border-top: 2px solid #a7b7d4;
   color: white;
 }
-/* line 29, ../stylesheets/modules/_list-item.sass */
+/* line 91, ../.bundle/ruby/2.0.0/gems/susy-1.0.9/sass/susy/_media.scss */
+.lt-ie9 .item--share {
+  text-align: left;
+}
+/* line 30, ../stylesheets/modules/_list-item.sass */
+.item--share span {
+  display: block;
+}
+/* line 91, ../.bundle/ruby/2.0.0/gems/susy-1.0.9/sass/susy/_media.scss */
+.lt-ie9 .item--share span {
+  display: inline-block;
+}
+/* line 35, ../stylesheets/modules/_list-item.sass */
 .item--share i {
-  margin-left: 20px;
+  margin: 0 10px;
 }
 
-/* line 32, ../stylesheets/modules/_list-item.sass */
+/* line 38, ../stylesheets/modules/_list-item.sass */
 .item--content--vote {
   position: absolute;
 }
 
-/* line 35, ../stylesheets/modules/_list-item.sass */
+/* line 41, ../stylesheets/modules/_list-item.sass */
 .item--content--share {
   position: absolute;
+  right: 6px;
+  top: 12px;
+}
+/* line 91, ../.bundle/ruby/2.0.0/gems/susy-1.0.9/sass/susy/_media.scss */
+.lt-ie9 .item--content--share {
   right: 25px;
   top: 20px;
 }
+/* line 49, ../stylesheets/modules/_list-item.sass */
+.item--content--share span {
+  display: block;
+}
 
-/* line 40, ../stylesheets/modules/_list-item.sass */
+/* line 52, ../stylesheets/modules/_list-item.sass */
 .item--content--info {
   margin: 0 40px;
 }
 
-/* line 43, ../stylesheets/modules/_list-item.sass */
+/* line 55, ../stylesheets/modules/_list-item.sass */
 .item--content--info--metadata {
   color: #acb7bf;
   font-size: 14px;
 }
-/* line 47, ../stylesheets/modules/_list-item.sass */
+/* line 59, ../stylesheets/modules/_list-item.sass */
 .item--content--info--metadata a {
   color: #8a9299;
 }
-/* line 50, ../stylesheets/modules/_list-item.sass */
+/* line 62, ../stylesheets/modules/_list-item.sass */
 .item--content--info--metadata span {
   padding-left: 20px;
 }
-/* line 52, ../stylesheets/modules/_list-item.sass */
+/* line 64, ../stylesheets/modules/_list-item.sass */
 .item--content--info--metadata span:first-child {
   padding-left: 0;
 }
@@ -2494,8 +2542,12 @@ h3, .h3 {
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+/* line 91, ../.bundle/ruby/2.0.0/gems/susy-1.0.9/sass/susy/_media.scss */
+.lt-ie9 .content--modal {
+  top: 50px !important;
+}
 
-/* line 16, ../stylesheets/modules/_modal.sass */
+/* line 18, ../stylesheets/modules/_modal.sass */
 .modal--close {
   background-color: transparent;
   border: none;
@@ -2509,18 +2561,18 @@ h3, .h3 {
   right: 5px;
   top: 5px;
 }
-/* line 28, ../stylesheets/modules/_modal.sass */
+/* line 30, ../stylesheets/modules/_modal.sass */
 .modal--close:hover {
   text-decoration: none;
   opacity: 0.8;
 }
 
-/* line 32, ../stylesheets/modules/_modal.sass */
+/* line 34, ../stylesheets/modules/_modal.sass */
 .modal--content {
   list-style: none;
   padding: 0;
 }
-/* line 35, ../stylesheets/modules/_modal.sass */
+/* line 37, ../stylesheets/modules/_modal.sass */
 .modal--content:after {
   content: "";
   position: relative;
@@ -2532,7 +2584,7 @@ h3, .h3 {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* line 45, ../stylesheets/modules/_modal.sass */
+/* line 47, ../stylesheets/modules/_modal.sass */
 .modal--btn {
   width: 200px;
   margin: 5px 0;
@@ -2561,12 +2613,12 @@ h3, .h3 {
   padding: 12px 30px;
 }
 
-/* line 51, ../stylesheets/modules/_modal.sass */
+/* line 53, ../stylesheets/modules/_modal.sass */
 .btn--twitter:hover {
   background: #55acee;
 }
 
-/* line 55, ../stylesheets/modules/_modal.sass */
+/* line 57, ../stylesheets/modules/_modal.sass */
 .btn--facebook:hover {
   background: #3b5998;
 }
@@ -2579,7 +2631,6 @@ header {
 /* line 4, ../stylesheets/modules/_navbar.sass */
 .metabar {
   position: absolute;
-  top: 15px;
   box-sizing: border-box;
   width: 100%;
   height: 65px;
@@ -2587,13 +2638,17 @@ header {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-/* line 12, ../stylesheets/modules/_navbar.sass */
-.metabar--block {
-  margin-right: 15px;
+/* line 91, ../.bundle/ruby/2.0.0/gems/susy-1.0.9/sass/susy/_media.scss */
+.lt-ie9 .metabar {
+  top: 15px;
 }
 
-/* line 15, ../stylesheets/modules/_navbar.sass */
+/* line 13, ../stylesheets/modules/_navbar.sass */
+.metabar--block {
+  margin: 0 15px;
+}
+
+/* line 16, ../stylesheets/modules/_navbar.sass */
 .metabar--btn {
   display: inline-block;
   color: white;
@@ -2612,13 +2667,18 @@ header {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 30, ../stylesheets/modules/_navbar.sass */
+/* line 31, ../stylesheets/modules/_navbar.sass */
 .metabar--btn:hover {
   text-decoration: none;
   opacity: 0.8;
 }
 
-/* line 34, ../stylesheets/modules/_navbar.sass */
+/* line 91, ../.bundle/ruby/2.0.0/gems/susy-1.0.9/sass/susy/_media.scss */
+.lt-ie9 .metabar--more {
+  display: none;
+}
+
+/* line 40, ../stylesheets/modules/_navbar.sass */
 .hero {
   display: inline-block;
   vertical-align: middle;
@@ -2629,11 +2689,11 @@ header {
   margin-top: 50px;
 }
 
-/* line 41, ../stylesheets/modules/_navbar.sass */
+/* line 47, ../stylesheets/modules/_navbar.sass */
 .hero--title {
   font-weight: 700;
   font-style: normal;
-  font-size: 50px;
+  font-size: 42px;
   letter-spacing: -0.04em;
   line-height: 1;
   color: white;
@@ -2641,49 +2701,63 @@ header {
   outline: 0;
   word-break: break-word;
 }
+/* line 91, ../.bundle/ruby/2.0.0/gems/susy-1.0.9/sass/susy/_media.scss */
+.lt-ie9 .hero--title {
+  font-size: 50px;
+}
 
-/* line 52, ../stylesheets/modules/_navbar.sass */
+/* line 60, ../stylesheets/modules/_navbar.sass */
 .hero--description {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   letter-spacing: 0.01rem;
   font-weight: lighter;
   font-style: normal;
-  font-size: 22px;
   margin: 0 0 10px 0 !important;
   padding: 0;
   color: white;
   outline: 0;
   word-break: break-word;
 }
+/* line 91, ../.bundle/ruby/2.0.0/gems/susy-1.0.9/sass/susy/_media.scss */
+.lt-ie9 .hero--description {
+  font-size: 22px;
+}
 
-/* line 64, ../stylesheets/modules/_navbar.sass */
+/* line 73, ../stylesheets/modules/_navbar.sass */
 .navbar {
+  display: none;
   overflow: hidden;
   *zoom: 1;
   color: white;
   border-top: 1px #dededc solid;
+  padding: 0;
+}
+/* line 91, ../.bundle/ruby/2.0.0/gems/susy-1.0.9/sass/susy/_media.scss */
+.lt-ie9 .navbar {
+  display: block;
 }
 
-/* line 69, ../stylesheets/modules/_navbar.sass */
+/* line 83, ../stylesheets/modules/_navbar.sass */
 .navbar--tabs {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
-/* line 73, ../stylesheets/modules/_navbar.sass */
+/* line 88, ../stylesheets/modules/_navbar.sass */
 .navbar--tabs--item {
-  margin-right: 20px;
   display: block;
 }
 /* line 91, ../.bundle/ruby/2.0.0/gems/susy-1.0.9/sass/susy/_media.scss */
 .lt-ie9 .navbar--tabs--item {
   display: inline-block;
+  margin-right: 20px;
 }
-/* line 79, ../stylesheets/modules/_navbar.sass */
+/* line 94, ../stylesheets/modules/_navbar.sass */
 .navbar--tabs--item:last-child {
   margin-right: 0px;
 }
-/* line 82, ../stylesheets/modules/_navbar.sass */
+/* line 97, ../stylesheets/modules/_navbar.sass */
 .navbar--tabs--item a {
   font-weight: 700;
   font-style: normal;
@@ -2695,28 +2769,31 @@ header {
   color: white;
 }
 
-/* line 92, ../stylesheets/modules/_navbar.sass */
+/* line 107, ../stylesheets/modules/_navbar.sass */
 .navbar--tabs--item.active a {
   text-decoration: line-through;
 }
 
-/* line 95, ../stylesheets/modules/_navbar.sass */
+/* line 110, ../stylesheets/modules/_navbar.sass */
 .pagetitle {
   background-color: #a9bcdc;
   border-top: 2px solid #a7b7d4;
   color: white;
 }
 
-/* line 100, ../stylesheets/modules/_navbar.sass */
+/* line 115, ../stylesheets/modules/_navbar.sass */
 .pagetitle--title {
   height: 45px;
-  font-size: 20px;
   font-weight: 700;
   font-style: normal;
   line-height: 45px;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
+}
+/* line 91, ../.bundle/ruby/2.0.0/gems/susy-1.0.9/sass/susy/_media.scss */
+.lt-ie9 .pagetitle--title {
+  font-size: 20px;
 }
 
 /* line 1, ../stylesheets/modules/_sidebar.sass */

@@ -31,9 +31,11 @@
   margin-left: 0
 
 .content--modal
-  width: 390px
   display: none
   padding: 30px
+  width: 320px
+  +at-breakpoint($tablet)
+    width: 500px
 
 .content--cover
   padding: 60px 10% 30px
