@@ -1,0 +1,61 @@
+// Content elements
+//
+// Every page have some content element
+
+.content 
+  min-height: 85vh
+  @include border-radius(4px)
+  +at-breakpoint($desktop)
+    margin-top: 50px
+    margin-bottom: 10px
+
+.content--list
+  margin: 0
+  padding: 0
+  list-style: none
+
+.content--sidebar
+  @include span-columns(3,12)
+  min-height: 85vh
+
+.content--box
+  @include span-columns(9 omega,12)
+  min-height: 85vh
+
+.content--more
+  margin: 20px 0
+  text-align: center
+
+.more--btn
+  @include btn
+  margin-left: 0
+
+.content--modal
+  display: none
+  padding: 30px
+  width: 320px
+  +at-breakpoint($tablet)
+    width: 500px
+
+.content--cover
+  padding: 60px 10% 30px
+  position: relative
+  text-align: center
+  background-color: $white
+  margin: 60px 0 40px
+  z-index: 0
+  @include border-radius(4px)
+  +at-breakpoint($desktop)
+    margin: 80px 0 50px
+
+.content--block
+  background: #FFF
+  padding: 25px 10px
+  @include border-radius(4px)
+  +at-breakpoint($tablet)
+    padding: 25px
+  +at-breakpoint($desktop)
+    padding: 50px
+
+.content--thread
+  @extend .list--item--open

@@ -1,0 +1,92 @@
+// Set baseline font size & line height
+// See http://compass-style.org/reference/compass/typography/vertical_rhythm/#mixin-establish-baseline
++establish-baseline
+
+// Set box-sizing: border-box and set the $border-box-sizing variable used internally by Susy
+// See http://susy.oddbird.net/guides/reference/#ref-border-box-mixin
++border-box-sizing
+
+// The basics
+html
+  font-family: $font-stack
+  letter-spacing: -0.02em
+  height: 100%
+
+body
+  background-color: $white
+  color: #8a9299
+  height: 100%
+  line-height: 1.4
+  -webkit-font-smoothing: antialiased
+  +at-breakpoint($desktop)
+    background-color: $background
+
+a
+  color: #676767
+  text-decoration: none
+
+  &:hover, &:focus
+    color: #a3b2cc
+    
+p
+  +leader(0)
+  +trailer(1)
+
+  &:last-child
+    +trailer(0)
+
+// Lists
+ul, ol
+  +leader(0)
+  +trailer(1)
+  padding-left: rhythm(1.5)
+
+  li
+    +trailer(0)
+
+h1, .h1
+  +adjust-font-size-to(32px)
+  +leader(0)
+  +trailer(1, 32px)
+
+h2, .h2
+  +adjust-font-size-to(24px)
+  +leader(0)
+  +trailer(1, 24px)
+
+h3, .h3
+  +adjust-font-size-to(19px)
+  +leader(0)
+  +trailer(1, 19px)
+
+.pull-right
+  float: right
+
+.pull-left
+  float: left
+
+.center
+  text-align: center
+
+// Button holder
+.btn-set
+  margin: 10px
+  line-height: 44px
+  display: inline-block
+  white-space: nowrap
+
+// Icons
+[class^="icon-"], [class*=" icon-"]
+  display: inline-block
+  vertical-align: middle
+
+// Modals
+#lean_overlay 
+  position: fixed
+  z-index: 100
+  top: 0px
+  left: 0px
+  height: 100%
+  width: 100%
+  background: #000
+  display: none

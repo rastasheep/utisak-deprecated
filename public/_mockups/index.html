@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+
+<head>
+  <title>OldIE Stylesheet Example</title>
+
+  <!--[if gt IE 9]><!-->
+  <link rel="stylesheet" href="css/application.css" media="all" type="text/css" />
+  <!--<![endif]-->
+
+    <!--[if IE 9]>
+      <link rel="stylesheet" href="css/application-ie9.css" />
+      <![endif]-->
+
+    <!--[if IE 8]>
+      <link rel="stylesheet" href="css/application-ie8.css" />
+      <![endif]-->
+
+    <!--[if IE 7]>
+      <link rel="stylesheet" href="css/application-ie7.css" />
+      <![endif]-->
+
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+
+      <script type="text/javascript" src="javascripts/jquery.leanModal.min.js"></script>
+      <script type="text/javascript" src="javascripts/jquery.tooltipster.min.js"></script>
+
+
+      <script type="text/javascript" src="javascripts/application.js"></script>
+
+      <meta name="contentport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    </head>
+
+    <body>
+
+      <header class="main">
+
+        <div class="metabar">
+          <div class="metabar--block pull-left metabar--more">
+            <div class="btn-set">
+            <a href="#login">
+              <i class="metabar--btn icon-more"></i>
+            </a>
+            </div>
+          </div>
+
+          <div class="metabar--block pull-right">
+
+            <div class="btn-set">
+              <a class="metabar--btn" href="/p/new-post">Dodaj vest</a>
+            </div>
+
+            <div class="btn-set">
+              <a rel="leanModal" href="#login" class="tooltip" title="Prijavi se">
+                <i class="metabar--btn icon-login"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <header class="grid center">
+          <div class="hero">
+            <h1 class="hero--title">Utisak</h1>
+            <p class="hero--description">Vesti koje se pamte</p>
+          </div>
+        </header>
+
+        <nav class="grid center navbar">
+          <ul class="navbar--tabs">
+            <li class="navbar--tabs--item active">
+              <a class="nav-tabs-anchor" href="index.html">Aktuelno</a>
+            </li>
+            <li class="navbar--tabs--item">
+              <a class="nav-tabs-anchor" href="filter.html">Najnovije</a>
+            </li>
+            <li class="navbar--tabs--item">
+              <a class="nav-tabs-anchor" href="filter.html">Utisak dana</a>
+            </li>
+          </ul>
+        </nav>
+
+      </header>
+
+      <div class="grid">
+
+        <div class="content" >
+
+          <ul class="content--list">
+
+            <li data-index="1" class="list--item">
+              <div class="item--content">
+                <span class="item--content--vote">
+                  <i class="icon-voted tooltip" title="Glas dodat"></i>
+                </span>
+                <div class="item--content--info">
+                  <a href="#" class="detail-disclosure">
+                    <b>Poništena mala matura, za upis se boduje uspeh u školi i rezultati takmičenja!</b>
+                  </a>
+                  <span class="link-text">(blic.rs)</span>
+                  <div class="item--content--info--metadata">
+                    <span>
+                      123 glasova
+                    </span>
+                    <span>
+                      <a href="#">Lesa_ns</a>
+                    </span>
+                    <span>
+                      pre 4 sata
+                    </span>
+                    <span>
+                      <a href="#">123 komentara</a>
+                    </span>
+                  </div>
+                </div>
+                <a href="#" class="item--content--share" id="share">
+                  <i class="icon-share tooltip" title="Podeli"></i>
+                </a>
+              </div>
+
+              <div class="item--share is-hidden">
+                <div  class="item--content--info">
+                  <span>Podeli sa prijateljima</span> 
+                  <a href="#"><i class="icon-twitter tooltip" title="Twitter"></i></a>
+                  <a href="#"><i class="icon-facebook tooltip" title="Facebook"></i></a>
+                  <a href="#"><i class="icon-gplus tooltip" title="Google+"></i></a>
+                  <a href="#"><i class="icon-readability tooltip" title="Readability"></i></a>
+                </div>
+              </div>
+            </li>
+
+            <li data-index="1" class="list--item--open">
+              <div class="item--content">
+                <a rel="leanModal" href="#login" class="item--content--vote" > 
+                  <i class="icon-vote tooltip" title="Glasaj"></i>
+                </a>
+                <div class="item--content--info">
+                  <a href="#" class="detail-disclosure">
+                    <b>&quotEgzitov&quot kamp između Spensa i teniskih terena</b>
+                  </a>
+                  <span class="link-text">(021.rs)</span>
+                  <div class="item--content--info--metadata">
+                    <span>
+                      1 glas
+                    </span>
+                    <span>
+                      <a href="#">Lesa_ns</a>
+                    </span>
+                    <span>
+                      pre 8 minuta
+                    </span>
+                    <span>
+                      <a href="#">bez komentara</a>
+                    </span>
+                  </div>
+                </div>
+                <a href="#" class="item--content--share" id="share">
+                  <i class="icon-collapse"></i>
+                </a>
+              </div>
+
+              <div class="item--share">
+                <div  class="item--content--info">
+                  <span>Podeli sa prijateljima</span> 
+                  <a href="#"><i class="icon-twitter tooltip" title="Twitter"></i></a>
+                  <a href="#"><i class="icon-facebook tooltip" title="Facebook"></i></a>
+                  <a href="#"><i class="icon-gplus tooltip" title="Google+"></i></a>
+                  <a href="#"><i class="icon-readability tooltip" title="Readability"></i></a>
+                </div>
+              </div>
+            </li>
+
+            <li data-index="1" class="list--item">
+              <div class="item--content">
+                <a rel="leanModal" href="#login" class="item--content--vote">
+                  <i class="icon-vote tooltip" title="Glasaj"></i>
+                </a>
+                <div  class="item--content--info">
+                  <a href="#" class="detail-disclosure">
+                    <b>U sredu ceo Novi Sad sa prigradskim naseljima bez vode</b>
+                  </a>
+                  <span class="link-text">(021.rs)</span>
+                  <div  class="item--content--info--metadata">
+                    <span>
+                      9 glasova
+                    </span>
+                    <span>
+                      <a href="#">Lesa_ns</a>
+                    </span>
+                    <span>
+                      pre 1 godinu
+                    </span>
+                    <span>
+                      <a href="#">1 komentar</a>
+                    </span>
+                  </div>
+                </div>
+                <a href="#" class="item--content--share" id="share">
+                  <i class="icon-share tooltip" title="Podeli"></i>
+                </a>
+              </div>
+
+              <div class="item--share is-hidden">
+                <div  class="item--content--info">
+                  <span>Podeli sa prijateljima</span> 
+                  <a href="#"><i class="icon-twitter tooltip" title="Twitter"></i></a>
+                  <a href="#"><i class="icon-facebook tooltip" title="Facebook"></i></a>
+                  <a href="#"><i class="icon-gplus tooltip" title="Google+"></i></a>
+                  <a href="#"><i class="icon-readability tooltip" title="Readability"></i></a>
+                </div>
+              </div>
+            </li>
+
+            <li data-index="1" class="list--item">
+              <div class="item--content">
+                <a rel="leanModal" href="#login" class="item--content--vote">
+                  <i class="icon-vote tooltip" title="Glasaj"></i>
+                </a>
+                <div  class="item--content--info">
+                  <a href="#" class="detail-disclosure">
+                    <b>100 filmova koji gledaoce inspirišu na putovanja</b>
+                  </a>
+                  <span class="link-text">(021.rs)</span>
+                  <div  class="item--content--info--metadata">
+                    <span>
+                      15 glasova
+                    </span>
+                    <span>
+                      <a href="#">Lesa_ns</a>
+                    </span>
+                    <span>
+                      pre 8 sati
+                    </span>
+                    <span>
+                      <a href="#">nema komentara</a>
+                    </span>
+                  </div>
+                </div>
+                <a href="#" class="item--content--share" id="share">
+                  <i class="icon-share tooltip" title="Podeli"></i>
+                </a>
+              </div>
+
+              <div class="item--share is-hidden">
+                <div  class="item--content--info">
+                  <span>Podeli sa prijateljima</span> 
+                  <a href="#"><i class="icon-twitter tooltip" title="Twitter"></i></a>
+                  <a href="#"><i class="icon-facebook tooltip" title="Facebook"></i></a>
+                  <a href="#"><i class="icon-gplus tooltip" title="Google+"></i></a>
+                  <a href="#"><i class="icon-readability tooltip" title="Readability"></i></a>
+                </div>
+              </div>
+            </li>
+
+            <li data-index="1" class="list--item">
+              <div class="item--content">
+                <a rel="leanModal" href="#login" class="item--content--vote">
+                  <i class="icon-vote tooltip" title="Glasaj"></i>
+                </a>
+                <div  class="item--content--info">
+                  <a href="#" class="detail-disclosure">
+                    <b>EXIT KAMP 2013. | Muzika | Nadlanu.com</b>
+                  </a>
+                  <span class="link-text">(nadlanu.com)</span>
+                  <div  class="item--content--info--metadata">
+                    <span>
+                      42 glasova
+                    </span>
+                    <span>
+                      <a href="#">Lesa_ns</a>
+                    </span>
+                    <span>
+                      pre 2 dana
+                    </span>
+                    <span>
+                      <a href="#">43 komentara</a>
+                    </span>
+                  </div>
+                </div>
+                <a href="#" class="item--content--share" id="share">
+                  <i class="icon-share tooltip" title="Podeli"></i>
+                </a>
+              </div>
+
+              <div class="item--share is-hidden">
+                <div  class="item--content--info">
+                  <span>Podeli sa prijateljima</span> 
+                  <a href="#"><i class="icon-twitter tooltip" title="Twitter"></i></a>
+                  <a href="#"><i class="icon-facebook tooltip" title="Facebook"></i></a>
+                  <a href="#"><i class="icon-gplus tooltip" title="Google+"></i></a>
+                  <a href="#"><i class="icon-readability tooltip" title="Readability"></i></a>
+                </div>
+              </div>
+            </li>
+
+            <li data-index="1" class="list--item">
+              <div class="item--content">
+                <a rel="leanModal" href="#login" class="item--content--vote">
+                  <i class="icon-vote tooltip" title="Glasaj"></i>
+                </a>
+                <div  class="item--content--info">
+                  <a href="#" class="detail-disclosure">
+                    <b>Biblioteka na Štrandu počela sa radom - I love Novi Sad</b>
+                  </a>
+                  <span class="link-text">(ilovenovisad.com)</span>
+                  <div  class="item--content--info--metadata">
+                    <span>
+                      1 glas 
+                    </span>
+                    <span>
+                      <a href="#">Lesa_ns</a>
+                    </span>
+                    <span>
+                      25.06. u 06:58
+                    </span>
+                    <span>
+                      <a href="#">bez komentara</a>
+                    </span>
+                  </div>
+                </div>
+                <a href="#" class="item--content--share" id="share">
+                  <i class="icon-share"></i>
+                </a>
+              </div>
+
+              <div class="item--share is-hidden">
+                <div  class="item--content--info">
+                  <span>Podeli sa prijateljima</span> 
+                  <a href="#"><i class="icon-twitter tooltip" title="Twitter"></i></a>
+                  <a href="#"><i class="icon-facebook tooltip" title="Facebook"></i></a>
+                  <a href="#"><i class="icon-gplus tooltip" title="Google+"></i></a>
+                  <a href="#"><i class="icon-readability tooltip" title="Readability"></i></a>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+          <div class="content--more">
+            <a href="#"class="more--btn">Učitaj još</a>
+          </div>
+
+            <div id="login" class="content--modal">
+              <button class="modal--close">x</button>
+                <h1> Prijavi se koristeći</h1>
+                <ul class="modal--content">
+                  <li>
+                    <a href="#" class="modal--btn btn--twitter">
+                      <i class="icon-twitter"></i>
+                      Twitter nalog
+                    </a>
+                  </li>
+                  <li>
+                    <p style="margin: 15px 0  ">
+                      ili
+                    </p>
+                  </li>
+                  <li>
+                    <a href="#" class="modal--btn btn--facebook">
+                      <i class="icon-facebook"></i>
+                      Facebook nalog
+                    </a>
+                  </li>
+                </ul>
+                <p>
+                  Teskst o bla bla truc stvarima kojih ce biti jedna recenica, mozda dve.
+                </p>
+              </div>
+
+              <div id="new" class="content--modal">
+                <button class="modal--close">x</button>
+                  <h1>Dodaj svoj utisak</h1>
+
+                  <div class="modal--content">
+                    <form class="form-horizontal">
+                      <div class="control-group">
+                        <label class="control-label" for="inputEmail">Naslov</label>
+                        <input type="text" id="inputEmail" placeholder="Naslov">
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="inputPassword">Link</label>
+                        <input type="url" id="inputPassword" placeholder="Link">
+                      </div>
+                      <div class="control-group">
+                        <label for="news_content">Komentar</label>
+                        <textarea id="news_content" name="news[content]"></textarea>
+                      </div>
+                      <div class="control-group">
+                        <button type="submit" class="btn">Sign in</button>
+                      </div>
+                    </form>
+                  </div>
+
+                  <p>
+                    Teskst o bla bla truc stvarima kojih ce biti jedna recenica, mozda dve.
+                  </p>
+                </div>
+
+        </div>
+
+        <div class="footer">
+          <a href="/about">O utisku</a> |
+          <a href="http://twitter.com/najutisak">@najutisak</a>
+        </div>
+      </div>
+
+    </body>
+    </html>

@@ -1,0 +1,58 @@
+.content--modal
+  background: $white
+  text-align: center
+  border-left: 10px solid $dark-blue
+  @include border-radius(4px)
+  &:after 
+    position: absolute
+    content: ""
+    top: 40px
+    left: 0px
+    pointer-events: none
+    border: 10px solid transparent
+    border-right-color: $dark-blue
+    @include rotate(180deg)
+  +at-breakpoint($tablet)
+    top: 50px !important
+
+.modal--close
+  background-color: transparent
+  border: none
+  color: $dark-blue
+  font-size: 30px
+  font-weight: 300
+  height: 30px
+  line-height: 20px
+  padding: 1px 6px 4px
+  position: absolute
+  right: 5px
+  top: 5px
+  &:hover
+    text-decoration: none
+    opacity: 0.8
+
+.modal--content
+  list-style: none
+  padding: 0
+  &:after 
+    content: ''
+    position: relative
+    left: 50%
+    display: block
+    margin: 30px 0 20px -50px
+    width: 100px
+    height: 2px
+    background-color: rgba(0,0,0,0.1)
+
+.modal--btn
+  width: 200px
+  margin: 5px 0
+  @include btn
+
+.btn--twitter
+  &:hover
+    background: #55acee
+
+.btn--facebook
+  &:hover
+    background: #3B5998

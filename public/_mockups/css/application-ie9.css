@@ -1,0 +1,2998 @@
+@charset "UTF-8";
+/* normalize.css v2.1.1 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 11, ../stylesheets/vendor/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 30, ../stylesheets/vendor/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 41, ../stylesheets/vendor/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 50, ../stylesheets/vendor/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 64, ../stylesheets/vendor/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 74, ../stylesheets/vendor/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 86, ../stylesheets/vendor/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 94, ../stylesheets/vendor/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 108, ../stylesheets/vendor/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 117, ../stylesheets/vendor/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 125, ../stylesheets/vendor/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 134, ../stylesheets/vendor/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 142, ../stylesheets/vendor/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 152, ../stylesheets/vendor/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+/* line 161, ../stylesheets/vendor/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 173, ../stylesheets/vendor/_normalize.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+/* line 181, ../stylesheets/vendor/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 189, ../stylesheets/vendor/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 197, ../stylesheets/vendor/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 205, ../stylesheets/vendor/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 209, ../stylesheets/vendor/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 221, ../stylesheets/vendor/_normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 229, ../stylesheets/vendor/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 241, ../stylesheets/vendor/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 253, ../stylesheets/vendor/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 264, ../stylesheets/vendor/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 275, ../stylesheets/vendor/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 289, ../stylesheets/vendor/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 301, ../stylesheets/vendor/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 314, ../stylesheets/vendor/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 326, ../stylesheets/vendor/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+/* line 336, ../stylesheets/vendor/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 348, ../stylesheets/vendor/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 360, ../stylesheets/vendor/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 369, ../stylesheets/vendor/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 380, ../stylesheets/vendor/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 393, ../stylesheets/vendor/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+ * Bootstrap v2.3.2
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+/* line 11, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 19, ../stylesheets/vendor/_bootstrap-form.scss */
+form {
+  margin: 0 0 20px;
+}
+
+/* line 22, ../stylesheets/vendor/_bootstrap-form.scss */
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* line 27, ../stylesheets/vendor/_bootstrap-form.scss */
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: 40px;
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* line 38, ../stylesheets/vendor/_bootstrap-form.scss */
+legend small {
+  font-size: 15px;
+  color: #999999;
+}
+
+/* line 42, ../stylesheets/vendor/_bootstrap-form.scss */
+label,
+input,
+button,
+select,
+textarea {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+/* line 51, ../stylesheets/vendor/_bootstrap-form.scss */
+input,
+button,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 57, ../stylesheets/vendor/_bootstrap-form.scss */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* line 61, ../stylesheets/vendor/_bootstrap-form.scss */
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  display: inline-block;
+  height: 20px;
+  padding: 4px 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555555;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+/* line 90, ../stylesheets/vendor/_bootstrap-form.scss */
+input,
+textarea,
+.uneditable-input {
+  width: 206px;
+}
+
+/* line 95, ../stylesheets/vendor/_bootstrap-form.scss */
+textarea {
+  height: auto;
+}
+
+/* line 98, ../stylesheets/vendor/_bootstrap-form.scss */
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear .2s, box-shadow linear .2s;
+  -moz-transition: border linear .2s, box-shadow linear .2s;
+  -o-transition: border linear .2s, box-shadow linear .2s;
+  transition: border linear .2s, box-shadow linear .2s;
+}
+
+/* line 124, ../stylesheets/vendor/_bootstrap-form.scss */
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+/* line 149, ../stylesheets/vendor/_bootstrap-form.scss */
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  *margin-top: 0;
+  /* IE7 */
+  margin-top: 1px \9;
+  /* IE8-9 */
+  line-height: normal;
+}
+
+/* line 160, ../stylesheets/vendor/_bootstrap-form.scss */
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+
+/* line 169, ../stylesheets/vendor/_bootstrap-form.scss */
+select,
+input[type="file"] {
+  height: 30px;
+  /* In IE7, the height of the select element cannot be changed by height, only font-size */
+  *margin-top: 4px;
+  /* For IE7, add top margin to align select with labels */
+  line-height: 30px;
+}
+
+/* line 179, ../stylesheets/vendor/_bootstrap-form.scss */
+select {
+  width: 220px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+}
+
+/* line 184, ../stylesheets/vendor/_bootstrap-form.scss */
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+/* line 188, ../stylesheets/vendor/_bootstrap-form.scss */
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* line 196, ../stylesheets/vendor/_bootstrap-form.scss */
+.uneditable-input,
+.uneditable-textarea {
+  color: #999999;
+  background-color: #fcfcfc;
+  border-color: #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  cursor: not-allowed;
+}
+
+/* line 206, ../stylesheets/vendor/_bootstrap-form.scss */
+.uneditable-input {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* line 210, ../stylesheets/vendor/_bootstrap-form.scss */
+.uneditable-textarea {
+  width: auto;
+  height: auto;
+}
+
+/* line 214, ../stylesheets/vendor/_bootstrap-form.scss */
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #999999;
+}
+
+/* line 218, ../stylesheets/vendor/_bootstrap-form.scss */
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #999999;
+}
+
+/* line 222, ../stylesheets/vendor/_bootstrap-form.scss */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #999999;
+}
+
+/* line 226, ../stylesheets/vendor/_bootstrap-form.scss */
+.radio,
+.checkbox {
+  min-height: 20px;
+  padding-left: 20px;
+}
+
+/* line 231, ../stylesheets/vendor/_bootstrap-form.scss */
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: -20px;
+}
+
+/* line 236, ../stylesheets/vendor/_bootstrap-form.scss */
+.controls > .radio:first-child,
+.controls > .checkbox:first-child {
+  padding-top: 5px;
+}
+
+/* line 240, ../stylesheets/vendor/_bootstrap-form.scss */
+.radio.inline,
+.checkbox.inline {
+  display: inline-block;
+  padding-top: 5px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+/* line 247, ../stylesheets/vendor/_bootstrap-form.scss */
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+  margin-left: 10px;
+}
+
+/* line 251, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-mini {
+  width: 60px;
+}
+
+/* line 254, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-small {
+  width: 90px;
+}
+
+/* line 257, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-medium {
+  width: 150px;
+}
+
+/* line 260, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-large {
+  width: 210px;
+}
+
+/* line 263, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-xlarge {
+  width: 270px;
+}
+
+/* line 266, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-xxlarge {
+  width: 530px;
+}
+
+/* line 269, ../stylesheets/vendor/_bootstrap-form.scss */
+input[class*="span"],
+select[class*="span"],
+textarea[class*="span"],
+.uneditable-input[class*="span"],
+.row-fluid input[class*="span"],
+.row-fluid select[class*="span"],
+.row-fluid textarea[class*="span"],
+.row-fluid .uneditable-input[class*="span"] {
+  float: none;
+  margin-left: 0;
+}
+
+/* line 280, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-append input[class*="span"],
+.input-append .uneditable-input[class*="span"],
+.input-prepend input[class*="span"],
+.input-prepend .uneditable-input[class*="span"],
+.row-fluid input[class*="span"],
+.row-fluid select[class*="span"],
+.row-fluid textarea[class*="span"],
+.row-fluid .uneditable-input[class*="span"],
+.row-fluid .input-prepend [class*="span"],
+.row-fluid .input-append [class*="span"] {
+  display: inline-block;
+}
+
+/* line 292, ../stylesheets/vendor/_bootstrap-form.scss */
+input,
+textarea,
+.uneditable-input {
+  margin-left: 0;
+}
+
+/* line 297, ../stylesheets/vendor/_bootstrap-form.scss */
+.controls-row [class*="span"] + [class*="span"] {
+  margin-left: 20px;
+}
+
+/* line 300, ../stylesheets/vendor/_bootstrap-form.scss */
+input.span12,
+textarea.span12,
+.uneditable-input.span12 {
+  width: 926px;
+}
+
+/* line 305, ../stylesheets/vendor/_bootstrap-form.scss */
+input.span11,
+textarea.span11,
+.uneditable-input.span11 {
+  width: 846px;
+}
+
+/* line 310, ../stylesheets/vendor/_bootstrap-form.scss */
+input.span10,
+textarea.span10,
+.uneditable-input.span10 {
+  width: 766px;
+}
+
+/* line 315, ../stylesheets/vendor/_bootstrap-form.scss */
+input.span9,
+textarea.span9,
+.uneditable-input.span9 {
+  width: 686px;
+}
+
+/* line 320, ../stylesheets/vendor/_bootstrap-form.scss */
+input.span8,
+textarea.span8,
+.uneditable-input.span8 {
+  width: 606px;
+}
+
+/* line 325, ../stylesheets/vendor/_bootstrap-form.scss */
+input.span7,
+textarea.span7,
+.uneditable-input.span7 {
+  width: 526px;
+}
+
+/* line 330, ../stylesheets/vendor/_bootstrap-form.scss */
+input.span6,
+textarea.span6,
+.uneditable-input.span6 {
+  width: 446px;
+}
+
+/* line 335, ../stylesheets/vendor/_bootstrap-form.scss */
+input.span5,
+textarea.span5,
+.uneditable-input.span5 {
+  width: 366px;
+}
+
+/* line 340, ../stylesheets/vendor/_bootstrap-form.scss */
+input.span4,
+textarea.span4,
+.uneditable-input.span4 {
+  width: 286px;
+}
+
+/* line 345, ../stylesheets/vendor/_bootstrap-form.scss */
+input.span3,
+textarea.span3,
+.uneditable-input.span3 {
+  width: 206px;
+}
+
+/* line 350, ../stylesheets/vendor/_bootstrap-form.scss */
+input.span2,
+textarea.span2,
+.uneditable-input.span2 {
+  width: 126px;
+}
+
+/* line 355, ../stylesheets/vendor/_bootstrap-form.scss */
+input.span1,
+textarea.span1,
+.uneditable-input.span1 {
+  width: 46px;
+}
+
+/* line 360, ../stylesheets/vendor/_bootstrap-form.scss */
+.controls-row {
+  *zoom: 1;
+}
+
+/* line 363, ../stylesheets/vendor/_bootstrap-form.scss */
+.controls-row:before,
+.controls-row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+/* line 369, ../stylesheets/vendor/_bootstrap-form.scss */
+.controls-row:after {
+  clear: both;
+}
+
+/* line 372, ../stylesheets/vendor/_bootstrap-form.scss */
+.controls-row [class*="span"],
+.row-fluid .controls-row [class*="span"] {
+  float: left;
+}
+
+/* line 376, ../stylesheets/vendor/_bootstrap-form.scss */
+.controls-row .checkbox[class*="span"],
+.controls-row .radio[class*="span"] {
+  padding-top: 5px;
+}
+
+/* line 380, ../stylesheets/vendor/_bootstrap-form.scss */
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+}
+
+/* line 389, ../stylesheets/vendor/_bootstrap-form.scss */
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][readonly],
+input[type="checkbox"][readonly] {
+  background-color: transparent;
+}
+
+/* line 395, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.warning .control-label,
+.control-group.warning .help-block,
+.control-group.warning .help-inline {
+  color: #c09853;
+}
+
+/* line 400, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.warning .checkbox,
+.control-group.warning .radio,
+.control-group.warning input,
+.control-group.warning select,
+.control-group.warning textarea {
+  color: #c09853;
+}
+
+/* line 407, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.warning input,
+.control-group.warning select,
+.control-group.warning textarea {
+  border-color: #c09853;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+/* line 415, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.warning input:focus,
+.control-group.warning select:focus,
+.control-group.warning textarea:focus {
+  border-color: #a47e3c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
+}
+
+/* line 423, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.warning .input-prepend .add-on,
+.control-group.warning .input-append .add-on {
+  color: #c09853;
+  background-color: #fcf8e3;
+  border-color: #c09853;
+}
+
+/* line 429, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.error .control-label,
+.control-group.error .help-block,
+.control-group.error .help-inline {
+  color: #b94a48;
+}
+
+/* line 434, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.error .checkbox,
+.control-group.error .radio,
+.control-group.error input,
+.control-group.error select,
+.control-group.error textarea {
+  color: #b94a48;
+}
+
+/* line 441, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.error input,
+.control-group.error select,
+.control-group.error textarea {
+  border-color: #b94a48;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+/* line 449, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.error input:focus,
+.control-group.error select:focus,
+.control-group.error textarea:focus {
+  border-color: #953b39;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+}
+
+/* line 457, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.error .input-prepend .add-on,
+.control-group.error .input-append .add-on {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #b94a48;
+}
+
+/* line 463, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.success .control-label,
+.control-group.success .help-block,
+.control-group.success .help-inline {
+  color: #468847;
+}
+
+/* line 468, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.success .checkbox,
+.control-group.success .radio,
+.control-group.success input,
+.control-group.success select,
+.control-group.success textarea {
+  color: #468847;
+}
+
+/* line 475, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.success input,
+.control-group.success select,
+.control-group.success textarea {
+  border-color: #468847;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+/* line 483, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.success input:focus,
+.control-group.success select:focus,
+.control-group.success textarea:focus {
+  border-color: #356635;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+}
+
+/* line 491, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.success .input-prepend .add-on,
+.control-group.success .input-append .add-on {
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #468847;
+}
+
+/* line 497, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.info .control-label,
+.control-group.info .help-block,
+.control-group.info .help-inline {
+  color: #3a87ad;
+}
+
+/* line 502, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.info .checkbox,
+.control-group.info .radio,
+.control-group.info input,
+.control-group.info select,
+.control-group.info textarea {
+  color: #3a87ad;
+}
+
+/* line 509, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.info input,
+.control-group.info select,
+.control-group.info textarea {
+  border-color: #3a87ad;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+/* line 517, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.info input:focus,
+.control-group.info select:focus,
+.control-group.info textarea:focus {
+  border-color: #2d6987;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3;
+}
+
+/* line 525, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group.info .input-prepend .add-on,
+.control-group.info .input-append .add-on {
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #3a87ad;
+}
+
+/* line 531, ../stylesheets/vendor/_bootstrap-form.scss */
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+  color: #b94a48;
+  border-color: #ee5f5b;
+}
+
+/* line 537, ../stylesheets/vendor/_bootstrap-form.scss */
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus {
+  border-color: #e9322d;
+  -webkit-box-shadow: 0 0 6px #f8b9b7;
+  -moz-box-shadow: 0 0 6px #f8b9b7;
+  box-shadow: 0 0 6px #f8b9b7;
+}
+
+/* line 545, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-actions {
+  padding: 19px 20px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #e5e5e5;
+  *zoom: 1;
+}
+
+/* line 553, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-actions:before,
+.form-actions:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+/* line 559, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-actions:after {
+  clear: both;
+}
+
+/* line 562, ../stylesheets/vendor/_bootstrap-form.scss */
+.help-block,
+.help-inline {
+  color: #595959;
+}
+
+/* line 566, ../stylesheets/vendor/_bootstrap-form.scss */
+.help-block {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* line 570, ../stylesheets/vendor/_bootstrap-form.scss */
+.help-inline {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+
+/* line 579, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-append,
+.input-prepend {
+  display: inline-block;
+  margin-bottom: 10px;
+  vertical-align: middle;
+  font-size: 0;
+  white-space: nowrap;
+}
+
+/* line 587, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-append input,
+.input-prepend input,
+.input-append select,
+.input-prepend select,
+.input-append .uneditable-input,
+.input-prepend .uneditable-input,
+.input-append .dropdown-menu,
+.input-prepend .dropdown-menu,
+.input-append .popover,
+.input-prepend .popover {
+  font-size: 14px;
+}
+
+/* line 599, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-append input,
+.input-prepend input,
+.input-append select,
+.input-prepend select,
+.input-append .uneditable-input,
+.input-prepend .uneditable-input {
+  position: relative;
+  margin-bottom: 0;
+  *margin-left: 0;
+  vertical-align: top;
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* line 613, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-append input:focus,
+.input-prepend input:focus,
+.input-append select:focus,
+.input-prepend select:focus,
+.input-append .uneditable-input:focus,
+.input-prepend .uneditable-input:focus {
+  z-index: 2;
+}
+
+/* line 621, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-append .add-on,
+.input-prepend .add-on {
+  display: inline-block;
+  width: auto;
+  height: 20px;
+  min-width: 16px;
+  padding: 4px 5px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: center;
+  text-shadow: 0 1px 0 #ffffff;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+}
+
+/* line 636, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-append .add-on,
+.input-prepend .add-on,
+.input-append .btn,
+.input-prepend .btn,
+.input-append .btn-group > .dropdown-toggle,
+.input-prepend .btn-group > .dropdown-toggle {
+  vertical-align: top;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 647, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-append .active,
+.input-prepend .active {
+  background-color: #a9dba9;
+  border-color: #46a546;
+}
+
+/* line 652, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-prepend .add-on,
+.input-prepend .btn {
+  margin-right: -1px;
+}
+
+/* line 656, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-prepend .add-on:first-child,
+.input-prepend .btn:first-child {
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+/* line 662, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-append input,
+.input-append select,
+.input-append .uneditable-input {
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+/* line 669, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-append input + .btn-group .btn:last-child,
+.input-append select + .btn-group .btn:last-child,
+.input-append .uneditable-input + .btn-group .btn:last-child {
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* line 676, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-append .add-on,
+.input-append .btn,
+.input-append .btn-group {
+  margin-left: -1px;
+}
+
+/* line 681, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-append .add-on:last-child,
+.input-append .btn:last-child,
+.input-append .btn-group:last-child > .dropdown-toggle {
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* line 688, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-prepend.input-append input,
+.input-prepend.input-append select,
+.input-prepend.input-append .uneditable-input {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 695, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-prepend.input-append input + .btn-group .btn,
+.input-prepend.input-append select + .btn-group .btn,
+.input-prepend.input-append .uneditable-input + .btn-group .btn {
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* line 702, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-prepend.input-append .add-on:first-child,
+.input-prepend.input-append .btn:first-child {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+/* line 709, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-prepend.input-append .add-on:last-child,
+.input-prepend.input-append .btn:last-child {
+  margin-left: -1px;
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* line 716, ../stylesheets/vendor/_bootstrap-form.scss */
+.input-prepend.input-append .btn-group:first-child {
+  margin-left: 0;
+}
+
+/* line 719, ../stylesheets/vendor/_bootstrap-form.scss */
+input.search-query {
+  padding-right: 14px;
+  padding-right: 4px \9;
+  padding-left: 14px;
+  padding-left: 4px \9;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  margin-bottom: 0;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+/* Allow for input prepend/append in search forms */
+/* line 732, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-search .input-append .search-query,
+.form-search .input-prepend .search-query {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 738, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-search .input-append .search-query {
+  -webkit-border-radius: 14px 0 0 14px;
+  -moz-border-radius: 14px 0 0 14px;
+  border-radius: 14px 0 0 14px;
+}
+
+/* line 743, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-search .input-append .btn {
+  -webkit-border-radius: 0 14px 14px 0;
+  -moz-border-radius: 0 14px 14px 0;
+  border-radius: 0 14px 14px 0;
+}
+
+/* line 748, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-search .input-prepend .search-query {
+  -webkit-border-radius: 0 14px 14px 0;
+  -moz-border-radius: 0 14px 14px 0;
+  border-radius: 0 14px 14px 0;
+}
+
+/* line 753, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-search .input-prepend .btn {
+  -webkit-border-radius: 14px 0 0 14px;
+  -moz-border-radius: 14px 0 0 14px;
+  border-radius: 14px 0 0 14px;
+}
+
+/* line 758, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-search input,
+.form-inline input,
+.form-horizontal input,
+.form-search textarea,
+.form-inline textarea,
+.form-horizontal textarea,
+.form-search select,
+.form-inline select,
+.form-horizontal select,
+.form-search .help-inline,
+.form-inline .help-inline,
+.form-horizontal .help-inline,
+.form-search .uneditable-input,
+.form-inline .uneditable-input,
+.form-horizontal .uneditable-input,
+.form-search .input-prepend,
+.form-inline .input-prepend,
+.form-horizontal .input-prepend,
+.form-search .input-append,
+.form-inline .input-append,
+.form-horizontal .input-append {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+/* line 787, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-search .hide,
+.form-inline .hide,
+.form-horizontal .hide {
+  display: none;
+}
+
+/* line 792, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-search label,
+.form-inline label,
+.form-search .btn-group,
+.form-inline .btn-group {
+  display: inline-block;
+}
+
+/* line 798, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-search .input-append,
+.form-inline .input-append,
+.form-search .input-prepend,
+.form-inline .input-prepend {
+  margin-bottom: 0;
+}
+
+/* line 804, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-search .radio,
+.form-search .checkbox,
+.form-inline .radio,
+.form-inline .checkbox {
+  padding-left: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+/* line 812, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-search .radio input[type="radio"],
+.form-search .checkbox input[type="checkbox"],
+.form-inline .radio input[type="radio"],
+.form-inline .checkbox input[type="checkbox"] {
+  float: left;
+  margin-right: 3px;
+  margin-left: 0;
+}
+
+/* line 820, ../stylesheets/vendor/_bootstrap-form.scss */
+.control-group {
+  margin-bottom: 10px;
+}
+
+/* line 823, ../stylesheets/vendor/_bootstrap-form.scss */
+legend + .control-group {
+  margin-top: 20px;
+  -webkit-margin-top-collapse: separate;
+}
+
+/* line 827, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-horizontal .control-group {
+  margin-bottom: 20px;
+  *zoom: 1;
+}
+
+/* line 831, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-horizontal .control-group:before,
+.form-horizontal .control-group:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+/* line 837, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-horizontal .control-group:after {
+  clear: both;
+}
+
+/* line 840, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-horizontal .control-label {
+  float: left;
+  width: 160px;
+  padding-top: 5px;
+  text-align: right;
+}
+
+/* line 846, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-horizontal .controls {
+  *display: inline-block;
+  *padding-left: 20px;
+  margin-left: 180px;
+  *margin-left: 0;
+}
+
+/* line 852, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-horizontal .controls:first-child {
+  *padding-left: 180px;
+}
+
+/* line 855, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-horizontal .help-block {
+  margin-bottom: 0;
+}
+
+/* line 858, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-horizontal input + .help-block,
+.form-horizontal select + .help-block,
+.form-horizontal textarea + .help-block,
+.form-horizontal .uneditable-input + .help-block,
+.form-horizontal .input-prepend + .help-block,
+.form-horizontal .input-append + .help-block {
+  margin-top: 10px;
+}
+
+/* line 866, ../stylesheets/vendor/_bootstrap-form.scss */
+.form-horizontal .form-actions {
+  padding-left: 180px;
+}
+
+/* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
+/* line 3, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-default {
+  border-radius: 5px;
+  background: #4c4c4c;
+  color: white;
+}
+/* line 7, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-default .tooltipster-content {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 8px 10px;
+  overflow: hidden;
+}
+/* line 12, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-default .tooltipster-arrow .tooltipster-arrow-border {
+  /* border-color: ... !important; */
+}
+
+/* Use this next selector to style things like font-size and line-height: */
+/* This next selector defines the color of the border on the outside of the arrow. This will automatically match the color and size of the border set on the main tooltip styles. Set display: none; if you would like a border around the tooltip but no border around the arrow */
+/* If you're using the icon option, use this next selector to style them */
+/* line 21, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-icon {
+  cursor: help;
+  margin-left: 4px;
+}
+
+/* This is the base styling required to make all Tooltipsters work */
+/* line 27, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-base {
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  z-index: 9999999;
+  pointer-events: none;
+  width: auto;
+  overflow: visible;
+}
+/* line 36, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-base .tooltipster-content {
+  overflow: hidden;
+}
+
+/* These next classes handle the styles for the little arrow attached to the tooltip. By default, the arrow will inherit the same colors and border as what is set on the main tooltip itself. */
+/* line 41, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-arrow {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+/* line 50, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-arrow span {
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+/* line 56, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-arrow-border {
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+/* line 62, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-arrow-top span, .tooltipster-arrow-top-right span, .tooltipster-arrow-top-left span {
+  border-left: 8px solid transparent !important;
+  border-right: 8px solid transparent !important;
+  border-top: 8px solid;
+  bottom: -7px;
+}
+
+/* line 68, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-arrow-top .tooltipster-arrow-border, .tooltipster-arrow-top-right .tooltipster-arrow-border, .tooltipster-arrow-top-left .tooltipster-arrow-border {
+  border-left: 9px solid transparent !important;
+  border-right: 9px solid transparent !important;
+  border-top: 9px solid;
+  bottom: -7px;
+}
+
+/* line 74, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-arrow-bottom span, .tooltipster-arrow-bottom-right span, .tooltipster-arrow-bottom-left span {
+  border-left: 8px solid transparent !important;
+  border-right: 8px solid transparent !important;
+  border-bottom: 8px solid;
+  top: -7px;
+}
+
+/* line 80, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-arrow-bottom .tooltipster-arrow-border, .tooltipster-arrow-bottom-right .tooltipster-arrow-border, .tooltipster-arrow-bottom-left .tooltipster-arrow-border {
+  border-left: 9px solid transparent !important;
+  border-right: 9px solid transparent !important;
+  border-bottom: 9px solid;
+  top: -7px;
+}
+
+/* line 87, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-arrow-top span, .tooltipster-arrow-top .tooltipster-arrow-border {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+/* line 93, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-arrow-bottom span, .tooltipster-arrow-bottom .tooltipster-arrow-border {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+/* line 98, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-arrow-top-left span, .tooltipster-arrow-bottom-left span {
+  left: 6px;
+}
+
+/* line 101, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-arrow-top-left .tooltipster-arrow-border, .tooltipster-arrow-bottom-left .tooltipster-arrow-border {
+  left: 5px;
+}
+
+/* line 104, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-arrow-top-right span, .tooltipster-arrow-bottom-right span {
+  right: 6px;
+}
+
+/* line 107, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-arrow-top-right .tooltipster-arrow-border, .tooltipster-arrow-bottom-right .tooltipster-arrow-border {
+  right: 5px;
+}
+
+/* line 111, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-arrow-left span {
+  border-top: 8px solid transparent !important;
+  border-bottom: 8px solid transparent !important;
+  border-left: 8px solid;
+  top: 50%;
+  margin-top: -7px;
+  right: -7px;
+}
+/* line 118, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-arrow-left .tooltipster-arrow-border {
+  border-top: 8px solid transparent !important;
+  border-bottom: 8px solid transparent !important;
+  border-left: 8px solid;
+  top: 50%;
+  margin-top: -7px;
+  right: -7px;
+  border-top: 9px solid transparent !important;
+  border-bottom: 9px solid transparent !important;
+  border-left: 9px solid;
+  margin-top: -8px;
+}
+
+/* line 131, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-arrow-right span {
+  border-top: 8px solid transparent !important;
+  border-bottom: 8px solid transparent !important;
+  border-right: 8px solid;
+  top: 50%;
+  margin-top: -7px;
+  left: -7px;
+}
+/* line 138, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-arrow-right .tooltipster-arrow-border {
+  border-top: 8px solid transparent !important;
+  border-bottom: 8px solid transparent !important;
+  border-right: 8px solid;
+  top: 50%;
+  margin-top: -7px;
+  left: -7px;
+  border-top: 9px solid transparent !important;
+  border-bottom: 9px solid transparent !important;
+  border-right: 9px solid;
+  margin-top: -8px;
+}
+
+/* Some CSS magic for the awesome animations - feel free to make your own custom animations and reference it in your Tooltipster settings! */
+/* line 152, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-fade {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -ms-transition-property: opacity;
+  transition-property: opacity;
+}
+
+/* line 160, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-fade-show {
+  opacity: 1;
+}
+
+/* line 163, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-grow {
+  -webkit-transform: scale(0, 0);
+  -moz-transform: scale(0, 0);
+  -o-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -ms-transition-property: -ms-transform;
+  transition-property: transform;
+  -webkit-backface-visibility: hidden;
+}
+
+/* line 176, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-grow-show {
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+/* line 189, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-swing {
+  opacity: 0;
+  -webkit-transform: rotateZ(4deg);
+  -moz-transform: rotateZ(4deg);
+  -o-transform: rotateZ(4deg);
+  -ms-transform: rotateZ(4deg);
+  transform: rotateZ(4deg);
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -ms-transition-property: -ms-transform;
+  transition-property: transform;
+}
+
+/* line 202, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-swing-show {
+  opacity: 1;
+  -webkit-transform: rotateZ(0deg);
+  -moz-transform: rotateZ(0deg);
+  -o-transform: rotateZ(0deg);
+  -ms-transform: rotateZ(0deg);
+  transform: rotateZ(0deg);
+  -webkit-transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 2.4);
+  -moz-transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 2.4);
+  -ms-transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 2.4);
+  -o-transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 2.4);
+  transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 2.4);
+}
+
+/* line 216, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-fall {
+  top: 0;
+  -webkit-transition-property: top;
+  -moz-transition-property: top;
+  -o-transition-property: top;
+  -ms-transition-property: top;
+  transition-property: top;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+/* line 232, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-fall.tooltipster-dying {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -ms-transition-property: all;
+  transition-property: all;
+  top: 0px !important;
+  opacity: 0;
+}
+
+/* line 241, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-slide {
+  left: -40px;
+  -webkit-transition-property: left;
+  -moz-transition-property: left;
+  -o-transition-property: left;
+  -ms-transition-property: left;
+  transition-property: left;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+/* line 255, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-slide.tooltipster-dying {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -ms-transition-property: all;
+  transition-property: all;
+  left: 0px !important;
+  opacity: 0;
+}
+
+/* CSS transition for when contenting is changing in a tooltip that is still open. The only properties that will NOT transition are: width, height, top, and left */
+/* line 266, ../stylesheets/vendor/_tooltipster.sass */
+.tooltipster-content-changing {
+  opacity: 0.5;
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+
+/* line 61, ../.bundle/ruby/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 93.75%;
+}
+
+/* line 64, ../.bundle/ruby/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 15px;
+  line-height: 1.6em;
+}
+
+/* line 14, ../.bundle/ruby/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 10, ../stylesheets/base/_elements.sass */
+html {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  letter-spacing: -0.02em;
+  height: 100%;
+}
+
+/* line 15, ../stylesheets/base/_elements.sass */
+body {
+  background-color: white;
+  color: #8a9299;
+  height: 100%;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+@media (min-width: 48.0625em) {
+  /* line 15, ../stylesheets/base/_elements.sass */
+  body {
+    background-color: #eceef1;
+  }
+}
+
+/* line 24, ../stylesheets/base/_elements.sass */
+a {
+  color: #676767;
+  text-decoration: none;
+}
+/* line 28, ../stylesheets/base/_elements.sass */
+a:hover, a:focus {
+  color: #a3b2cc;
+}
+
+/* line 31, ../stylesheets/base/_elements.sass */
+p {
+  margin-top: 0em;
+  margin-bottom: 1.6em;
+}
+/* line 35, ../stylesheets/base/_elements.sass */
+p:last-child {
+  margin-bottom: 0em;
+}
+
+/* line 39, ../stylesheets/base/_elements.sass */
+ul, ol {
+  margin-top: 0em;
+  margin-bottom: 1.6em;
+  padding-left: 2.4em;
+}
+/* line 44, ../stylesheets/base/_elements.sass */
+ul li, ol li {
+  margin-bottom: 0em;
+}
+
+/* line 47, ../stylesheets/base/_elements.sass */
+h1, .h1 {
+  font-size: 2.13333em;
+  line-height: 1.125em;
+  margin-top: 0em;
+  margin-bottom: 0.75em;
+}
+
+/* line 52, ../stylesheets/base/_elements.sass */
+h2, .h2 {
+  font-size: 1.6em;
+  line-height: 1.5em;
+  margin-top: 0em;
+  margin-bottom: 1em;
+}
+
+/* line 57, ../stylesheets/base/_elements.sass */
+h3, .h3 {
+  font-size: 1.26667em;
+  line-height: 1.26316em;
+  margin-top: 0em;
+  margin-bottom: 1.26316em;
+}
+
+/* line 62, ../stylesheets/base/_elements.sass */
+.pull-right {
+  float: right;
+}
+
+/* line 65, ../stylesheets/base/_elements.sass */
+.pull-left {
+  float: left;
+}
+
+/* line 68, ../stylesheets/base/_elements.sass */
+.center {
+  text-align: center;
+}
+
+/* line 72, ../stylesheets/base/_elements.sass */
+.btn-set {
+  margin: 10px;
+  line-height: 44px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* line 79, ../stylesheets/base/_elements.sass */
+[class^="icon-"], [class*=" icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 84, ../stylesheets/base/_elements.sass */
+#lean_overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: black;
+  display: none;
+}
+
+/* line 2, ../stylesheets/base/_flash.sass */
+.flash {
+  height: 0;
+  position: relative;
+  text-align: center;
+  z-index: 99999;
+  opacity: 1;
+  -webkit-transition: top 0.7s, opacity 0.7s;
+  -moz-transition: top 0.7s, opacity 0.7s;
+  -o-transition: top 0.7s, opacity 0.7s;
+  transition: top 0.7s, opacity 0.7s;
+}
+
+/* line 10, ../stylesheets/base/_flash.sass */
+.flash--content {
+  display: inline-block;
+  background: #b3b3b1;
+  color: white;
+  padding: 12px 25px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 17, ../stylesheets/base/_flash.sass */
+.flash--success {
+  background: #57ad68;
+}
+
+/* line 20, ../stylesheets/base/_flash.sass */
+.flash--failure {
+  background: #cc5454;
+}
+
+/* line 2, ../stylesheets/base/_icon.sass */
+.icon-new {
+  background-image: url("../images/newpost.png");
+  width: 14px;
+  height: 16px;
+}
+
+/* line 7, ../stylesheets/base/_icon.sass */
+.icon-login {
+  background: center url("../images/login.png") no-repeat !important;
+  width: 24px;
+  height: 24px;
+}
+
+/* line 12, ../stylesheets/base/_icon.sass */
+.icon-vote, .icon-voted {
+  background-image: url("../images/voteup.png");
+  width: 22px;
+  height: 22px;
+}
+/* line 16, ../stylesheets/base/_icon.sass */
+.icon-vote:hover, .icon-voted:hover {
+  background-position: 0 22px;
+}
+
+/* line 19, ../stylesheets/base/_icon.sass */
+.icon-voted {
+  opacity: 0.3;
+}
+/* line 22, ../stylesheets/base/_icon.sass */
+.icon-voted:hover {
+  background-position: 0 0;
+}
+
+/* line 25, ../stylesheets/base/_icon.sass */
+.icon-share {
+  background-image: url("../images/share.png");
+  width: 16px;
+  height: 16px;
+}
+/* line 29, ../stylesheets/base/_icon.sass */
+.icon-share:hover {
+  opacity: 0.8;
+}
+
+/* line 32, ../stylesheets/base/_icon.sass */
+.icon-collapse {
+  background-image: url("../images/collapse.png");
+  width: 16px;
+  height: 16px;
+}
+/* line 36, ../stylesheets/base/_icon.sass */
+.icon-collapse:hover {
+  opacity: 0.8;
+}
+
+/* line 39, ../stylesheets/base/_icon.sass */
+.icon-facebook {
+  background-image: url("../images/facebook.png");
+  width: 16px;
+  height: 16px;
+}
+/* line 43, ../stylesheets/base/_icon.sass */
+.icon-facebook:hover {
+  opacity: 0.8;
+}
+
+/* line 46, ../stylesheets/base/_icon.sass */
+.icon-twitter {
+  background-image: url("../images/twitter.png");
+  width: 16px;
+  height: 16px;
+}
+/* line 50, ../stylesheets/base/_icon.sass */
+.icon-twitter:hover {
+  opacity: 0.8;
+}
+
+/* line 53, ../stylesheets/base/_icon.sass */
+.icon-gplus {
+  background-image: url("../images/gplus.png");
+  width: 16px;
+  height: 16px;
+}
+/* line 57, ../stylesheets/base/_icon.sass */
+.icon-gplus:hover {
+  opacity: 0.8;
+}
+
+/* line 60, ../stylesheets/base/_icon.sass */
+.icon-readability {
+  background-image: url("../images/readability.png");
+  width: 16px;
+  height: 16px;
+}
+/* line 64, ../stylesheets/base/_icon.sass */
+.icon-readability:hover {
+  opacity: 0.8;
+}
+
+/* line 67, ../stylesheets/base/_icon.sass */
+.icon-avatar {
+  width: 38px;
+  height: 38px;
+  padding: 0 !important;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 72, ../stylesheets/base/_icon.sass */
+.icon-avatar:hover {
+  opacity: 0.8;
+}
+
+/* line 75, ../stylesheets/base/_icon.sass */
+.icon-link {
+  background-image: url("../images/link.png");
+  width: 16px;
+  height: 16px;
+}
+/* line 79, ../stylesheets/base/_icon.sass */
+.icon-link:hover {
+  opacity: 0.8;
+}
+
+/* line 82, ../stylesheets/base/_icon.sass */
+.icon-settings {
+  background-image: url("../images/settings.png");
+  width: 16px;
+  height: 16px;
+}
+/* line 86, ../stylesheets/base/_icon.sass */
+.icon-settings:hover {
+  opacity: 0.8;
+}
+
+/* line 89, ../stylesheets/base/_icon.sass */
+.icon-more {
+  background: center url("../images/more.png") !important;
+  width: 24px;
+  height: 24px;
+}
+/* line 93, ../stylesheets/base/_icon.sass */
+.icon-more:hover {
+  opacity: 0.8;
+}
+
+/* line 96, ../stylesheets/base/_icon.sass */
+.icon-verified {
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background: url(https://d1wzu4qct23er4.cloudfront.net/assets/checkmark-e3a77f30de8e1e6ea3316699d0ee25ac.png) center no-repeat #57ad68;
+}
+
+/* line 5, ../stylesheets/modules/_block.sass */
+.block--jumbo-txt {
+  font-size: 40px;
+  text-align: center;
+}
+/* line 9, ../stylesheets/modules/_block.sass */
+.block--jumbo-txt:after {
+  content: "";
+  position: relative;
+  left: 50%;
+  display: block;
+  margin: 20px 0 20px -50px;
+  width: 100px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 20, ../stylesheets/modules/_block.sass */
+.block--last-par:after {
+  content: "";
+  position: relative;
+  left: 50%;
+  display: block;
+  margin: 20px 0 20px -50px;
+  width: 100px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 5, ../stylesheets/modules/_content.sass */
+.content {
+  min-height: 85vh;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+@media (min-width: 48.0625em) {
+  /* line 5, ../stylesheets/modules/_content.sass */
+  .content {
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+}
+
+/* line 12, ../stylesheets/modules/_content.sass */
+.content--list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 17, ../stylesheets/modules/_content.sass */
+.content--sidebar {
+  width: 23.40426%;
+  float: left;
+  margin-right: 2.12766%;
+  min-height: 85vh;
+}
+
+/* line 21, ../stylesheets/modules/_content.sass */
+.content--box {
+  width: 74.46809%;
+  float: right;
+  margin-right: 0;
+  min-height: 85vh;
+}
+
+/* line 25, ../stylesheets/modules/_content.sass */
+.content--more {
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* line 29, ../stylesheets/modules/_content.sass */
+.more--btn {
+  display: inline-block;
+  color: white;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #b0c1df), color-stop(50%, #a9bcdc));
+  background: -webkit-linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
+  background: -moz-linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
+  background: -o-linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
+  background: linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
+  font-size: 14px;
+  line-height: 22px;
+  border-radius: 4px;
+  padding: 12px 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  margin-left: 0;
+}
+/* line 11, ../stylesheets/mixins/_btn.sass */
+.more--btn:hover {
+  text-decoration: none;
+  opacity: 0.8;
+  color: white;
+}
+@media (min-width: 35.5625em) {
+  /* line 29, ../stylesheets/modules/_content.sass */
+  .more--btn {
+    padding: 12px 30px;
+  }
+}
+
+/* line 33, ../stylesheets/modules/_content.sass */
+.content--modal {
+  display: none;
+  padding: 30px;
+  width: 320px;
+}
+@media (min-width: 35.5625em) {
+  /* line 33, ../stylesheets/modules/_content.sass */
+  .content--modal {
+    width: 500px;
+  }
+}
+
+/* line 40, ../stylesheets/modules/_content.sass */
+.content--cover {
+  padding: 60px 10% 30px;
+  position: relative;
+  text-align: center;
+  background-color: white;
+  margin: 60px 0 40px;
+  z-index: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+@media (min-width: 48.0625em) {
+  /* line 40, ../stylesheets/modules/_content.sass */
+  .content--cover {
+    margin: 80px 0 50px;
+  }
+}
+
+/* line 51, ../stylesheets/modules/_content.sass */
+.content--block {
+  background: white;
+  padding: 25px 10px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+@media (min-width: 35.5625em) {
+  /* line 51, ../stylesheets/modules/_content.sass */
+  .content--block {
+    padding: 25px;
+  }
+}
+@media (min-width: 48.0625em) {
+  /* line 51, ../stylesheets/modules/_content.sass */
+  .content--block {
+    padding: 50px;
+  }
+}
+
+/* line 1, ../stylesheets/modules/_cover.sass */
+.content--cover::before, .content--cover::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 380px;
+  width: 150px;
+  height: 500px;
+  z-index: -1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 13, ../stylesheets/modules/_cover.sass */
+.content--cover:after {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+/* line 16, ../stylesheets/modules/_cover.sass */
+.cover--inner {
+  position: relative;
+}
+
+/* line 20, ../stylesheets/modules/_cover.sass */
+.cover--avatar {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  top: -110px;
+  left: 50%;
+  margin-left: -50px;
+  overflow: hidden;
+  border: 3px solid white;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+/* line 33, ../stylesheets/modules/_cover.sass */
+.cover--avatar img {
+  width: 100%;
+}
+
+/* line 1, ../stylesheets/modules/_footer.sass */
+.footer {
+  text-align: center;
+  clear: both;
+  margin: 42px auto;
+  padding-top: 10px;
+  letter-spacing: 1px;
+  line-height: 1.3em;
+  font-weight: bold;
+  color: #bdc3c7;
+}
+
+/* line 10, ../stylesheets/modules/_grid.sass */
+.grid {
+  padding-left: 1.33333em;
+  padding-right: 1.33333em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+/* line 38, ../.bundle/ruby/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 48.0625em) {
+  /* line 10, ../stylesheets/modules/_grid.sass */
+  .grid {
+    max-width: 51.2em;
+  }
+}
+
+/* line 1, ../stylesheets/modules/_list-item.sass */
+.list--item, .list--item--open, .content--thread {
+  position: relative;
+  margin-bottom: 1px;
+  background-color: white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  clear: both;
+}
+/* line 7, ../stylesheets/modules/_list-item.sass */
+.list--item:last-child, .list--item--open:last-child, .content--thread:last-child {
+  border: 0;
+}
+
+/* line 10, ../stylesheets/modules/_list-item.sass */
+.list--item--open, .content--thread {
+  margin: 10px 0;
+}
+
+/* line 14, ../stylesheets/modules/_list-item.sass */
+.item--content, .item--share {
+  padding: 12px 6px;
+  position: relative;
+}
+@media (min-width: 35.5625em) {
+  /* line 14, ../stylesheets/modules/_list-item.sass */
+  .item--content, .item--share {
+    padding: 20px 25px;
+  }
+}
+
+/* line 20, ../stylesheets/modules/_list-item.sass */
+.item--share {
+  text-align: center;
+  background-color: #a9bcdc;
+  border-radius: 0 0 4px 4px;
+  border-top: 2px solid #a7b7d4;
+  color: white;
+}
+@media (min-width: 35.5625em) {
+  /* line 20, ../stylesheets/modules/_list-item.sass */
+  .item--share {
+    text-align: left;
+  }
+}
+/* line 30, ../stylesheets/modules/_list-item.sass */
+.item--share span {
+  display: block;
+}
+@media (min-width: 35.5625em) {
+  /* line 30, ../stylesheets/modules/_list-item.sass */
+  .item--share span {
+    display: inline-block;
+  }
+}
+/* line 35, ../stylesheets/modules/_list-item.sass */
+.item--share i {
+  margin: 0 10px;
+}
+
+/* line 38, ../stylesheets/modules/_list-item.sass */
+.item--content--vote {
+  position: absolute;
+}
+
+/* line 41, ../stylesheets/modules/_list-item.sass */
+.item--content--share {
+  position: absolute;
+  right: 6px;
+  top: 12px;
+}
+@media (min-width: 35.5625em) {
+  /* line 41, ../stylesheets/modules/_list-item.sass */
+  .item--content--share {
+    right: 25px;
+    top: 20px;
+  }
+}
+/* line 49, ../stylesheets/modules/_list-item.sass */
+.item--content--share span {
+  display: block;
+}
+
+/* line 52, ../stylesheets/modules/_list-item.sass */
+.item--content--info {
+  margin: 0 40px;
+}
+
+/* line 55, ../stylesheets/modules/_list-item.sass */
+.item--content--info--metadata {
+  color: #acb7bf;
+  font-size: 14px;
+}
+/* line 59, ../stylesheets/modules/_list-item.sass */
+.item--content--info--metadata a {
+  color: #8a9299;
+}
+/* line 62, ../stylesheets/modules/_list-item.sass */
+.item--content--info--metadata span {
+  padding-left: 20px;
+}
+/* line 64, ../stylesheets/modules/_list-item.sass */
+.item--content--info--metadata span:first-child {
+  padding-left: 0;
+}
+
+/* line 1, ../stylesheets/modules/_modal.sass */
+.content--modal {
+  background: white;
+  text-align: center;
+  border-left: 10px solid #a9bcdc;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 6, ../stylesheets/modules/_modal.sass */
+.content--modal:after {
+  position: absolute;
+  content: "";
+  top: 40px;
+  left: 0px;
+  pointer-events: none;
+  border: 10px solid transparent;
+  border-right-color: #a9bcdc;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+@media (min-width: 35.5625em) {
+  /* line 1, ../stylesheets/modules/_modal.sass */
+  .content--modal {
+    top: 50px !important;
+  }
+}
+
+/* line 18, ../stylesheets/modules/_modal.sass */
+.modal--close {
+  background-color: transparent;
+  border: none;
+  color: #a9bcdc;
+  font-size: 30px;
+  font-weight: 300;
+  height: 30px;
+  line-height: 20px;
+  padding: 1px 6px 4px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+/* line 30, ../stylesheets/modules/_modal.sass */
+.modal--close:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+/* line 34, ../stylesheets/modules/_modal.sass */
+.modal--content {
+  list-style: none;
+  padding: 0;
+}
+/* line 37, ../stylesheets/modules/_modal.sass */
+.modal--content:after {
+  content: "";
+  position: relative;
+  left: 50%;
+  display: block;
+  margin: 30px 0 20px -50px;
+  width: 100px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 47, ../stylesheets/modules/_modal.sass */
+.modal--btn {
+  width: 200px;
+  margin: 5px 0;
+  display: inline-block;
+  color: white;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #b0c1df), color-stop(50%, #a9bcdc));
+  background: -webkit-linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
+  background: -moz-linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
+  background: -o-linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
+  background: linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
+  font-size: 14px;
+  line-height: 22px;
+  border-radius: 4px;
+  padding: 12px 10px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+/* line 11, ../stylesheets/mixins/_btn.sass */
+.modal--btn:hover {
+  text-decoration: none;
+  opacity: 0.8;
+  color: white;
+}
+@media (min-width: 35.5625em) {
+  /* line 47, ../stylesheets/modules/_modal.sass */
+  .modal--btn {
+    padding: 12px 30px;
+  }
+}
+
+/* line 53, ../stylesheets/modules/_modal.sass */
+.btn--twitter:hover {
+  background: #55acee;
+}
+
+/* line 57, ../stylesheets/modules/_modal.sass */
+.btn--facebook:hover {
+  background: #3b5998;
+}
+
+/* line 1, ../stylesheets/modules/_navbar.sass */
+header {
+  background-color: #c3d0e6;
+}
+
+/* line 4, ../stylesheets/modules/_navbar.sass */
+.metabar {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 65px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (min-width: 35.5625em) {
+  /* line 4, ../stylesheets/modules/_navbar.sass */
+  .metabar {
+    top: 15px;
+  }
+}
+
+/* line 13, ../stylesheets/modules/_navbar.sass */
+.metabar--block {
+  margin: 0 15px;
+}
+
+/* line 16, ../stylesheets/modules/_navbar.sass */
+.metabar--btn {
+  display: inline-block;
+  color: white;
+  font-size: 14px;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 16px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 4px;
+  vertical-align: bottom;
+  text-rendering: optimizeLegibility;
+  background: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 31, ../stylesheets/modules/_navbar.sass */
+.metabar--btn:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+@media (min-width: 35.5625em) {
+  /* line 35, ../stylesheets/modules/_navbar.sass */
+  .metabar--more {
+    display: none;
+  }
+}
+
+/* line 40, ../stylesheets/modules/_navbar.sass */
+.hero {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 80px;
+}
+@media (min-width: 35.5625em) {
+  /* line 40, ../stylesheets/modules/_navbar.sass */
+  .hero {
+    margin-top: 50px;
+  }
+}
+
+/* line 47, ../stylesheets/modules/_navbar.sass */
+.hero--title {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 42px;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: white;
+  margin-bottom: 8px;
+  outline: 0;
+  word-break: break-word;
+}
+@media (min-width: 35.5625em) {
+  /* line 47, ../stylesheets/modules/_navbar.sass */
+  .hero--title {
+    font-size: 50px;
+  }
+}
+
+/* line 60, ../stylesheets/modules/_navbar.sass */
+.hero--description {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  letter-spacing: 0.01rem;
+  font-weight: lighter;
+  font-style: normal;
+  margin: 0 0 10px 0 !important;
+  padding: 0;
+  color: white;
+  outline: 0;
+  word-break: break-word;
+}
+@media (min-width: 35.5625em) {
+  /* line 60, ../stylesheets/modules/_navbar.sass */
+  .hero--description {
+    font-size: 22px;
+  }
+}
+
+/* line 73, ../stylesheets/modules/_navbar.sass */
+.navbar {
+  display: none;
+  overflow: hidden;
+  color: white;
+  border-top: 1px #dededc solid;
+  padding: 0;
+}
+@media (min-width: 35.5625em) {
+  /* line 73, ../stylesheets/modules/_navbar.sass */
+  .navbar {
+    display: block;
+  }
+}
+
+/* line 83, ../stylesheets/modules/_navbar.sass */
+.navbar--tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 88, ../stylesheets/modules/_navbar.sass */
+.navbar--tabs--item {
+  display: block;
+}
+@media (min-width: 35.5625em) {
+  /* line 88, ../stylesheets/modules/_navbar.sass */
+  .navbar--tabs--item {
+    display: inline-block;
+    margin-right: 20px;
+  }
+}
+/* line 94, ../stylesheets/modules/_navbar.sass */
+.navbar--tabs--item:last-child {
+  margin-right: 0px;
+}
+/* line 97, ../stylesheets/modules/_navbar.sass */
+.navbar--tabs--item a {
+  font-weight: 700;
+  font-style: normal;
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 20px 0;
+  color: white;
+}
+
+/* line 107, ../stylesheets/modules/_navbar.sass */
+.navbar--tabs--item.active a {
+  text-decoration: line-through;
+}
+
+/* line 110, ../stylesheets/modules/_navbar.sass */
+.pagetitle {
+  background-color: #a9bcdc;
+  border-top: 2px solid #a7b7d4;
+  color: white;
+}
+
+/* line 115, ../stylesheets/modules/_navbar.sass */
+.pagetitle--title {
+  height: 45px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+@media (min-width: 35.5625em) {
+  /* line 115, ../stylesheets/modules/_navbar.sass */
+  .pagetitle--title {
+    font-size: 20px;
+  }
+}
+
+/* line 1, ../stylesheets/modules/_sidebar.sass */
+.sidebar--btn {
+  display: inline-block;
+  color: white;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #b0c1df), color-stop(50%, #a9bcdc));
+  background: -webkit-linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
+  background: -moz-linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
+  background: -o-linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
+  background: linear-gradient(top, #b0c1df 50%, #a9bcdc 50%);
+  font-size: 14px;
+  line-height: 22px;
+  border-radius: 4px;
+  padding: 12px 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  margin-top: 35px;
+  width: 140px;
+  text-align: center;
+}
+/* line 11, ../stylesheets/mixins/_btn.sass */
+.sidebar--btn:hover {
+  text-decoration: none;
+  opacity: 0.8;
+  color: white;
+}
+@media (min-width: 35.5625em) {
+  /* line 1, ../stylesheets/modules/_sidebar.sass */
+  .sidebar--btn {
+    padding: 12px 30px;
+  }
+}
+
+/* line 7, ../stylesheets/modules/_sidebar.sass */
+.content--box {
+  background: white;
+  border-radius: 4px;
+  border-left: 10px solid #a9bcdc;
+  position: relative;
+}
+
+/* line 13, ../stylesheets/modules/_sidebar.sass */
+.content--box:after {
+  left: -30px;
+  border: solid transparent;
+  content: " ";
+  position: absolute;
+  pointer-events: none;
+  border-right-color: #a9bcdc;
+  border-width: 10px;
+  top: 50px;
+}
+
+/* line 3, ../stylesheets/modules/_thread.sass */
+.thread--nested {
+  margin-left: 25px;
+}
+
+/* line 6, ../stylesheets/modules/_thread.sass */
+.thread--comment {
+  position: relative;
+  padding: 20px 25px;
+  padding-left: 65px;
+}
+/* line 10, ../stylesheets/modules/_thread.sass */
+.thread--comment:hover > .comment--share {
+  display: inline;
+}
+
+/* line 13, ../stylesheets/modules/_thread.sass */
+.thread--comment-info {
+  position: relative;
+  font-size: 20px;
+  padding: 10px 25px;
+  text-align: center;
+}
+/* line 18, ../stylesheets/modules/_thread.sass */
+.thread--comment-info b {
+  display: block;
+  padding: 20px;
+}
+
+/* line 22, ../stylesheets/modules/_thread.sass */
+.comment--author--img {
+  position: absolute;
+  background: #f2f2f0;
+  left: 25px;
+  width: 32px;
+  height: 32px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* line 30, ../stylesheets/modules/_thread.sass */
+.comment--share {
+  display: none;
+  float: right;
+}
+
+/* line 34, ../stylesheets/modules/_thread.sass */
+.comment--reply {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #8a9299;
+}
+
+/* line 40, ../stylesheets/modules/_thread.sass */
+.comment--form {
+  padding-top: 20px;
+}
+/* line 43, ../stylesheets/modules/_thread.sass */
+.comment--form label {
+  display: none;
+}
+/* line 46, ../stylesheets/modules/_thread.sass */
+.comment--form textarea {
+  width: 100%;
+  height: 120px;
+}
+
+/* line 50, ../stylesheets/modules/_thread.sass */
+.comment--reply-form {
+  display: none;
+  padding-top: 20px;
+}
+/* line 53, ../stylesheets/modules/_thread.sass */
+.comment--reply-form::before {
+  content: "↪";
+  padding: 10px;
+}
+
+/* line 5, ../stylesheets/_state.sass */
+.is-hidden {
+  display: none;
+}
+
+/* line 8, ../stylesheets/_state.sass */
+.no-js .is-hidden--no-js {
+  display: none;
+}
+
+/* line 11, ../stylesheets/_state.sass */
+.js .is-hidden--js {
+  display: none;
+}
+
+/* line 14, ../stylesheets/_state.sass */
+.is-visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

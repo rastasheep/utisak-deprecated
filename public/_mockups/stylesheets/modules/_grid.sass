@@ -1,0 +1,24 @@
+// This module is a top-level Susy grid container.
+//
+// You can use Susy methods like span-columns() and at-breakpoint() in modules that
+// are placed inside this container. 
+//
+// You'll eventually want to delete the +susy-grid-background lines.
+//
+// http://susy.oddbird.net/guides/reference/
+
+.grid
+  +container
+
+  padding-left: 0.25em
+  padding-right: 0.25em
+  +at-breakpoint($tablet)
+
+  +at-breakpoint($desktop)
+    
+    @if $lt-ie9
+      // Force static width for IE7+8
+      width: pxtoem(768px)
+    @else
+      // Constrain the fluid grid to a max width
+      max-width: pxtoem(768px) 

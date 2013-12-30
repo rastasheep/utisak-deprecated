@@ -1,0 +1,101 @@
+// Pseudo icon
+.icon-new
+  background-image: url("../images/newpost.png")
+  width: 14px
+  height: 16px
+
+.icon-login
+  background: center url("../images/login.png") no-repeat !important
+  width: 24px
+  height: 24px
+
+.icon-vote
+  background-image: url("../images/voteup.png")
+  width: 22px
+  height: 22px
+  &:hover
+    background-position: 0 22px
+
+.icon-voted
+  @extend .icon-vote
+  opacity: 0.3
+  &:hover
+    background-position: 0 0
+
+.icon-share
+  background-image: url("../images/share.png")
+  width: 16px
+  height: 16px
+  &:hover
+    opacity: 0.8
+
+.icon-collapse
+  background-image: url("../images/collapse.png")
+  width: 16px
+  height: 16px
+  &:hover
+    opacity: 0.8
+
+.icon-facebook
+  background-image: url("../images/facebook.png")
+  width: 16px
+  height: 16px
+  &:hover
+    opacity: 0.8
+
+.icon-twitter
+  background-image: url("../images/twitter.png")
+  width: 16px
+  height: 16px
+  &:hover
+    opacity: 0.8
+
+.icon-gplus
+  background-image: url("../images/gplus.png")
+  width: 16px
+  height: 16px
+  &:hover
+    opacity: 0.8
+
+.icon-readability
+  background-image: url("../images/readability.png")
+  width: 16px
+  height: 16px
+  &:hover
+    opacity: 0.8
+
+.icon-avatar
+  width: 38px
+  height: 38px
+  padding: 0 !important
+  @include border-radius(4px)
+  &:hover
+    opacity: 0.8
+
+.icon-link
+  background-image: url("../images/link.png")
+  width: 16px
+  height: 16px
+  &:hover
+    opacity: 0.8
+
+.icon-settings
+  background-image: url("../images/settings.png")
+  width: 16px
+  height: 16px
+  &:hover
+    opacity: 0.8
+
+.icon-more
+  background: center url("../images/more.png") !important
+  width: 24px
+  height: 24px
+  &:hover
+    opacity: 0.8
+
+.icon-verified
+  display: inline-block
+  border-radius: 50%
+  width: 24px
+  height: 24px
+  background: url("../images/verified.png") center no-repeat $green

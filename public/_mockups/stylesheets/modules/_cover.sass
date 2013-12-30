@@ -1,0 +1,34 @@
+.content--cover::before, .content--cover::after
+  content: ""
+  position: fixed
+  top: 0
+  left: 380px
+  width: 150px
+  height: 500px
+  z-index: -1
+  background: rgba(255, 255, 255, 0.05)
+  border: 1px solid rgba(255, 255, 255, 0.1)
+  @include rotate(45deg)
+
+.content--cover:after
+  @include rotate(135deg)
+
+.cover--inner
+  position: relative
+  // z-index: 100
+
+.cover--avatar
+  width: 100px 
+  height: 100px 
+  position: absolute 
+  @include border-radius(100%)
+  top: -110px
+  left: 50% 
+  margin-left: -50px 
+  overflow: hidden
+  border: 3px solid $white 
+  // z-index: 500
+  @include box-shadow(0 1px 1px rgba(0,0,0,0.3))
+
+  img
+    width: 100%
